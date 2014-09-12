@@ -1,0 +1,845 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {#<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css"/>#}
+    {#<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>#}
+
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/font-awesome-3.2.1/css/font-awesome.min.css?v=21082014">
+
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/nivo-slider.css" media="screen">
+
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/theme.css">
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/theme-responsive.css">
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/skin/modern.css?v=27081014" id="themecss">
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/color/blue.css" id="colors">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_16,h_16,,c_pad,fl_progressive/iyinkpap261jt9dthrmb.ico">
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/css/ie.css">
+    <![endif]-->
+
+    <link rel="canonical" href="http://serviceaireacondicionado.info"/>
+{% endblock stylesheets %}
+
+{% block javascripts %}
+    {#<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>#}
+    {#<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>#}
+
+    <!-- The Scripts -->
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.min.js?v=30012014"></script>
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/bootstrap.min.js?v=30012014"></script>
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.parallax.js"></script>
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/modernizr-2.6.2.min.js"></script>
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.nivo.slider.pack.js"></script>
+    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.unveil.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("img").unveil();
+        });
+    </script>
+
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/css/prettyPhoto.css">
+    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.prettyPhoto.js"></script>
+    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/superfish.js"></script>
+
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.gmap.min.js"></script>
+    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/custom.js?v=21082014-1975"></script>
+
+
+    {#<script type="text/javascript">#}
+        {#var _mfq = _mfq || [];#}
+        {#(function() {#}
+            {#var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;#}
+            {#mf.src = "//cdn.mouseflow.com/projects/e14c8319-ddb8-4e6a-92ab-9a0f1c673c26.js";#}
+            {#document.getElementsByTagName("head")[0].appendChild(mf);#}
+        {#})();#}
+    {#</script>#}
+
+    {#<script async type="text/javascript">(function(){var ldk=document.createElement('script'); ldk.type='text/javascript'; ldk.async=true; ldk.src='http://weboptimizer.leadaki.com/weboptimizer/521f9400e4b01f7fac730c25/52cecca9e4b095ef55b8f0c1.js';var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);})();</script>#}
+
+    {#<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"3066222","applicationTime":48,"beacon":"beacon-1.newrelic.com","queueTime":0,"licenseKey":"e38fe6ab85","transactionName":"Z1xVZkBWXUFYU0BdXV4WZ15TTmdXVEBYVUZVFmBXUERaRlwfXVpWVUEZWkZaXw==","agent":"js-agent.newrelic.com\/nr-412.min.js","errorBeacon":"bam.nr-data.net"}</script>#}
+{% endblock javascripts %}
+
+{% block body %}
+<div class="wrap">
+<!-- Header Start -->
+<header id="header">
+    <!-- Main Header Start -->
+    <div class="main-header">
+        <div class="container">
+            <!-- TopNav Start -->
+            <div class="topnav navbar-header">
+                <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
+                    <i class="icon-angle-down icon-current"></i>
+                </a>
+            </div>
+            <!-- TopNav End -->
+            <!-- Logo Start -->
+            <div class="logo pull-left">
+                <h1>
+                    <a href="/">
+
+                        <img src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,h_90,fl_progressive/iyinkpap261jt9dthrmb.png">
+
+                    </a>
+                </h1>
+            </div>
+            <!-- Logo End -->
+            <!-- Mobile Menu Start -->
+            <div class="mobile navbar-header">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#">
+                    <i class="icon-reorder icon-2x"></i>
+                </a>
+            </div>
+            <!-- Mobile Menu End -->
+            <!-- Menu Start -->
+            <nav class="collapse navbar-collapse menu">
+                <ul class="nav navbar-nav sf-menu">
+
+
+                    <li><a  href="/productos">
+                            Productos</a></li>
+
+
+                    <li><a  href="/quienes-somos">
+                            Qui&eacute;nes somos</a></li>
+
+                    <li><a  href="/ubicacion">
+                            Ubicaci&oacute;n</a></li>
+
+                    <li><a  href="/contactanos">
+                            Contactanos</a></li>
+                </ul>
+            </nav>
+            <!-- Menu End -->
+        </div>
+    </div>
+    <!-- Main Header End -->
+</header>
+<!-- Header End -->
+<!-- Content Start -->
+<div id="main">
+
+
+
+
+
+
+
+
+
+
+<!-- Main Content start-->
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="posts-block col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                <!-- Recent work start-->
+                <div class="recentwork_wrapper">
+                    <!-- Slider Start-->
+                    <div class="post-image">
+                        <!-- Slider Start-->
+                        <div class="slider-wrapper theme-default">
+                            <div id="nivoslider" class="nivoSlider">
+                                <a href="#"><img
+                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/jolck9onrwvc4leq31qh.jpg"
+                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
+                                            data-transition="slideInLeft"></a>  <a href="#"><img
+                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/i0ackrjjptigcglimmkv.jpg"
+                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
+                                            data-transition="slideInLeft"></a>  <a href="#"><img
+                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/nczoq3eq1gjsqygm2hlr.jpg"
+                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
+                                            data-transition="slideInLeft"></a>  <a href="#"><img
+                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/apvskkcfvgdhbktv3wpo.jpg"
+                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
+                                            data-transition="slideInLeft"></a>  <a href="#"><img
+                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/iexfn6q8ai9el5cryzoy.jpg"
+                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
+                                            data-transition="slideInLeft"></a>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- Slider End-->
+                    </div>
+                </div>
+                <!-- Recent work end-->
+            </div>
+            <!-- Left Section End -->
+            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12" id="contact-form">
+                <div class="contact-form">
+                    <h3 class="title">
+                        Solicitar presupuesto</h3>
+                    <!-- <p>
+Dejanos tu consulta y te responderemos a la brevedad.</p> -->
+                    <form method="post" class="reply" id="contact">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <!-- <label>Nombre: <span>*</span></label> -->
+                                    <input class="form-control" id="name" name="name" type="text" value=""
+                                           required placeholder="Nombre">
+                                </div>
+                                <div class="col-xs-12">
+                                    <!-- <label>Teléfono: <span>*</span></label> -->
+                                    <input class="form-control" type="tel" id="phone" name="phone" value=""
+                                           required placeholder="Teléfono">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <!-- <label>Email: <span>*</span></label> -->
+                                    <input class="form-control" id="email" name="email" type="email" value=""
+                                           required placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <!-- <label>
+Quiero solicitar presupuesto para: <span>*</span></label> -->
+                                    <textarea class="form-control" id="text" name="message" style="min-height: 95px;" rows="3" cols="40" required placeholder="Quiero solicitar presupuesto para..."></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="actions">
+                            <button class="btn-normal btn-color submit bottom-pad" type="submit">
+                                Solicitar Presupuesto Gratis</button>
+                        </div>
+                        <div class="success alert-success alert" style="display: none">Tu mensaje se envió correctamente</div>
+                        <div class="error alert-error alert" style="display: none">E-mail must be valid and message must be longer
+                            than 100 characters.</div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+
+
+
+<!-- <div class="divider"></div> -->
+<div class=" recentworks ">
+<div class="container">
+<div class="row">
+
+    <div class="posts-block col-lg-8 col-md-8 col-sm-6 col-xs-12">
+        <article class="about-us">
+
+            <h3 class="title" id="quienes-somos" >
+                Qui&eacute;nes somos</h3>
+
+            <div class="post-content">
+                <p ><p style="text-align:justify"><span style="font-size:18px"><strong>Instalaci&oacute;n y Reparaci&oacute;n de Aires Acondicionados, Split, Lavarropas y heladeras</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>en Capital Federal.&nbsp;</strong></span></p>
+
+                <p style="text-align:justify"><em><span style="font-size:18px">Adem&aacute;s brindamos servicios de Gasista Matriculado y Plomer&iacute;a&nbsp;general.</span></em></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <ul>
+                    <li style="text-align:justify"><span style="font-size:18px">Atenci&oacute;n 24 hs. </span></li>
+                    <li style="text-align:justify"><span style="font-size:18px">Aceptamos todas las tarjetas de cr&eacute;dito.</span></li>
+                    <li style="text-align:justify"><span style="font-size:18px">Experiencia en reparaci&oacute;n de equipos de aire acondicionado, heladeras, lavarropas y secadoras.&nbsp;</span></li>
+                </ul>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que ofrecemos:</strong></span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Refrigeraci&oacute;n:&nbsp;</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de equipos Split, multiSplit y centrales.</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n e instalaci&oacute;n de heladeras comerciales y c&aacute;maras frigor&iacute;ficas.</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">3- Mantenimiento preventivo. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">4- Atenci&oacute;n a consorcios. </span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Calderas:&nbsp;</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de calderas murales, termotanques y quemadores.</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n de calderas centrales y secadoras. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">3- Automatizaciones. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">4- Aislamiento t&eacute;rmico. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">5- Mantenimiento y/o service pre-temporada. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">Adem&aacute;s reparamos lavarropas y secarropas.</span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Gasista Matriculado</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que brindamos:</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><span style="font-family:arial,sans-serif">1- Rehabilitaciones</span></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">2-&nbsp;Planos</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">3- Rec&aacute;lculo de ca&ntilde;er&iacute;a </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">4- Tr&aacute;mites ante empresa distibuidora de gas</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">5- Presentaci&oacute;n F1022 - 3.4.A - 3.5</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">6-&nbsp;Reparaci&oacute;n de articulos a gas</span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Trabajos de Plomer&iacute;a en General</strong></span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>&iexcl;D&eacute;jenos su consulta y nos pondremos en contacto con ud. a la brevedad!</strong></span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><u><span style="font-size:18px">Otros medios de Contacto:</span></u></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">Tel&eacute;fono Fijo: 3529-1982&nbsp;</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">M&oacute;vil: 15 34 26 51 75 </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">Nextel: 647*4781</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">E-mail: climatronick@gmail.com</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Instalaci&oacute;n y Reparaci&oacute;n de Aires Acondicionados, Split, Lavarropas y heladeras</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>en Capital Federal.&nbsp;</strong></span></p>
+
+                <p style="text-align:justify"><em><span style="font-size:18px">Adem&aacute;s brindamos servicios de Gasista Matriculado y Plomer&iacute;a&nbsp;general.</span></em></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <ul>
+                    <li style="text-align:justify"><span style="font-size:18px">Atenci&oacute;n 24 hs. </span></li>
+                    <li style="text-align:justify"><span style="font-size:18px">Aceptamos todas las tarjetas de cr&eacute;dito.</span></li>
+                    <li style="text-align:justify"><span style="font-size:18px">Experiencia en reparaci&oacute;n de equipos de aire acondicionado, heladeras, lavarropas y secadoras.&nbsp;</span></li>
+                </ul>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que ofrecemos:</strong></span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Refrigeraci&oacute;n:&nbsp;</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de equipos Split, multiSplit y centrales.</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n e instalaci&oacute;n de heladeras comerciales y c&aacute;maras frigor&iacute;ficas.</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">3- Mantenimiento preventivo. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">4- Atenci&oacute;n a consorcios. </span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Calderas:&nbsp;</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de calderas murales, termotanques y quemadores.</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n de calderas centrales y secadoras. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">3- Automatizaciones. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">4- Aislamiento t&eacute;rmico. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">5- Mantenimiento y/o service pre-temporada. </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">Adem&aacute;s reparamos lavarropas y secarropas.</span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Gasista Matriculado</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que brindamos:</strong></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><span style="font-family:arial,sans-serif">1- Rehabilitaciones</span></span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">2-&nbsp;Planos</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">3- Rec&aacute;lculo de ca&ntilde;er&iacute;a </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">4- Tr&aacute;mites ante empresa distibuidora de gas</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">5- Presentaci&oacute;n F1022 - 3.4.A - 3.5</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">6-&nbsp;Reparaci&oacute;n de articulos a gas</span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>Trabajos de Plomer&iacute;a en General</strong></span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><span style="font-size:18px"><strong>&iexcl;D&eacute;jenos su consulta y nos pondremos en contacto con ud. a la brevedad!</strong></span></p>
+
+                <p style="text-align:justify">&nbsp;</p>
+
+                <p style="text-align:justify"><u><span style="font-size:18px">Otros medios de Contacto:</span></u></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">Tel&eacute;fono Fijo: {{ site.phone }}&nbsp;</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">M&oacute;vil: 15 34 26 51 75 </span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">Nextel: 647*4781</span></p>
+
+                <p style="text-align:justify"><span style="font-size:18px">E-mail: {{ site.email }}</span></p>
+                </p>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+        <div class="address widget">
+            <h3 class="title" >
+                Llamanos ahora!</h3>
+
+            <p class="phone"><a href="tel:3529-1982" data-toggle="modal" ><i class="icon-phone" style="margin-right: 8px;"></i> 3529-1982</a></p>
+
+            <p >
+                Pod&eacute;s hacernos un pedido o consultar por precios.
+                (Horario de atención de Lunes a Viernes de 9 a 18 hs)</p>
+            <p class="action">
+                <a  class="btn btn-special btn-color" href="#contactModal" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Landing', 'AskFreeEstimate', 'Button'])" >
+                    Solicitar Presupuesto Gratis</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="divider"></div>
+
+
+<div class="content" id="image_gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 com-sm-12 col-xs-12">
+                <h3 class="title" data-name="products.title">
+                    Galer&iacute;a de imagenes</h3>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 portfolio-wrap">
+                <div class="row">
+                    <div class="portfolio">
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/jolck9onrwvc4leq31qh.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/jolck9onrwvc4leq31qh.jpg" width="253" height="191"/></a>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/i0ackrjjptigcglimmkv.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/i0ackrjjptigcglimmkv.jpg" width="253" height="191"/></a>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/nczoq3eq1gjsqygm2hlr.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/nczoq3eq1gjsqygm2hlr.jpg" width="253" height="191"/></a>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/apvskkcfvgdhbktv3wpo.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/apvskkcfvgdhbktv3wpo.jpg" width="253" height="191"/></a>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/iexfn6q8ai9el5cryzoy.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/iexfn6q8ai9el5cryzoy.jpg" width="253" height="191"/></a>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </div>
+</div>
+
+
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 com-sm-12 col-xs-12">
+                <h3 class="title" data-name="products.title">
+                    Productos</h3>
+                <p  data-name="products.subtitle" >
+                    Estos son los productos que ofrecemos en Climatronik.</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 portfolio-wrap">
+                <div class="row">
+                    <div class="portfolio">
+
+                        {% for item in site.products %}
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="/producto/service-para-split-multisplit/52499429e4b0639f1706da04" class="portfolio-item-link" >
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/g3jnu9e3svod9m0itkci.jpg" alt="Service para Split / MultiSplit " />
+                                </a>
+                                <div class="portfolio-item-title">
+                                    <a href="/producto/service-para-split-multisplit/52499429e4b0639f1706da04">{{ item.title }}</a>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="/producto/climatronik/524994eee4b0639f1706da11" class="portfolio-item-link" >
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/efa2t7g28zxkklwidkl1.jpg" alt="CLIMATRONIK" />
+                                </a>
+                                <div class="portfolio-item-title">
+                                    <a href="/producto/climatronik/524994eee4b0639f1706da11">CLIMATRONIK</a>
+                                    <p>A Convenir&nbsp;</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="/producto/recarga-de-gas-refrigerante/5277c135e4b030f795d8f206" class="portfolio-item-link" >
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/iw6si5saqxhz92vme5wf.jpg" alt="Recarga de Gas Refrigerante" />
+                                </a>
+                                <div class="portfolio-item-title">
+                                    <a href="/producto/recarga-de-gas-refrigerante/5277c135e4b030f795d8f206">Recarga de Gas Refrigerante</a>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="/producto/mantenimiento-preventivo/52499450e4b0639f1706da0a" class="portfolio-item-link" >
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/mwursy0yghrb5ytalyca.jpg" alt="Mantenimiento Preventivo" />
+                                </a>
+                                <div class="portfolio-item-title">
+                                    <a href="/producto/mantenimiento-preventivo/52499450e4b0639f1706da0a">Mantenimiento Preventivo</a>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="/producto/trabajos-de-plomeria-en-general/53066dabe4b0df6b70dbc0df" class="portfolio-item-link" >
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/qqjekhcxg9xtqsyxgotu.jpg" alt="Trabajos de Plomer&iacute;a en General" />
+                                </a>
+                                <div class="portfolio-item-title">
+                                    <a href="/producto/trabajos-de-plomeria-en-general/53066dabe4b0df6b70dbc0df">Trabajos de Plomer&iacute;a en Gen...</a>
+                                    <p>A Convenir&nbsp;</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="/producto/surrey/5260423be4b0cd0814c4679c" class="portfolio-item-link" >
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/zzmvu50txo4xkadmfaik.jpg" alt="SURREY" />
+                                </a>
+                                <div class="portfolio-item-title">
+                                    <a href="/producto/surrey/5260423be4b0cd0814c4679c">SURREY</a>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                <a href="/producto/carrier/52604266e4b0cd0814c4679d" class="portfolio-item-link" >
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/ewbmasol7m8q5dw9sumy.jpg" alt="CARRIER" />
+                                </a>
+                                <div class="portfolio-item-title">
+                                    <a href="/producto/carrier/52604266e4b0cd0814c4679d">CARRIER</a>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </div>
+</div>
+
+<div class=" recentworks ">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="contact-form">
+                <div class="contact-form">
+                    <h3 class="title" id="contactanos" >
+                        Solicitar presupuesto</h3>
+                    <p>
+
+                        Dejanos tu consulta y te responderemos a la brevedad.              </p>
+                    <form method="post" class="reply" id="contact">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <!-- <label>Nombre: <span>*</span></label> -->
+                                    <input class="form-control" id="name" name="name" type="text" value="" required placeholder="Nombre">
+                                    <!-- <label>Email: <span>*</span></label> -->
+                                    <input class="form-control" type="email" id="email" name="email" value="" required placeholder="Email">
+                                    <!-- <label>Teléfono: <span>*</span></label> -->
+                                    <input class="form-control" id="subject" name="phone" type="text" value="" required placeholder="Telefono">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <!-- <label >
+          Quiero solicitar un presupuesto para <span>*</span></label> -->
+                                    <textarea class="form-control" id="text" name="message" rows="3" cols="40" required placeholder="
+Quiero solicitar un presupuesto para..."></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="actions">
+                            <button class="btn-normal btn-color submit  bottom-pad" type="submit" style="margin-bottom:0;">
+                                Solicitar Presupuesto Gratis</button>
+                        </div>
+                        <div class="success alert-success alert" style="display:none">Tu mensaje se envió correctamente</div>
+                        <div class="error alert-error alert" style="display:none">E-mail must be valid and message must be longer than 100 characters.</div>
+                        <div class="clearfix">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+                <div class="address widget">
+                    <h3 class="title" >Datos de contacto</h3>
+                    <div style="height:200px;margin-bottom:20px;color:#333;" id="maps" class="google-maps" data-company="null" data-address="S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina"
+                         data-address-description="S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina" ></div>
+                    <!-- Left Section End -->
+                    <ul class="contact-us" >
+                        <li>
+                            <i class="icon-map-marker"></i>
+                            <p>
+                                S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-phone"></i>
+                            <p>
+                                3529-1982
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-envelope"></i>
+                            <p>
+                                <a href="mailto:climatronick@gmail.com">climatronick@gmail.com</a>
+                            </p>
+                        </li>
+                    </ul>
+                    <!-- <h3 >
+   Horarios de atenci&oacute;n</h3> -->
+                 <span >
+                 <ul>
+                     <li ><i class="icon-time"> </i>Lunes a Viernes de 9 a 18 hs</li>
+                 </ul>
+                 </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Clients End -->
+</div>
+
+
+
+<div class="modal fade" id="contactModal">
+    <div class="modal-dialog" style="padding-top: 5%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="javascript:$('#contactModal').modal('hide');">&times;</button>
+                <h4 class="modal-title">
+                    Solicitar Presupuesto</h4>
+            </div>
+            <div class="modal-body" style="background: #fafafa;">
+
+                <h2 class="title" style="text-align: center; margin-top: 0;"><i class="icon-phone" style="margin-right: 8px;"></i>
+                    Llamanos ahora al <a href="tel:3529-1982">3529-1982</a>!</h2>
+                <h4 class="title" style="margin-bottom: 18px; margin-left: 15px; margin-top: 25px;">Dejanos tus datos y te contactaremos:</h4>
+
+                <form method="post" class="reply" id="contact">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control" id="name" name="name" type="text" value="" placeholder="Nombre" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input class="form-control" type="tel" id="phone" name="phone" value="" placeholder="Teléfono" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <input class="form-control" id="email" name="email" type="email" value="" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <textarea class="form-control" id="text" name="message" style="min-height: 95px;" rows="3" cols="40" placeholder="
+Quiero solicitar un presupuesto para..." required></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div style="text-align: center;">
+                        <button class="btn-normal btn-color submit  bottom-pad" type="submit" style="margin-left: 3.5%; margin-bottom: 1%;">
+                            Solicitar Presupuesto Gratis</button>
+                    </div>
+                    <div class="success alert-success alert" style="display:none">Tu mensaje se envió correctamente</div>
+                    <div class="error alert-error alert" style="display:none">E-mail must be valid and message must be longer than 100 characters.</div>
+                    <div class="clearfix">
+                    </div>
+                </form>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Footer Start -->
+<footer id="footer">
+    <!-- Footer Top Start -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <section class="col-lg-5 col-md-5 col-xs-12 col-sm-5 footer-one">
+                    <h3>Sobre nosotros</h3>
+                    <p>Instalaci&oacute;n y Reparaci&oacute;n de Aires Acondicionados, Split, Lavarropas y heladeras
+                        <br/>
+                        <br/>en Capital Federal.&nbsp;
+                        <br/>
+                        <br/>Adem&aacute;s brindamos servicios de Gasista Matriculado y Plomer&iacute;a&nbsp;general.
+                        <br/>
+                        <br/>&nbsp;
+                        <br/>
+                        <br/>
+                        <br/>	Atenci&oacute;n 24 hs.
+                        <br/>	Aceptamos todas las tarjetas de cr&eacut...</p>
+                </section>
+                <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-two">
+
+                </section>
+                <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-three">
+                    <h3>Contactanos</h3>
+                    <ul class="contact-us">
+
+                        <li>
+                            <i class="icon-map-marker"></i>
+                            <p>
+                                S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina
+                            </p>
+                        </li>
+
+
+                        <li>
+                            <i class="icon-phone"></i>
+                            <p>3529-1982</p>
+                        </li>
+
+                        <li>
+                            <i class="icon-envelope"></i>
+                            <p><a href="mailto:climatronick@gmail.com">climatronick@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Top End -->
+    <!-- Footer Bottom Start -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 "> &copy; Copyright 2014 powered by
+                    <a href="http://leadaki.com">Leadaki. Más clientes para tu negocio</a>. Todos los derechos reservados. </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bottom End -->
+</footer>
+<!-- Scroll To Top -->
+<a href="#" class="scrollup"><i class="icon-angle-up"></i></a>
+</div>
+{% endblock body %}

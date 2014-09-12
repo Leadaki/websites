@@ -1,0 +1,11 @@
+# -- IDEs
+.idea/*
+
+# -- Composer
+vendor/*
+
+# -- Cache
+cache/*
+
+# -- Config
+config/config.php

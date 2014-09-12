@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ config.app.language }}">
+<head>
+    <meta charset="{{ config.app.charset }}">
+    {% block metatags %}
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock metatags %}
+    <title>{% block title %}{% endblock title %}</title>
+    {% block stylesheets %}{% endblock stylesheets %}
+</head>
+<body>
+{% block body %}{% endblock body %}
+
+{% block javascripts %}{% endblock javascripts %}
+</body>
+</html>
