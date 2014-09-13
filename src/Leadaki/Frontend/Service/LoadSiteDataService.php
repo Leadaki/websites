@@ -16,44 +16,71 @@ class LoadSiteDataService
     /** @var array */
     private $options;
 
+    /** @var string */
+    private $cacheName;
+
+    /** @var stirng */
+    private $cachePath;
+
     /** @var Site */
     private $site;
+
+    /** @var array */
+    private $data;
 
     public function __construct($url, $options = array())
     {
         $this->url = $url;
 
         $defaults = array(
-            'cachePath' => '',
+            'cacheFolder' => sys_get_temp_dir(),
             'cacheValid' => 3600,
         );
 
         $this->options = array_merge($defaults, $options);
+
+        $this->cacheName = sprintf('%s.json', md5($this->url));
+        $this->cachePath = sprintf('%s/%s', $this->options['cacheFolder'], $this->cacheName);
 
         $this->loadSiteData();
     }
 
     private function loadSiteData()
     {
-        $this->checkCache();
         $this->processData($this->getRemoteData());
     }
 
-    private function checkCache()
+    private function hasCache()
     {
+        if (file_exists(($this->cachePath))) {
+            $mtime = filemtime($this->cachePath);
 
+            if ($this->options['cacheValid'] > abs(time() - $mtime)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private function getRemoteData()
     {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Accept' => 'application/json',
-        ));
-        $response = curl_exec($ch);
-        curl_close($ch);
+        $response = null;
+
+        if ($this->hasCache()) {
+            $response = file_get_contents($this->cachePath);
+        } else {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $this->url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Accept' => 'application/json',
+            ));
+            $response = curl_exec($ch);
+            // -- Save Cache
+            file_put_contents($this->cachePath, $response);
+            curl_close($ch);
+        }
 
         return $response;
     }
@@ -61,6 +88,8 @@ class LoadSiteDataService
     private function processData($data)
     {
         $data = json_decode($data, true);
+        $this->data = $data;
+
         $site = new Site();
 
         $siteReflectionClass = new \ReflectionClass($site);
@@ -172,5 +201,21 @@ class LoadSiteDataService
     public function getSite()
     {
         return $this->site;
+    }
+
+    /**
+     * @param array $data
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
     }
 } 
