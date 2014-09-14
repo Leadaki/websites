@@ -12,8 +12,8 @@
 
     <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/theme.css">
     <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/theme-responsive.css">
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/skin/modern.css?v=27081014" id="themecss">
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/color/blue.css" id="colors">
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/skin/{{ site.template.id }}.css?v=27081014" id="themecss">
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/color/{{ site.template.color }}.css" id="colors">
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_16,h_16,,c_pad,fl_progressive/iyinkpap261jt9dthrmb.ico">
@@ -89,10 +89,12 @@
             <!-- Logo Start -->
             <div class="logo pull-left">
                 <h1>
-                    <a href="/">
-
-                        <img src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,h_90,fl_progressive/iyinkpap261jt9dthrmb.png">
-
+                    <a href="/" title="{{ site.title }}">
+                    {% if site.logo is defined and site.logo is not empty %}
+                        <img src="{{ site.logo.url }}" alt="{{ site.title }}">
+                    {% else %}
+                        {{ site.title }}
+                    {% endif %}
                     </a>
                 </h1>
             </div>
@@ -153,22 +155,16 @@
                         <!-- Slider Start-->
                         <div class="slider-wrapper theme-default">
                             <div id="nivoslider" class="nivoSlider">
-                                <a href="#"><img
-                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/jolck9onrwvc4leq31qh.jpg"
-                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
-                                            data-transition="slideInLeft"></a>  <a href="#"><img
-                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/i0ackrjjptigcglimmkv.jpg"
-                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
-                                            data-transition="slideInLeft"></a>  <a href="#"><img
-                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/nczoq3eq1gjsqygm2hlr.jpg"
-                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
-                                            data-transition="slideInLeft"></a>  <a href="#"><img
-                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/apvskkcfvgdhbktv3wpo.jpg"
-                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
-                                            data-transition="slideInLeft"></a>  <a href="#"><img
-                                            src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_838,h_550,c_pad,q_90,fl_progressive/iexfn6q8ai9el5cryzoy.jpg"
-                                            title="<h3 class='title'>Climatronik</h3><div class='subtitle'>Service de Aires Acondicionados</div>" alt="Climatronik"
-                                            data-transition="slideInLeft"></a>
+                            {% for item in site.products %}
+                                {% if item.images is not empty %}
+                                <a href="#">
+                                    <img
+                                            src="{{ item.images[0].small }}"
+                                            title="<h3 class='title'>{{ item.title }}</h3><div class='subtitle'>{{ item.subtitle }}</div>" alt="{{ item.title }}"
+                                            data-transition="slideInLeft">
+                                </a>
+                                {% endif %}
+                            {% endfor %}
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -243,174 +239,7 @@ Quiero solicitar presupuesto para: <span>*</span></label> -->
                 Qui&eacute;nes somos</h3>
 
             <div class="post-content">
-                <p ><p style="text-align:justify"><span style="font-size:18px"><strong>Instalaci&oacute;n y Reparaci&oacute;n de Aires Acondicionados, Split, Lavarropas y heladeras</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>en Capital Federal.&nbsp;</strong></span></p>
-
-                <p style="text-align:justify"><em><span style="font-size:18px">Adem&aacute;s brindamos servicios de Gasista Matriculado y Plomer&iacute;a&nbsp;general.</span></em></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <ul>
-                    <li style="text-align:justify"><span style="font-size:18px">Atenci&oacute;n 24 hs. </span></li>
-                    <li style="text-align:justify"><span style="font-size:18px">Aceptamos todas las tarjetas de cr&eacute;dito.</span></li>
-                    <li style="text-align:justify"><span style="font-size:18px">Experiencia en reparaci&oacute;n de equipos de aire acondicionado, heladeras, lavarropas y secadoras.&nbsp;</span></li>
-                </ul>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que ofrecemos:</strong></span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Refrigeraci&oacute;n:&nbsp;</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de equipos Split, multiSplit y centrales.</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n e instalaci&oacute;n de heladeras comerciales y c&aacute;maras frigor&iacute;ficas.</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">3- Mantenimiento preventivo. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">4- Atenci&oacute;n a consorcios. </span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Calderas:&nbsp;</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de calderas murales, termotanques y quemadores.</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n de calderas centrales y secadoras. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">3- Automatizaciones. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">4- Aislamiento t&eacute;rmico. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">5- Mantenimiento y/o service pre-temporada. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">Adem&aacute;s reparamos lavarropas y secarropas.</span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Gasista Matriculado</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que brindamos:</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><span style="font-family:arial,sans-serif">1- Rehabilitaciones</span></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">2-&nbsp;Planos</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">3- Rec&aacute;lculo de ca&ntilde;er&iacute;a </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">4- Tr&aacute;mites ante empresa distibuidora de gas</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">5- Presentaci&oacute;n F1022 - 3.4.A - 3.5</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">6-&nbsp;Reparaci&oacute;n de articulos a gas</span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Trabajos de Plomer&iacute;a en General</strong></span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>&iexcl;D&eacute;jenos su consulta y nos pondremos en contacto con ud. a la brevedad!</strong></span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><u><span style="font-size:18px">Otros medios de Contacto:</span></u></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">Tel&eacute;fono Fijo: 3529-1982&nbsp;</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">M&oacute;vil: 15 34 26 51 75 </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">Nextel: 647*4781</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">E-mail: climatronick@gmail.com</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Instalaci&oacute;n y Reparaci&oacute;n de Aires Acondicionados, Split, Lavarropas y heladeras</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>en Capital Federal.&nbsp;</strong></span></p>
-
-                <p style="text-align:justify"><em><span style="font-size:18px">Adem&aacute;s brindamos servicios de Gasista Matriculado y Plomer&iacute;a&nbsp;general.</span></em></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <ul>
-                    <li style="text-align:justify"><span style="font-size:18px">Atenci&oacute;n 24 hs. </span></li>
-                    <li style="text-align:justify"><span style="font-size:18px">Aceptamos todas las tarjetas de cr&eacute;dito.</span></li>
-                    <li style="text-align:justify"><span style="font-size:18px">Experiencia en reparaci&oacute;n de equipos de aire acondicionado, heladeras, lavarropas y secadoras.&nbsp;</span></li>
-                </ul>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que ofrecemos:</strong></span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Refrigeraci&oacute;n:&nbsp;</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de equipos Split, multiSplit y centrales.</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n e instalaci&oacute;n de heladeras comerciales y c&aacute;maras frigor&iacute;ficas.</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">3- Mantenimiento preventivo. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">4- Atenci&oacute;n a consorcios. </span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Calderas:&nbsp;</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">1- Reparaci&oacute;n e instalaci&oacute;n de calderas murales, termotanques y quemadores.</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">2- Reparaci&oacute;n de calderas centrales y secadoras. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">3- Automatizaciones. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">4- Aislamiento t&eacute;rmico. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">5- Mantenimiento y/o service pre-temporada. </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">Adem&aacute;s reparamos lavarropas y secarropas.</span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Gasista Matriculado</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Servicios que brindamos:</strong></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><span style="font-family:arial,sans-serif">1- Rehabilitaciones</span></span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">2-&nbsp;Planos</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">3- Rec&aacute;lculo de ca&ntilde;er&iacute;a </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">4- Tr&aacute;mites ante empresa distibuidora de gas</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">5- Presentaci&oacute;n F1022 - 3.4.A - 3.5</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">6-&nbsp;Reparaci&oacute;n de articulos a gas</span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>Trabajos de Plomer&iacute;a en General</strong></span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><span style="font-size:18px"><strong>&iexcl;D&eacute;jenos su consulta y nos pondremos en contacto con ud. a la brevedad!</strong></span></p>
-
-                <p style="text-align:justify">&nbsp;</p>
-
-                <p style="text-align:justify"><u><span style="font-size:18px">Otros medios de Contacto:</span></u></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">Tel&eacute;fono Fijo: {{ site.phone }}&nbsp;</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">M&oacute;vil: 15 34 26 51 75 </span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">Nextel: 647*4781</span></p>
-
-                <p style="text-align:justify"><span style="font-size:18px">E-mail: {{ site.email }}</span></p>
-                </p>
+                {{ site.main_description | raw('html') }}
             </div>
         </article>
     </div>
@@ -438,7 +267,7 @@ Quiero solicitar presupuesto para: <span>*</span></label> -->
 </div>
 <div class="divider"></div>
 
-
+{% if site.images is not empty %}
 <div class="content" id="image_gallery">
     <div class="container">
         <div class="row">
@@ -450,47 +279,16 @@ Quiero solicitar presupuesto para: <span>*</span></label> -->
             <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 portfolio-wrap">
                 <div class="row">
                     <div class="portfolio">
-
+                    {% for item in site.images %}
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
                             <div class="portfolio-item">
-                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/jolck9onrwvc4leq31qh.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/jolck9onrwvc4leq31qh.jpg" width="253" height="191"/></a>
-
+                                <a href="{{ item.url }}" rel="prettyPhoto[pp_gal]" >
+                                    <img data-src="{{ item.small }}" width="253" height="191"/>
+                                </a>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/i0ackrjjptigcglimmkv.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/i0ackrjjptigcglimmkv.jpg" width="253" height="191"/></a>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/nczoq3eq1gjsqygm2hlr.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/nczoq3eq1gjsqygm2hlr.jpg" width="253" height="191"/></a>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/apvskkcfvgdhbktv3wpo.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/apvskkcfvgdhbktv3wpo.jpg" width="253" height="191"/></a>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/q_95,fl_progressive/iexfn6q8ai9el5cryzoy.jpg" rel="prettyPhoto[pp_gal]" ><img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_fill,q_90,fl_progressive/iexfn6q8ai9el5cryzoy.jpg" width="253" height="191"/></a>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
+                    {% endfor %}
                     </div>
                 </div>
             </div>
@@ -498,6 +296,7 @@ Quiero solicitar presupuesto para: <span>*</span></label> -->
         <div class="divider"></div>
     </div>
 </div>
+{% endif %}
 
 
 
@@ -521,7 +320,7 @@ Quiero solicitar presupuesto para: <span>*</span></label> -->
                                 <a href="/producto/service-para-split-multisplit/52499429e4b0639f1706da04" class="portfolio-item-link" >
                                     <span class="portfolio-item-hover"></span>
                                     <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/g3jnu9e3svod9m0itkci.jpg" alt="Service para Split / MultiSplit " />
+                                    <img data-src="{{ item.images[0].small }}" alt="{{ item.title }}" />
                                 </a>
                                 <div class="portfolio-item-title">
                                     <a href="/producto/service-para-split-multisplit/52499429e4b0639f1706da04">{{ item.title }}</a>
@@ -531,110 +330,6 @@ Quiero solicitar presupuesto para: <span>*</span></label> -->
                             </div>
                         </div>
                         {% endfor %}
-
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="/producto/climatronik/524994eee4b0639f1706da11" class="portfolio-item-link" >
-                                    <span class="portfolio-item-hover"></span>
-                                    <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/efa2t7g28zxkklwidkl1.jpg" alt="CLIMATRONIK" />
-                                </a>
-                                <div class="portfolio-item-title">
-                                    <a href="/producto/climatronik/524994eee4b0639f1706da11">CLIMATRONIK</a>
-                                    <p>A Convenir&nbsp;</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="/producto/recarga-de-gas-refrigerante/5277c135e4b030f795d8f206" class="portfolio-item-link" >
-                                    <span class="portfolio-item-hover"></span>
-                                    <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/iw6si5saqxhz92vme5wf.jpg" alt="Recarga de Gas Refrigerante" />
-                                </a>
-                                <div class="portfolio-item-title">
-                                    <a href="/producto/recarga-de-gas-refrigerante/5277c135e4b030f795d8f206">Recarga de Gas Refrigerante</a>
-                                    <p>&nbsp;</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="/producto/mantenimiento-preventivo/52499450e4b0639f1706da0a" class="portfolio-item-link" >
-                                    <span class="portfolio-item-hover"></span>
-                                    <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/mwursy0yghrb5ytalyca.jpg" alt="Mantenimiento Preventivo" />
-                                </a>
-                                <div class="portfolio-item-title">
-                                    <a href="/producto/mantenimiento-preventivo/52499450e4b0639f1706da0a">Mantenimiento Preventivo</a>
-                                    <p>&nbsp;</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="/producto/trabajos-de-plomeria-en-general/53066dabe4b0df6b70dbc0df" class="portfolio-item-link" >
-                                    <span class="portfolio-item-hover"></span>
-                                    <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/qqjekhcxg9xtqsyxgotu.jpg" alt="Trabajos de Plomer&iacute;a en General" />
-                                </a>
-                                <div class="portfolio-item-title">
-                                    <a href="/producto/trabajos-de-plomeria-en-general/53066dabe4b0df6b70dbc0df">Trabajos de Plomer&iacute;a en Gen...</a>
-                                    <p>A Convenir&nbsp;</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="/producto/surrey/5260423be4b0cd0814c4679c" class="portfolio-item-link" >
-                                    <span class="portfolio-item-hover"></span>
-                                    <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/zzmvu50txo4xkadmfaik.jpg" alt="SURREY" />
-                                </a>
-                                <div class="portfolio-item-title">
-                                    <a href="/producto/surrey/5260423be4b0cd0814c4679c">SURREY</a>
-                                    <p>&nbsp;</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
-                            <div class="portfolio-item">
-                                <a href="/producto/carrier/52604266e4b0cd0814c4679d" class="portfolio-item-link" >
-                                    <span class="portfolio-item-hover"></span>
-                                    <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="http://d35pk2t3v0rl2w.cloudfront.net/hbrrdozyj/image/upload/w_253,h_191,c_pad,q_90/ewbmasol7m8q5dw9sumy.jpg" alt="CARRIER" />
-                                </a>
-                                <div class="portfolio-item-title">
-                                    <a href="/producto/carrier/52604266e4b0cd0814c4679d">CARRIER</a>
-                                    <p>&nbsp;</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
@@ -687,26 +382,26 @@ Quiero solicitar un presupuesto para..."></textarea>
             <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
                 <div class="address widget">
                     <h3 class="title" >Datos de contacto</h3>
-                    <div style="height:200px;margin-bottom:20px;color:#333;" id="maps" class="google-maps" data-company="null" data-address="S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina"
-                         data-address-description="S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina" ></div>
+                    <div style="height:200px;margin-bottom:20px;color:#333;" id="maps" class="google-maps" data-company="null" data-address="{{ site.main_location.google_maps_address }}"
+                         data-address-description="{{ site.main_location.address }}" ></div>
                     <!-- Left Section End -->
                     <ul class="contact-us" >
                         <li>
                             <i class="icon-map-marker"></i>
                             <p>
-                                S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina
+                                {{ site.main_location.address }}
                             </p>
                         </li>
                         <li>
                             <i class="icon-phone"></i>
                             <p>
-                                3529-1982
+                                {{ site.phone }}
                             </p>
                         </li>
                         <li>
                             <i class="icon-envelope"></i>
                             <p>
-                                <a href="mailto:climatronick@gmail.com">climatronick@gmail.com</a>
+                                <a href="mailto:climatronick@gmail.com">{{ site.email }}</a>
                             </p>
                         </li>
                     </ul>
@@ -807,19 +502,19 @@ Quiero solicitar un presupuesto para..." required></textarea>
                         <li>
                             <i class="icon-map-marker"></i>
                             <p>
-                                S&aacute;nchez de Bustamante 810, Buenos Aires, Argentina
+                                {{ site.main_location.address }}
                             </p>
                         </li>
 
 
                         <li>
                             <i class="icon-phone"></i>
-                            <p>3529-1982</p>
+                            <p>{{ site.phone }}</p>
                         </li>
 
                         <li>
                             <i class="icon-envelope"></i>
-                            <p><a href="mailto:climatronick@gmail.com">climatronick@gmail.com</a></p>
+                            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
                         </li>
                     </ul>
                 </section>
