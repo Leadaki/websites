@@ -4,6 +4,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 // -- Load used class
+use Aura\Router\RouterFactory;
 use Leadaki\Frontend\Service\LoadSiteDataService;
 
 // -- Load config file or redirect to install script
@@ -24,6 +25,64 @@ $loadSiteDataService = new LoadSiteDataService(
 
 $site = $loadSiteDataService->getData();
 
+$routerFactory = new RouterFactory();
+$router = $routerFactory->newInstance();
+
+$router->attach(null, $config['app']['base_url'], function ($router) {
+    // -- Set Defaults
+    $router
+        ->addServer(array(
+            'REQUEST_METHOD' => 'HEAD|GET',
+        ))
+    ;
+
+    // -- Index
+    $router
+        ->add('index', '/')
+    ;
+
+    // -- Products
+    $router
+        ->add('productos', '/productos')
+    ;
+
+    // -- Product View
+    $router
+        ->add('productos_detalle', '/productos/{friendly_name}/{product_id}')
+        ->addTokens(array(
+            'friendly_name' => '[\w-]+',
+            'product_id' => '\w+',
+        ))
+    ;
+
+    // -- Quienes Somos
+    $router
+        ->add('quienes_somos', '/quienes-somos')
+    ;
+
+    // -- Ubicacion
+    $router
+        ->add('ubicacion', '/ubicacion')
+    ;
+
+    // -- Contactanos
+    $router
+        ->add('contactanos', '/contactanos')
+    ;
+});
+
+
+
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+$route = $router->match($path, $_SERVER);
+
+if (empty($route)) {
+    header("HTTP/1.0 404 Not Found");
+    echo 'Ruta no encontrada';
+    exit;
+}
+
 // -- Load and configure Twig
 $loader = new Twig_Loader_Filesystem($config['folders']['templates']);
 $twig = new Twig_Environment($loader, array(
@@ -31,7 +90,11 @@ $twig = new Twig_Environment($loader, array(
     'debug' => $config['app']['debug'],
 ));
 
-echo $twig->render('index.html.twig', array(
+$twig->addFunction(new Twig_SimpleFunction('url_generate', function($name, $parameters = array()) use ($router) {
+    return $router->generate($name, $parameters);
+}));
+
+echo $twig->render($route->name . '.html.twig', array(
     'config' => $config,
     'site' => $site,
 ));

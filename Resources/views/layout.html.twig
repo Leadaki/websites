@@ -317,13 +317,13 @@ Quiero solicitar presupuesto para: <span>*</span></label> -->
                         {% for item in site.products %}
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
                             <div class="portfolio-item">
-                                <a href="/producto/service-para-split-multisplit/52499429e4b0639f1706da04" class="portfolio-item-link" >
+                                <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}" class="portfolio-item-link" >
                                     <span class="portfolio-item-hover"></span>
                                     <span class="fullscreen"><i class="icon-search"></i></span>
                                     <img data-src="{{ item.images[0].small }}" alt="{{ item.title }}" />
                                 </a>
                                 <div class="portfolio-item-title">
-                                    <a href="/producto/service-para-split-multisplit/52499429e4b0639f1706da04">{{ item.title }}</a>
+                                    <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}">{{ item.title }}</a>
                                     <p>&nbsp;</p>
                                 </div>
                                 <div class="clearfix"></div>
