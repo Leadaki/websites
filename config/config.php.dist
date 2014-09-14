@@ -3,7 +3,17 @@
 /**
  * Website id for retrieve data from the API
  */
-$config['app']['website_id'] = 'innovateinflables.com.ar';
+$config['app']['website_id'] = '';
+
+/**
+ * Template id to apply
+ */
+$config['template']['id'] = 'modern';
+
+/**
+ * Template color
+ */
+$config['template']['color'] = 'red';
 
 /**
  * Folder to sve cache
