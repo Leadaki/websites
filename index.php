@@ -25,51 +25,59 @@ $loadSiteDataService = new LoadSiteDataService(
 
 $site = $loadSiteDataService->getData();
 
+$routerCachePath = sprintf('%s/%s', $config['folders']['cache'], 'router.cache');
 $routerFactory = new RouterFactory();
 $router = $routerFactory->newInstance();
 
-$router->attach(null, $config['app']['base_url'], function ($router) {
-    // -- Set Defaults
-    $router
-        ->addServer(array(
-            'REQUEST_METHOD' => 'HEAD|GET',
-        ))
-    ;
+if (file_exists($routerCachePath)) {
+    $router->setRoutes(unserialize(file_get_contents($routerCachePath)));
+} else {
+    $router->attach(null, $config['app']['base_url'], function ($router) {
+        // -- Set Defaults
+        $router
+            ->addServer(array(
+                'REQUEST_METHOD' => 'HEAD|GET',
+            ))
+        ;
 
-    // -- Index
-    $router
-        ->add('index', '/')
-    ;
+        // -- Index
+        $router
+            ->add('index', '/')
+        ;
 
-    // -- Products
-    $router
-        ->add('productos', '/productos')
-    ;
+        // -- Products
+        $router
+            ->add('productos', '/productos')
+        ;
 
-    // -- Product View
-    $router
-        ->add('productos_detalle', '/productos/{friendly_name}/{product_id}')
-        ->addTokens(array(
-            'friendly_name' => '[\w-]+',
-            'product_id' => '\w+',
-        ))
-    ;
+        // -- Product View
+        $router
+            ->add('productos_detalle', '/productos/{friendly_name}/{product_id}')
+            ->addTokens(array(
+                'friendly_name' => '[\w-]+',
+                'product_id' => '\w+',
+            ))
+        ;
 
-    // -- Quienes Somos
-    $router
-        ->add('quienes_somos', '/quienes-somos')
-    ;
+        // -- Quienes Somos
+        $router
+            ->add('quienes_somos', '/quienes-somos')
+        ;
 
-    // -- Ubicacion
-    $router
-        ->add('ubicacion', '/ubicacion')
-    ;
+        // -- Ubicacion
+        $router
+            ->add('ubicacion', '/ubicacion')
+        ;
 
-    // -- Contactanos
-    $router
-        ->add('contactanos', '/contactanos')
-    ;
-});
+        // -- Contactanos
+        $router
+            ->add('contactanos', '/contactanos')
+        ;
+    });
+
+    // -- Save cache
+    file_put_contents($routerCachePath, serialize($router->getRoutes()));
+}
 
 
 
