@@ -1,0 +1,207 @@
+/*--
+    GLOBAL
+--------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700);
+
+body {
+    color: #333;
+    font-family: 'Josefin Slab', serif;
+}
+.divider {
+    border: none;
+}
+
+/* Titles */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-family: 'Josefin Slab', serif;
+}
+h3.title {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+
+/*--
+    HEADER
+--------------------------------------*/
+#header .main-header {
+  border-bottom: 2px solid #ccc;
+  min-height: 86px;
+  margin-bottom: 40px;
+  z-index: 9999;
+}
+.nav > li {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.nav > li > a {
+  color: #333;
+  border-top: 4px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color: transparent;
+  border-color: #000;
+}
+
+@media (min-width: 980px) {
+  .menu > ul li {
+    margin: 25px 0 0 10px;
+  }
+  .menu ul>li>a {
+    padding: 10px 18px 8px 18px;
+  }
+}
+
+
+/*--
+    FORM
+--------------------------------------*/
+.reply input,
+.reply textarea {
+    background-color: #ccc;
+    /*color: #FFF;*/
+    border: 1px solid #999;
+}
+
+/*--
+    BTN
+--------------------------------------*/
+.btn-special,
+.btn-normal,
+.btn-small,
+.btn-large,
+.btn {
+  border-radius: 0;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.btn-color, .subscribe-btn {
+  color: #FFF;
+  cursor: pointer;
+  background-color: black;
+}
+
+
+/*--
+    SLIDER IMG
+--------------------------------------*/
+.item .item-inner,
+.post-image {
+    border-radius: 0;
+}
+.nivo-caption {
+  background: none;
+  top: 0;
+  margin: 0;
+}
+.nivo-caption .title {
+  background-color: rgba(0,0,0,.4);
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  font-size: 35px;
+  padding: 20px 25px 25px;
+}
+.nivo-caption .subtitle {
+    background-color: rgba(0,0,0,.4);
+    border-bottom: 1px solid #eef1cc;
+    border-top: 2px solid #ccc;
+    display: block;
+    position: absolute;
+    bottom: 10px; left: 0; right: 0;
+    padding: 10px 20px;
+}
+.nivo-prevNav,
+.nivo-nextNav {
+  background-color: transparent;
+  border: 2px solid #999;
+  border-radius: 50px;
+  color: #999;
+  line-height: 50px;
+  padding: 0!important;
+  width: 50px; height: 50px;
+  top: 45%!important;
+}
+.nivo-prevNav {
+    left: 10px;
+}
+.nivo-nextNav {
+    right: 10px;
+}
+.tp-leftarrow.default:before,
+.nivo-prevNav:before,
+.tp-rightarrow.default:before,
+.nivo-nextNav:before {
+  color: #999;
+}
+
+
+/*--
+    CONTACT FORM
+--------------------------------------*/
+.contact-form {
+  border-bottom: 2px solid #ccc;
+  padding: 15px 15px 25px;
+}
+.contact-form .title {
+    padding: 10px 0;
+}
+.contact-form .actions {
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+/*--
+    ADDRESS
+--------------------------------------*/
+.address {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+.address .title {
+    padding: 0 0 10px;
+}
+.address .phone {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 20px -15px;
+    padding: 15px 30px;
+}
+.address .phone a {
+    color: #333;
+}
+.address .action {
+    margin: 30px 0 0;
+}
+
+
+/*--
+    GALLERY
+--------------------------------------*/
+.portfolio-item {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 0;
+}
+.portfolio-item-title {
+  background-color: transparent;
+  border-bottom: 2px solid #ccc;
+}
+.portfolio-item-title a {
+  /*color: #FFF;*/
+}
+
+
+/*--
+    ABOUT
+--------------------------------------*/
+.about-us {
+  padding: 15px;
+}

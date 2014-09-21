@@ -1,0 +1,30 @@
+        /*** STYLE SWITCHER ***/
+#switcherContent{padding:0 15px 15px 15px;}
+.styleSwitcher {background:rgba(0, 0, 0, 0.5); position:fixed; top:200px; width:170px;left:-170px;z-index:9999}' +
+.switcher.dark{background:#555;}
+.styleSwitcher ul li{display:inline-block;}
+.styleSwitcher ul {display:block; padding:0; margin:0}
+.styleSwitcher ul.switcher li a {display:block; text-indent:-3000px; overflow:hidden; border:none; width:20px; height:20px; margin:0 5px 5px 0;}
+.styleSwitcher h1 {padding:0 0 6px 0; line-height:44px;font-size:14px;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; text-transform:uppercase; color:#eee;border:none; margin:0; text-align:left;}
+.styleSwitcher h1:after {content:none;}
+.styleSwitcher #showHideSwitcher{outline:none; width:50px; height:50px; position:absolute; right:-50px; background:rgba(0, 0, 0, 0.5); top:0; font-size:24px; text-align:center; line-height:50px; color:#eee;}
+.styleSwitcher #showHideSwitcher:hover i {color:#fff;}
+.styleSwitcher select{font-size:11px;margin:0 0 15px 15px;background:#eee; border:1px solid #ddd; width:120px;padding:4px; color:#333;}
+
+a.btnSwitcher {
+	display: block;
+	width:120px;
+	border:1px solid #eee;
+	background:#fff;
+	margin-top:10px;
+	text-transform: uppercase;
+	padding:10px;
+	color:#777;
+	text-decoration: none;
+	text-align: center;
+}
+.btnSwitcher.active, .btnSwitcher:hover {
+	border-color:#eee;
+	background:#eee;
+} 
+      /*** STYLE SWITCHER ***/

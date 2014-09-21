@@ -1,18 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    {#<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css"/>#}
-    {#<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>#}
-
     <!-- Library CSS -->
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/font-awesome-3.2.1/css/font-awesome.min.css?v=21082014">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/nivo-slider.css" media="screen">
+    <link rel="stylesheet" href="css/nivo-slider.css" media="screen">
 
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/theme.css">
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/theme-responsive.css">
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/skin/{{ site.template.id }}.css?v=27081014" id="themecss">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme-responsive.css">
+    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/skin/{{ site.template.id }}.css" id="themecss">
     <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/stylesheets/color/{{ site.template.color }}.css" id="colors">
 
     <!-- Favicons -->
@@ -24,24 +21,24 @@
     <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/respond.min.js"></script>
     <![endif]-->
     <!--[if IE]>
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/css/ie.css">
+    <link rel="stylesheet" href="css/ie.css">
     <![endif]-->
 
-    <link rel="canonical" href="http://serviceaireacondicionado.info"/>
+    <link rel="canonical" href="{{ site.url }}"/>
 {% endblock stylesheets %}
 
-{% block javascripts %}
-    {#<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>#}
-    {#<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>#}
+{% block javascripts_head %}
+    <script src="js/modernizr-2.6.2.min.js"></script>
+{% endblock javascripts_head %}
 
+{% block javascripts %}
     <!-- The Scripts -->
-    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.min.js?v=30012014"></script>
-    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/bootstrap.min.js?v=30012014"></script>
-    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.parallax.js"></script>
-    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/modernizr-2.6.2.min.js"></script>
-    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.nivo.slider.pack.js"></script>
-    <script src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.unveil.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/jquery.nivo.slider.pack.js"></script>
+    <script src="js/jquery.unveil.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -49,13 +46,13 @@
         });
     </script>
 
-    <link rel="stylesheet" href="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/css/prettyPhoto.css">
-    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.prettyPhoto.js"></script>
-    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/superfish.js"></script>
+    <link rel="stylesheet" href="css/prettyPhoto.css">
+    <script async src="js/jquery.prettyPhoto.js"></script>
+    <script async src="js/superfish.js"></script>
 
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/jquery.gmap.min.js"></script>
-    <script async src="http://d1fcfxtho6z2su.cloudfront.net/public/pixma/js/custom.js?v=21082014-1975"></script>
+    <script async src="js/jquery.gmap.min.js"></script>
+    <script async src="js/custom.js"></script>
 
 
     {#<script type="text/javascript">#}
