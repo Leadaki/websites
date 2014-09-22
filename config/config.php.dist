@@ -6,17 +6,24 @@
 $config['app']['website_id'] = '';
 
 /**
+ * Website base url in server
+ */
+$config['app']['base_url'] = '';
+
+/**
  * Template id to apply
+ * Available: apparel|basic|modern|motors|pixma
  */
 $config['template']['id'] = 'modern';
 
 /**
  * Template color
+ * Available: blue|brown|golden|gray|green|magenta|orange|purple|red|teal
  */
 $config['template']['color'] = 'red';
 
 /**
- * Folder to sve cache
+ * Folder to save cache
  */
 $config['folders']['cache'] = __DIR__ . '/../cache';
 
