@@ -29,10 +29,12 @@ $routerCachePath = sprintf('%s/%s', $config['folders']['cache'], 'router.cache')
 $routerFactory = new RouterFactory();
 $router = $routerFactory->newInstance();
 
-if (file_exists($routerCachePath)) {
+if (file_exists($routerCachePath) && !$config['app']['debug']) {
     $router->setRoutes(unserialize(file_get_contents($routerCachePath)));
 } else {
-    $router->attach(null, $config['app']['base_url'], function ($router) {
+    $base_path = parse_url($config['app']['base_url'], PHP_URL_PATH);
+
+    $router->attach(null, $base_path, function ($router) {
         // -- Set Defaults
         $router
             ->addServer(array(
@@ -78,8 +80,6 @@ if (file_exists($routerCachePath)) {
     // -- Save cache
     file_put_contents($routerCachePath, serialize($router->getRoutes()));
 }
-
-
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
