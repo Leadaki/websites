@@ -1,0 +1,29 @@
+{% if 2 < (site.images | length)  %}
+<div class="content" id="image_gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 com-sm-12 col-xs-12">
+                <h3 class="title" data-name="products.title">Galería de imagenes</h3>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 portfolio-wrap">
+                <div class="row">
+                    <div class="portfolio">
+                        {% for item in site.images %}
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                            <div class="portfolio-item">
+                                {# TODO: Method to generate images #}
+                                <a href="${image.toImage('q_95','jpg')}" rel="prettyPhoto[pp_gal]" ><img data-src="${image.toImage('w_253,h_191,c_fill,q_90','jpg')}" width="253" height="191"/></a>
+                                *{<img src="${IMG_BASE_PATH +'w_253,h_191,c_pad,q_90/'+image+'.jpg'}" />}*
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </div>
+</div>
+{% endif %}
