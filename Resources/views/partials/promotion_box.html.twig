@@ -1,17 +1,17 @@
-{% if site.products is not empty %}
+{% if site.promotions is not empty %}
 {# TODO: Verify if has promotions #}
 <div class="content">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 com-sm-12 col-xs-12">
                 <h3 class="title">Promociones</h3>
-                <p>{{ 'Mirá estas promociones que tenemos en  #{site.title}.' }}</p>
+                <p>{{ "Mirá estas promociones que tenemos en  #{site.title}." }}</p>
             </div>
             <div class="clearfix"></div>
             <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 portfolio-wrap">
                 <div class="row">
                     <div class="portfolio">
-                        {% for item in site.products %}
+                        {% for item in site.promotions %}
                         {% if 'PROMOTION' == item.type %}
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
                             <div class="portfolio-item">
