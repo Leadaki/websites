@@ -1,88 +1,8 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-    <!-- Main Content start-->
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="posts-block col-lg-8 col-md-8 col-sm-7 col-xs-12">
-                    <!-- Recent work start-->
-                    <div class="recentwork_wrapper">
-                        <!-- Slider Start-->
-                        <div class="post-image">
-                            <!-- Slider Start-->
-                            <div class="slider-wrapper theme-default">
-                                <div id="nivoslider" class="nivoSlider">
-                                    {% for item in site.products %}
-                                        {% if item.images is not empty %}
-                                            <a href="#">
-                                                <img
-                                                        src="{{ item.images[0].small }}"
-                                                        title="<h3 class='title'>{{ item.title }}</h3><div class='subtitle'>{{ item.subtitle }}</div>" alt="{{ item.title }}"
-                                                        data-transition="slideInLeft">
-                                            </a>
-                                        {% endif %}
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <!-- Slider End-->
-                        </div>
-                    </div>
-                    <!-- Recent work end-->
-                </div>
-                <!-- Left Section End -->
-                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12" id="contact-form">
-                    <div class="contact-form">
-                        <h3 class="title">
-                            Solicitar presupuesto</h3>
-                        <!-- <p>
-    Dejanos tu consulta y te responderemos a la brevedad.</p> -->
-                        <form method="post" class="reply" id="contact">
-                            <fieldset>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <!-- <label>Nombre: <span>*</span></label> -->
-                                        <input class="form-control" id="name" name="name" type="text" value=""
-                                               required placeholder="Nombre">
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <!-- <label>Teléfono: <span>*</span></label> -->
-                                        <input class="form-control" type="tel" id="phone" name="phone" value=""
-                                               required placeholder="Teléfono">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <!-- <label>Email: <span>*</span></label> -->
-                                        <input class="form-control" id="email" name="email" type="email" value=""
-                                               required placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <!-- <label>
-    Quiero solicitar presupuesto para: <span>*</span></label> -->
-                                        <textarea class="form-control" id="text" name="message" style="min-height: 95px;" rows="3" cols="40" required placeholder="Quiero solicitar presupuesto para..."></textarea>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <div class="actions">
-                                <button class="btn-normal btn-color submit bottom-pad" type="submit">
-                                    Solicitar Presupuesto Gratis</button>
-                            </div>
-                            <div class="success alert-success alert" style="display: none">Tu mensaje se envió correctamente</div>
-                            <div class="error alert-error alert" style="display: none">E-mail must be valid and message must be longer
-                                than 100 characters.</div>
-                            <div class="clearfix"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="divider"></div>
 
+    {#{% include('partials/slider_full_width_box.html.twig') %}#}
     {% include('partials/about_us_box.html.twig') %}
     {% include('partials/promotion_box.html.twig') %}
     {% include('partials/image_gallery_box.html.twig') %}
