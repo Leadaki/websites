@@ -1,0 +1,131 @@
+<!-- Slider Start-->
+<div class="sliderContainer">
+    <div class="fullwidthbanner-container">
+        <div class="fullwidthbanner rslider">
+            <ul>
+                <!-- THE FIRST SLIDE -->
+                {% if site.images is empty %}
+                    {% set site.images = ['slider-bg-1_liwlgs'] %}
+                {% endif %}
+
+                {% for item in site.images %}
+                <li data-delay="10000" data-masterspeed="300" data-transition="fade">
+                    <div class="slotholder">
+                        {# TODO: Method to generate image url #}
+                        <img src="${image.toImage('q_90,w_1200','jpg')}" data-fullwidthcentering="on">
+                    </div>
+                    <div class="caption modern_big_bluebg h1 lft tp-caption start"
+                         data-x="0"
+                         data-y="350"
+                         data-speed="700"
+                         data-endspeed="800"
+                         data-start="1000"
+                         data-easing="easeOutQuint"
+                         data-endeasing="easeOutQuint">
+                        <h3>{{ site.title }}</h3>
+                    </div>
+
+                    <div class="visible-md visible-lg">
+                        <div class=" caption lfl "
+                             data-x="790"
+                             data-y="30"
+                             data-speed="300"
+                             data-start="1400"
+                             data-easing="easeOutExpo">
+                            <div class="contact-form" style="width: 360px">
+                                <h3 class="title">Solicitar presupuesto</h3>
+                                <!-- <p>Dejanos tu consulta y te responderemos a la brevedad.</p> -->
+                                <form method="post" class="reply" id="contact">
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <!-- <label>Nombre: <span>*</span></label> -->
+                                                <input class="form-control" id="name" name="name" type="text" value=""
+                                                       required placeholder="Nombre">
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <!-- <label>Teléfono: <span>*</span></label> -->
+                                                <input class="form-control" type="tel" id="phone" name="phone" value=""
+                                                       required placeholder="Teléfono">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <!-- <label>Email: <span>*</span></label> -->
+                                                <input class="form-control" id="email" name="email" type="email" value=""
+                                                       required placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <!-- <label>Quiero solicitar presupuesto para: <span>*</span></label> -->
+                                                <textarea class="form-control" id="text" name="message" style="min-height: 95px;" rows="3" cols="40" required placeholder="Quiero solicitar presupuesto para..."></textarea>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div class="actions">
+                                        <button class="btn-normal btn-color submit bottom-pad" type="submit">Solicitar Presupuesto Gratis</button>
+                                    </div>
+                                    <div class="success alert-success alert" style="display: none">Tu mensaje se envió correctamente</div>
+                                    <div class="error alert-error alert" style="display: none">E-mail must be valid and message must be longer
+                                                                                               than 100 characters.</div>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Slider End-->
+<!-- Slogan Start-->
+<div class="slogan bottom-pad-small">
+    <div class="container">
+        <div class="row">
+            <div class="slogan-content">
+                <div class="col-lg-9 col-md-9">
+                    <h2 class="slogan-title"  id="username" data-type="text" data-pk="1" data-url="/website/editInPlaceField" data-title="Enter username">{{ site.subtitle }}</h2>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="get-started">
+                        <a data-toggle="modal" href="#contactModal" class="btn btn-special btn-color pull-right">Contactanos ahora!</a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Slogan End-->
+{% if 3 <= (site.benefits | length) %}
+<!-- Main Content start-->
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            {% for item in site.benefits[:3] %}
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="content-box big ch-item bottom-pad-small">
+                    <div class="ch-info-wrap">
+                        <div class="ch-info">
+                            <div class="ch-info-front ch-img-1">
+                                <i class="icon-certificate" style="width: 24px; text-align: center;"></i>
+                            </div>
+                            <div class="ch-info-back">
+                                <i class="icon-certificate" style="width: 24px; text-align: center;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box-info">
+                        <h3>{{ item }}</h3>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Main Content end-->
+{% endif %}

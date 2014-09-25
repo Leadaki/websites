@@ -1,0 +1,137 @@
+<!-- Slider Start-->
+<div class="sliderContainer">
+    <div class="fullwidthbanner-container">
+        <div class="fullwidthbanner rslider">
+            <ul>
+                <!-- THE FIRST SLIDE -->
+                {% set images = site.images is empty ? ['slider-bg-1_liwlgs'] : site.images %}
+
+                {% for item in images %}
+
+                <li data-delay="10000" data-masterspeed="300" data-transition="fade">
+                    <div class="slotholder">
+                        {# TODO: Method to make image #}
+                        <img src="${image.toImage('q_90,w_1200','jpg')}" data-fullwidthcentering="on">
+                    </div>
+                    <div class="caption modern_big_bluebg h1 lft tp-caption start"
+                         data-x="40"
+                         data-y="60"
+                         data-speed="700"
+                         data-endspeed="800"
+                         data-start="1000"
+                         data-easing="easeOutQuint"
+                         data-endeasing="easeOutQuint">
+                        <h3>{{ site.title }}</h3>
+                    </div>
+                    {% if site.subtitle is not empty %}
+                    <div class="caption modern_big_bluebg list_slide lfb tp-caption start" style="white-space: normal;"
+                         data-easing="easeOutExpo"
+                         data-start="1000"
+                         data-speed="900"
+                         data-y="130"
+                         data-x="40">
+
+                        <h3 data-name="index.subtitle">{{ site.subtitle }}</h3>
+                    </div>
+                    {% endif %}
+                    <div class="visible-md visible-lg">
+
+
+                        <div class=" caption lfl "
+                             data-x="680"
+                             data-y="60"
+                             data-speed="300"
+                             data-start="1400"
+                             data-easing="easeOutExpo" style="padding: 15px;background-color: rgba(78, 91, 108, 0.5); border-radius: 10px;">
+
+
+                            <h3 class="title">Solicitar Presupuesto</h3>
+                            <form method="post" class="reply" id="contact" role="form">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input class="form-control" id="name" name="name" type="text" value="" placeholder="Nombre" required>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input class="form-control" type="tel" id="phone" name="phone" value="" placeholder="Teléfono" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <input class="form-control" id="email" name="email" type="email" value="" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <textarea class="form-control" id="text" name="message" style="min-height: 95px;" rows="3" cols="40"
+                                                      placeholder="Quiero solicitar un presupuesto para..." required></textarea>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div style="text-align: center;">
+                                    <button class="btn-normal btn-color submit  bottom-pad" type="submit" style="margin-left: 3.5%; margin-bottom: 3.5%;">Solicitar Presupuesto Gratis</button>
+                                </div>
+                                <div class="success alert-success alert" style="display:none">Tu mensaje se envió correctamente</div>
+                                <div class="error alert-error alert" style="display:none">E-mail must be valid and message must be longer than 100 characters.</div>
+                                <div class="clearfix">
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Slider End-->
+<!-- Slogan Start-->
+<div class="slogan bottom-pad-small">
+    <div class="container">
+        <div class="row">
+            <div class="slogan-content">
+                <div class="col-lg-9 col-md-9">
+                    <h2 class="slogan-title"  id="username" data-type="text" data-pk="1" data-url="/website/editInPlaceField" data-title="Enter username">{{ site.subtitle }}</h2>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="get-started">
+                        <a data-toggle="modal" href="#contactModal" class="btn btn-special btn-color pull-right">Contactanos ahora!</a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Slogan End-->
+{% if 3 <= (site.benefits | length) %}
+<!-- Main Content start-->
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            {% for item in site.benefits[:3] %}
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="content-box big ch-item bottom-pad-small">
+                    <div class="ch-info-wrap">
+                        <div class="ch-info">
+                            <div class="ch-info-front ch-img-1">
+                                <i class="icon-certificate" style="width: 24px; text-align: center;"></i>
+                            </div>
+                            <div class="ch-info-back">
+                                <i class="icon-certificate" style="width: 24px; text-align: center;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box-info">
+                        <h3>{{ item }}</h3>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Main Content end-->
+{% endif %}
