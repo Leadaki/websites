@@ -23,7 +23,7 @@ $loadSiteDataService = new LoadSiteDataService(
     )
 );
 
-$site = $loadSiteDataService->getData();
+$site = $loadSiteDataService->getSite();
 
 $routerCachePath = sprintf('%s/%s', $config['folders']['cache'], 'router.cache');
 $routerFactory = new RouterFactory();
@@ -98,9 +98,15 @@ $twig = new Twig_Environment($loader, array(
     'debug' => $config['app']['debug'],
 ));
 
+// -- Load Twig Debug Extension
+if ($config['app']['debug']) {
+    $twig->addExtension(new Twig_Extension_Debug());
+}
+
 $twig->addFunction(new Twig_SimpleFunction('url_generate', function($name, $parameters = array()) use ($router) {
     return $router->generate($name, $parameters);
 }));
+
 
 echo $twig->render($route->name . '.html.twig', array(
     'config' => $config,
