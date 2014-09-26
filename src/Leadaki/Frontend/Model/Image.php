@@ -4,12 +4,17 @@ namespace Leadaki\Frontend\Model;
 
 class Image
 {
+    /** @var string */
     private $id;
+
+    /** @var string */
     private $thumbnail;
+
+    /** @var string */
     private $url;
 
     /**
-     * @param mixed $id
+     * @param string $id
      *
      * @return $this
      */
@@ -21,7 +26,7 @@ class Image
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getId()
     {
@@ -29,7 +34,7 @@ class Image
     }
 
     /**
-     * @param mixed $thumbnail
+     * @param string $thumbnail
      *
      * @return $this
      */
@@ -41,7 +46,7 @@ class Image
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getThumbnail()
     {
@@ -49,7 +54,27 @@ class Image
     }
 
     /**
-     * @param mixed $url
+     * @param string $thumbnail
+     *
+     * @return $this
+     */
+    public function setSmall($thumbnail)
+    {
+        $this->thumbnail = $thumbnail;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSmall()
+    {
+        return $this->thumbnail;
+    }
+
+    /**
+     * @param string $url
      *
      * @return $this
      */
@@ -61,7 +86,7 @@ class Image
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getUrl()
     {
