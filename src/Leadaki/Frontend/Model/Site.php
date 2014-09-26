@@ -603,4 +603,32 @@ class Site
     {
         return $this->videos;
     }
+
+    /**
+     * @param Image  $image
+     * @param string $options
+     * @param string $extension
+     *
+     * @return string
+     */
+    public function generateImageUrl(Image $image, $options = '', $extension = 'png')
+    {
+        if (empty($options)) {
+            return $image->getUrl();
+        }
+
+        return str_replace(
+            array(
+                '#OPTIONS#',
+                '#ID#',
+                '#EXTENSION#',
+            ),
+            array(
+                $options,
+                $image->getId(),
+                $extension,
+            ),
+            $this->getImagesPath()
+        );
+    }
 } 
