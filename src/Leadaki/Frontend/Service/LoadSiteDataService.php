@@ -2,11 +2,13 @@
 
 namespace Leadaki\Frontend\Service;
 
-use Leadaki\Frontend\Model\AbstractItemInterface;
-use Leadaki\Frontend\Model\Product;
-use Leadaki\Frontend\Model\Promotion;
-use Leadaki\Frontend\Model\Service;
+use Leadaki\Frontend\Factory\ItemFactory;
+use Leadaki\Frontend\Factory\ObjectFactory;
+use Leadaki\Frontend\Model\Image;
+use Leadaki\Frontend\Model\Location;
 use Leadaki\Frontend\Model\Site;
+use Leadaki\Frontend\Model\Template;
+use Leadaki\Frontend\Util\Util;
 
 class LoadSiteDataService
 {
@@ -19,7 +21,7 @@ class LoadSiteDataService
     /** @var string */
     private $cacheName;
 
-    /** @var stirng */
+    /** @var string */
     private $cachePath;
 
     /** @var Site */
@@ -28,6 +30,10 @@ class LoadSiteDataService
     /** @var array */
     private $data;
 
+    /**
+     * @param       $url
+     * @param array $options
+     */
     public function __construct($url, $options = array())
     {
         $this->url = $url;
@@ -45,11 +51,19 @@ class LoadSiteDataService
         $this->loadSiteData();
     }
 
+    /**
+     * Load site data
+     */
     private function loadSiteData()
     {
         $this->processData($this->getRemoteData());
     }
 
+    /**
+     * Check if exist cache for request
+     *
+     * @return bool
+     */
     private function hasCache()
     {
         if (file_exists(($this->cachePath))) {
@@ -63,6 +77,9 @@ class LoadSiteDataService
         return false;
     }
 
+    /**
+     * @return mixed|null|string
+     */
     private function getRemoteData()
     {
         $response = null;
@@ -85,6 +102,9 @@ class LoadSiteDataService
         return $response;
     }
 
+    /**
+     * @param $data
+     */
     private function processData($data)
     {
         $data = json_decode($data, true);
@@ -96,16 +116,20 @@ class LoadSiteDataService
         $thisReflectionClass = new \ReflectionClass($this);
 
         foreach ($data as $key => $value) {
-            $camelCaseKey = $this->underscoreToCamelCase($key);
+            $camelCaseKey = Util::underscoreToCamelCase($key);
             if ($siteReflectionClass->hasProperty($camelCaseKey)) {
                 if (!is_array($value)) {
                     call_user_func(array($site, 'set' . ucfirst($camelCaseKey)), $value);
                 } else {
-                    if ($thisReflectionClass->hasMethod('process' . ucfirst($camelCaseKey))) {
-                        call_user_func(
-                            array($site, 'set' . ucfirst($camelCaseKey)),
-                            call_user_func(array($this, 'process' . ucfirst($camelCaseKey)), $value)
-                        );
+                    if(!Util::isAssoc($value) && !is_array(reset($value))) {
+                        call_user_func(array($site, 'set' . ucfirst($camelCaseKey)), $value);
+                    } else {
+                        if ($thisReflectionClass->hasMethod('process' . ucfirst($camelCaseKey))) {
+                            call_user_func(
+                                array($site, 'set' . ucfirst($camelCaseKey)),
+                                call_user_func(array($this, 'process' . ucfirst($camelCaseKey)), $value)
+                            );
+                        }
                     }
                 }
             }
@@ -114,73 +138,126 @@ class LoadSiteDataService
         $this->setSite($site);
     }
 
-    private function processProducts($products)
+    /**
+     *
+     */
+    private function processItems($name, $items)
     {
-        $items = array();
-        foreach ($products as $product) {
-            $item = new Product();
-            $itemReflectionClass = new \ReflectionClass($item);
-            foreach ($product as $key => $value) {
-                $camelCaseKey = $this->underscoreToCamelCase($key);
-                if (!is_array($value) && $itemReflectionClass->hasMethod('set' . ucfirst($camelCaseKey))) {
-                    call_user_func(array($item, 'set' . ucfirst($camelCaseKey)), $value);
+        $objects = array();
+        foreach ($items as $item) {
+            $object = ItemFactory::create($name);
+            if (null === $object) {
+                continue;
+            }
+            $objectReflectionClass = new \ReflectionClass($object);
+            foreach ($item as $key => $value) {
+                $camelCaseKey = Util::underscoreToCamelCase($key);
+                if (!is_array($value)) {
+                    if ($objectReflectionClass->hasMethod('set' . ucfirst($camelCaseKey))) {
+                        call_user_func(array($object, 'set' . ucfirst($camelCaseKey)), $value);
+                    }
+                } else {
+                    if ('images' === $key) {
+                        $object->setImages($this->processImages($value));
+                    }
                 }
             }
-            $items[] = $item;
+            $objects[] = $object;
         }
 
-        return $items;
-    }
-
-    public function processPromotions($promotions)
-    {
-        $items = array();
-        foreach ($promotions as $promotion) {
-            $item = new Promotion();
-            $itemReflectionClass = new \ReflectionClass($item);
-            foreach ($promotion as $key => $value) {
-                $camelCaseKey = $this->underscoreToCamelCase($key);
-                if (!is_array($value) && $itemReflectionClass->hasMethod('set' . ucfirst($camelCaseKey))) {
-                    call_user_func(array($item, 'set' . ucfirst($camelCaseKey)), $value);
-                }
-            }
-            $items[] = $item;
-        }
-
-        return $items;
-    }
-
-    public function processServices($services)
-    {
-        $items = array();
-        foreach ($services as $service) {
-            $item = new Service();
-            $itemReflectionClass = new \ReflectionClass($item);
-            foreach ($service as $key => $value) {
-                $camelCaseKey = $this->underscoreToCamelCase($key);
-                if (!is_array($value) && $itemReflectionClass->hasMethod('set' . ucfirst($camelCaseKey))) {
-                    call_user_func(array($item, 'set' . ucfirst($camelCaseKey)), $value);
-                }
-            }
-            $items[] = $item;
-        }
-
-        return $items;
+        return $objects;
     }
 
     /**
-     * @param string $in
+     * @param $items
      *
-     * @return string
+     * @return array
      */
-    public function underscoreToCamelCase($in)
+    private function processProducts($items)
     {
-        $out = explode('_', $in);
-        $out = array_map(function ($it) { return ucfirst($it); }, $out);
-        $out[0] = strtolower($out[0]);
-        $out = implode('', $out);
+        return $this->processItems('Product', $items);
+    }
 
-        return $out;
+    /**
+     * @param $items
+     *
+     * @return array
+     */
+    private function processPromotions($items)
+    {
+        return $this->processItems('Promotions', $items);
+    }
+
+    /**
+     * @param $items
+     *
+     * @return array
+     */
+    private function processServices($items)
+    {
+        return $this->processItems('Service', $items);
+    }
+
+    private function processObjects($name, $input)
+    {
+        if (empty($input) || !is_array($input)) {
+            return;
+        }
+
+        $object = ObjectFactory::create($name);
+        $objectReflectionClass = new \ReflectionClass($object);
+        foreach ($input as $key => $value) {
+            $camelCaseProperty = Util::underscoreToCamelCase($key);
+            if ($objectReflectionClass->hasMethod('set' . ucfirst($camelCaseProperty))) {
+                call_user_func(array($object, 'set' . ucfirst($camelCaseProperty)), $value);
+            }
+        }
+
+        return $object;
+    }
+
+    /**
+     * @param $input
+     *
+     * @return Location
+     */
+    private function processMainLocation($input)
+    {
+        return $this->processObjects('Location', $input);
+    }
+
+    /**
+     * @param $input
+     *
+     * @return Template
+     */
+    private function processTemplate($input)
+    {
+        return $this->processObjects('Location', $input);
+    }
+
+    /**
+     * @param array $input
+     *
+     * @return Image
+     */
+    private function processLogo(array $input)
+    {
+        return $this->processObjects('Image', $input);
+    }
+
+    /**
+     * @param array $input
+     *
+     * @return array
+     */
+    private function processImages(array $input)
+    {
+        $images = array();
+        foreach ($input as $item) {
+            $images[] = $this->processObjects('Image', $item);
+        }
+        return $images;
     }
 
     /**
