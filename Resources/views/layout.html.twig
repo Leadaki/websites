@@ -98,7 +98,7 @@
             <!-- Logo Start -->
             <div class="logo pull-left">
                 <h1>
-                    <a href="/" title="{{ site.title }}">
+                    <a href="{{ url_generate('index') }}" title="{{ site.title }}">
                     {% if site.logo is defined and site.logo is not empty %}
                         <img src="{{ site.generateImageUrl(site.logo, 'q_95,h_90', 'png') }}" alt="{{ site.title }}">
                     {% else %}
@@ -119,19 +119,19 @@
             <nav class="collapse navbar-collapse menu">
                 <ul class="nav navbar-nav sf-menu">
                     {% if site.promotions is not empty %}
-                    <li><a id="current" href="/promociones">Promociones</a></li>
+                    <li><a id="current" href="{{ url_generate('promociones') }}">Promociones</a></li>
                     {% endif %}
                     {% if site.products is not empty %}
-                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="{{ url_generate('productos') }}">Productos</a></li>
                     {% endif %}
                     {% if site.services is not empty %}
-                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="{{ url_generate('servicios') }}">Servicios</a></li>
                     {% endif %}
-                    <li><a href="/quienes-somos">Qui&eacute;nes somos</a></li>
+                    <li><a href="{{ url_generate('quienes_somos') }}">Qui&eacute;nes somos</a></li>
                     {% if site.main_location.address is not empty %}
-                    <li><a href="/ubicacion">Ubicaci&oacute;n</a></li>
+                    <li><a href="{{ url_generate('ubicacion') }}">Ubicaci&oacute;n</a></li>
                     {% endif %}
-                    <li><a href="/contactanos">Contactanos</a></li>
+                    <li><a href="{{ url_generate('contactanos') }}">Contactanos</a></li>
                 </ul>
             </nav>
             <!-- Menu End -->
