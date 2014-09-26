@@ -16,8 +16,7 @@
                                 <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}" class="portfolio-item-link">
                                     <span class="portfolio-item-hover"></span>
                                     <span class="fullscreen"><i class="icon-search"></i></span>
-                                    {# TODO: Method to generate image url #}
-                                    {# <img data-src="<?= toImage($product->images[0]->id,'w_253,h_191,c_pad,q_90','jpg') ?>" alt="{{ item.title }}" /> #}
+                                    <img data-src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ item.title }}" />
                                 </a>
                                 <div class="portfolio-item-title">
                                     <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}">{{ item.title }}</a>

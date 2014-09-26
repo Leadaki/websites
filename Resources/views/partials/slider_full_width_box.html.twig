@@ -10,8 +10,7 @@
 
                 <li data-delay="10000" data-masterspeed="300" data-transition="fade">
                     <div class="slotholder">
-                        {# TODO: Method to make image #}
-                        <img src="${image.toImage('q_90,w_1200','jpg')}" data-fullwidthcentering="on">
+                        <img src="{{ site.generateImageUrl(item, 'q_90,w_1200', 'jpg') }}" data-fullwidthcentering="on">
                     </div>
                     <div class="caption modern_big_bluebg h1 lft tp-caption start"
                          data-x="40"
