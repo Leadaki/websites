@@ -32,7 +32,11 @@ class Site
 
     /** @var string */
     private $mainDescription;
+
+    /** @var Template */
     private $template;
+
+    /** @var Location */
     private $mainLocation;
 
     /** @var array */
@@ -321,7 +325,7 @@ class Site
     }
 
     /**
-     * @param mixed $mainLocation
+     * @param Location $mainLocation
      *
      * @return $this
      */
@@ -333,7 +337,7 @@ class Site
     }
 
     /**
-     * @return mixed
+     * @return Location
      */
     public function getMainLocation()
     {
@@ -501,7 +505,7 @@ class Site
     }
 
     /**
-     * @param mixed $template
+     * @param Template $template
      *
      * @return $this
      */
@@ -513,7 +517,7 @@ class Site
     }
 
     /**
-     * @return mixed
+     * @return Template
      */
     public function getTemplate()
     {
