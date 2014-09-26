@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+
+    {% set breadcrumb = { 'title': 'Nuestras promociones' } %}
+    {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
+
+    {% include('partials/promotion_box.html.twig') %}
+    {% include('partials/about_us_box.html.twig') %}
+
+{% endblock main %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+
+    {% set breadcrumb = { 'title': 'Quiénes somos' } %}
+    {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
+
+    {% set aboutUsWhiteBox = true %}
+    {% set aboutUsHideTitle = true %}
+
+    {% include('partials/about_us_box.html.twig') %}
+
+    {% set hideLocationMap = true %}
+
+    {% include('partials/new_contact_us_box.html.twig') %}
+
+{% endblock main %}
