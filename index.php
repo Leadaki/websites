@@ -47,9 +47,19 @@ if (file_exists($routerCachePath) && !$config['app']['debug']) {
             ->add('index', '/')
         ;
 
+        // -- Promotions
+        $router
+            ->add('promociones', '/promociones')
+        ;
+
         // -- Products
         $router
             ->add('productos', '/productos')
+        ;
+
+        // -- Services
+        $router
+            ->add('servicios', '/servicios')
         ;
 
         // -- Product View
