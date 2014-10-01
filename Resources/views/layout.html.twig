@@ -128,7 +128,7 @@
                     <li><a href="{{ url_generate('servicios') }}">Servicios</a></li>
                     {% endif %}
                     <li><a href="{{ url_generate('quienes_somos') }}">Qui&eacute;nes somos</a></li>
-                    {% if site.main_location.address is not empty %}
+                    {% if site.mainLocation.address is not empty %}
                     <li><a href="{{ url_generate('ubicacion') }}">Ubicaci&oacute;n</a></li>
                     {% endif %}
                     <li><a href="{{ url_generate('contactanos') }}">Contactanos</a></li>
@@ -184,11 +184,11 @@
                     <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-three">
                         <h3>Contactanos</h3>
                         <ul class="contact-us">
-                            {% if site.main_location.address is defined and site.main_location.address is not empty %}
+                            {% if site.mainLocation.address is defined and site.mainLocation.address is not empty %}
                             <li>
                                 <i class="icon-map-marker"></i>
                                 <p>
-                                    {{ site.main_location.address }}
+                                    {{ site.mainLocation.address }}
                                 </p>
                             </li>
                             {% endif %}

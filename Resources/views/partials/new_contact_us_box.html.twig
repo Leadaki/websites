@@ -44,16 +44,16 @@
                             id="maps"
                             class="google-maps"
                             data-company="{{ site.title | escape('html')  }}"
-                            data-address="{{ site.main_location.google_maps_address is not empty ? site.main_location.google_maps_address : site.main_location.address }}"
-                            data-address-description="{{ site.main_location.address | escape('html') }}">
+                            data-address="{{ site.mainLocation.google_maps_address is not empty ? site.mainLocation.google_maps_address : site.mainLocation.address }}"
+                            data-address-description="{{ site.mainLocation.address | escape('html') }}">
                     </div>
                     <!-- Left Section End -->
                     {##{/if}#}
                     <ul class="contact-us">
-                        {% if site.main_location.address is not empty %}
+                        {% if site.mainLocation.address is not empty %}
                             <li>
                                 <i class="icon-map-marker"></i>
-                                <p>{{ site.main_location.address }}</p>
+                                <p>{{ site.mainLocation.address }}</p>
                             </li>
                         {% endif %}
                         {% if site.phone is not empty %}
