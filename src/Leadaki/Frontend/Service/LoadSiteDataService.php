@@ -233,7 +233,7 @@ class LoadSiteDataService
      */
     private function processTemplate($input)
     {
-        return $this->processObjects('Location', $input);
+        return $this->processObjects('Template', $input);
     }
 
     /**
