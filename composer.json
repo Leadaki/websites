@@ -1,5 +1,17 @@
 {
+    "name": "Leadaki Frontend",
+    "type": "project",
+    "description": "Leadaki Frontend display data from API",
+    "keywords": ["frontend", "api"],
+    "homepage": "http://leadaki.com",
+    "authors": [
+        {
+            "name": "Jesús Urrutia",
+            "email": "jesus.urrutia@gmail.com"
+        }
+    ],
     "require": {
+        "php": ">=5.3.0",
         "twig/twig": "v1.16.0",
         "aura/router": "2.0.0"
     },
