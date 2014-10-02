@@ -40,9 +40,12 @@ $templateService = new TwigTemplateService(array(
 $templateService->addGlobal('config', $config);
 $templateService->addGlobal('site', $site);
 
-$templateService->addFunction('url_generate', function($name, $parameters = array()) use ($routerService) {
-    return $routerService->generate($name, $parameters);
-});
+$templateService->addFunction(
+    'url_generate',
+    function($name, $parameters = array()) use ($routerService) {
+        return $routerService->generate($name, $parameters);
+    }
+);
 
 if ($config['app']['debug']) {
     $templateService->addExtension(new Twig_Extension_Debug());
