@@ -2,7 +2,14 @@
 
 {% block main %}
 
-    {#{% include('partials/slider_full_width_box.html.twig') %}#}
+    {% if 'pixma' == site.template.id %}
+        {% include('partials/slider_full_width_box.html.twig') %}
+    {% elseif 'motors' == site.template.id %}
+        {% include('partials/new_slider_full_width_box.html.twig') %}
+    {% else %}
+        {% include('partials/slider_with_form_box.html.twig') %}
+    {% endif %}
+
     {% include('partials/about_us_box.html.twig') %}
     {% include('partials/promotion_box.html.twig') %}
     {% include('partials/image_gallery_box.html.twig') %}
