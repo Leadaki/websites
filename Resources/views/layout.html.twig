@@ -32,6 +32,30 @@
     <link rel="stylesheet" href="{{ asset('/css/ie.css') }}">
     <![endif]-->
 
+    <style>
+
+        .btn-danger{
+            background-color:#F7B647;
+        }
+        .btn-danger:hover{
+            background-color:#FC810B;
+        }
+
+        .caption .dblue {
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            color: inherit;
+        }
+        .logo img{
+            height: {{ site.logo_header_height is defined ? site.logo_header_height : '60px' }};
+        }
+
+        .sliderContainer {
+            max-width:1280px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    </style>
+
     {{ site.custom_css }}
 
     <link rel="canonical" href="{{ site.url }}">
