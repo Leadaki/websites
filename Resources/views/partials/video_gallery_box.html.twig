@@ -10,15 +10,14 @@
                 <div class="row">
                     <div class="portfolio">
                         {% for item in site.videos %}
-                        {# TODO: {if video && video.contains('youtu') #}
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
-                            <div class="portfolio-item">
-                                {# TODO: Get Youtube ID #}
-                                <a href="{{ item }}" rel="prettyPhoto[pp_gal]"><img data-src="http://img.youtube.com/vi/${video.getYoutubeVideoId()}/hqdefault.jpg"/></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        {# /if #}
+                            {% if item.isYoutube %}
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                    <div class="portfolio-item">
+                                        <a href="{{ item.url }}" rel="prettyPhoto[pp_gal]"><img data-src="http://img.youtube.com/vi/{{ item.getYoutubeId }}/hqdefault.jpg"/></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
