@@ -13,9 +13,12 @@
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
                             <div class="portfolio-item">
                                 <a href="{{ site.generateImageUrl(item, 'q_95', 'jpg') }}" rel="prettyPhoto[pp_gal]">
-                                    <img data-src="{{ site.generateImageUrl(item, 'w_253,h_191,c_fill,q_90', 'jpg') }}" width="253" height="191"/>
+                                    <img
+                                            data-src="{{ site.generateImageUrl(item, 'w_253,h_191,c_fill,q_90', 'jpg') }}"
+                                            width="253"
+                                            height="191"/>
                                 </a>
-                                <img src="{{ site.generateImageUrl(item, 'w_253,h_191,c_pad,q_90', 'jpg') }}" />
+                                {#<img src="{{ site.generateImageUrl(item, 'w_253,h_191,c_pad,q_90', 'jpg') }}" />#}
                                 <div class="clearfix"></div>
                             </div>
                         </div>
