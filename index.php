@@ -41,9 +41,16 @@ $templateService->addGlobal('config', $config);
 $templateService->addGlobal('site', $site);
 
 $templateService->addFunction(
-    'url_generate',
+    'path',
     function($name, $parameters = array()) use ($routerService) {
         return $routerService->generate($name, $parameters);
+    }
+);
+
+$templateService->addFunction(
+    'asset',
+    function($path) use ($config) {
+        return $config['app']['base_url'] . $path;
     }
 );
 
