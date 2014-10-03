@@ -54,6 +54,8 @@ $templateService->addFunction(
     }
 );
 
+$templateService->addExtension(new Twig_Extensions_Extension_Text());
+
 if ($config['app']['debug']) {
     $templateService->addExtension(new Twig_Extension_Debug());
 }
