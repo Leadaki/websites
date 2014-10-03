@@ -11,11 +11,11 @@ class ProductController extends AbstractController
 {
     public function indexAction()
     {
-        return $this->render('productos.html.twig');
+        return $this->render('products.html.twig');
     }
 
-    public function detailAction()
+    public function detailAction($slug)
     {
-        return $this->render('productos.html.twig');
+        return $this->render('product_detail.html.twig');
     }
 } 

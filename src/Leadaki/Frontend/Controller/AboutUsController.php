@@ -11,6 +11,6 @@ class AboutUsController extends AbstractController
 {
     public function indexAction()
     {
-        return $this->render('quienes_somos.html.twig');
+        return $this->render('about_us.html.twig');
     }
 } 

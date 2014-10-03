@@ -11,6 +11,6 @@ class ContactController extends AbstractController
 {
     public function indexAction()
     {
-        return $this->render('contactanos.html.twig');
+        return $this->render('contact.html.twig');
     }
 } 

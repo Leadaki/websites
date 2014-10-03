@@ -11,6 +11,6 @@ class ServiceController extends AbstractController
 {
     public function indexAction()
     {
-        return $this->render('servicio.html.twig');
+        return $this->render('services.html.twig');
     }
 } 

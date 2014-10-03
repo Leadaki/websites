@@ -11,6 +11,6 @@ class LocationController extends AbstractController
 {
     public function indexAction()
     {
-        return $this->render('ubicacion.html.twig');
+        return $this->render('location.html.twig');
     }
 } 
