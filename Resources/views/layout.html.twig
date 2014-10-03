@@ -155,7 +155,7 @@
                 <div class="row">
                     <section class="col-lg-5 col-md-5 col-xs-12 col-sm-5 footer-one">
                         <h3>Sobre nosotros</h3>
-                        <p>{{ site.main_description | raw('html') }}</p>
+                        <p>{{ site.mainDescription | striptags | truncate(300) | capitalize | raw('html') | nl2br }}</p>
                     </section>
 
                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-two">
