@@ -5,7 +5,9 @@
     {% set breadcrumb = { 'title': 'Nuestros productos' } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
 
-    {% include('partials/promotion_box.html.twig') %}
     {% include('partials/products_box.html.twig') %}
+
+    {% set hideLocationMap = true %}
+    {% include('partials/contact_us_box.html.twig') %}
 
 {% endblock main %}
