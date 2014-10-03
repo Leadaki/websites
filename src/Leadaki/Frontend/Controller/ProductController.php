@@ -16,6 +16,8 @@ class ProductController extends AbstractController
 
     public function detailAction($slug)
     {
-        return $this->render('product_detail.html.twig');
+        return $this->render('product_detail.html.twig', array(
+            'slug' => $slug,
+        ));
     }
 } 
