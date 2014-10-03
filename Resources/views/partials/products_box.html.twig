@@ -16,11 +16,13 @@
                                 <a href="{{ path('product_detail', { 'slug': item.friendlyUri }) }}" class="portfolio-item-link">
                                     <span class="portfolio-item-hover"></span>
                                     <span class="fullscreen"><i class="icon-search"></i></span>
-                                    <img data-src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ item.title }}" />
+                                    <img
+                                            data-src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}"
+                                            alt="{{ item.title }}"/>
                                 </a>
                                 <div class="portfolio-item-title">
-                                    <a href="{{ path('product_detail', { 'slug': item.friendlyUri }) }}">{{ item.title }}</a>
-                                    <p>{{ item.price }}</p>
+                                    <a href="{{ path('product_detail', { 'slug': item.friendlyUri }) }}">{{ item.title | truncate(30) }}</a>
+                                    <p>{{ item.price }}&nbsp;</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
