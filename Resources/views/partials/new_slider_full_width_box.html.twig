@@ -4,11 +4,9 @@
         <div class="fullwidthbanner rslider">
             <ul>
                 <!-- THE FIRST SLIDE -->
-                {% if site.images is empty %}
-                    {% set site.images = ['slider-bg-1_liwlgs'] %}
-                {% endif %}
+                {% set images = site.images is empty ? ['slider-bg-1_liwlgs'] : site.images %}
 
-                {% for item in site.images %}
+                {% for item in images %}
                 <li data-delay="10000" data-masterspeed="300" data-transition="fade">
                     <div class="slotholder">
                         <img src="{{ site.generateImageUrl(item, 'q_90,w_1200', 'jpg') }}" data-fullwidthcentering="on">
@@ -86,11 +84,21 @@
         <div class="row">
             <div class="slogan-content">
                 <div class="col-lg-9 col-md-9">
-                    <h2 class="slogan-title"  id="username" data-type="text" data-pk="1" data-url="/website/editInPlaceField" data-title="Enter username">{{ site.subtitle }}</h2>
+                    <h2
+                            class="slogan-title"
+                            id="username"
+                            data-type="text"
+                            data-pk="1"
+                            data-url="/website/editInPlaceField"
+                            data-title="Enter username">
+                        {{ site.subtitle }}
+                    </h2>
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="get-started">
-                        <a data-toggle="modal" href="#contactModal" class="btn btn-special btn-color pull-right">Contactanos ahora!</a>
+                        <a data-toggle="modal" href="#contactModal" class="btn btn-special btn-color pull-right">
+                            Contactanos ahora!
+                        </a>
                     </div>
                 </div>
                 <div class="clearfix"></div>
