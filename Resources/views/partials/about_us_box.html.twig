@@ -1,12 +1,13 @@
 <!-- <div class="divider"></div> -->
 
-<div class="recentworks">
+<div class="{{ aboutUsWhiteBox ? 'content' : 'recentworks' }}">
     <div class="container">
         <div class="row">
             <div class="posts-block col-lg-8 col-md-8 col-sm-6 col-xs-12">
                 <article class="about-us">
+                    {% if not aboutUsHideTitle %}
                     <h3 class="title" id="quienes-somos">Qui&eacute;nes somos</h3>
-
+                    {% endif %}
                     <div class="post-content">
                         {{ site.mainDescription | raw('html') }}
                     </div>

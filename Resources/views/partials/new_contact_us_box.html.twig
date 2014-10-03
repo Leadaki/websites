@@ -1,12 +1,12 @@
-<div class="#{if contactUsWhiteBox} content #{/if}#{else} recentworks #{/else}">
+<div class="{{ contactUsWhiteBox ? 'content' : 'recentworks' }}">
     <div class="container">
         <div class="row">
 
             <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="contact-form">
                 <div class="contact-form">
-                    {# TODO: #{if !contactUsHideTitle} #}
+                    {% if not contactUsHideTitle %}
                     <h3 class="title" id="contactanos">Solicitar presupuesto</h3>
-                    {##{/if}#}
+                    {% endif %}
                     <p>Dejanos tu consulta y te responderemos a la brevedad.</p>
                     <form method="post" class="reply" id="contact">
                         <fieldset>
@@ -38,7 +38,7 @@
             <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
                 <div class="address widget">
                     <h3 class="title">Datos de contacto</h3>
-                    {# TODO: #{if !hideLocationMap && website.address} #}
+                    {% if not hideLocationMap and site.mainLocation.address is not empty %}
                     <div
                             style="height:200px;margin-bottom:20px;color:#333;"
                             id="maps"
@@ -48,7 +48,7 @@
                             data-address-description="{{ site.mainLocation.address | escape('html') }}">
                     </div>
                     <!-- Left Section End -->
-                    {##{/if}#}
+                    {% endif %}
                     <ul class="contact-us">
                         {% if site.mainLocation.address is not empty %}
                             <li>
