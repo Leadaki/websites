@@ -8,16 +8,14 @@
                     <!-- Slider Start-->
                     <div class="post-image">
                         <!-- Slider Start-->
-                        <div class="${website.images?.size>0?'slider-wrapper':''} theme-default">
+                        <div class="{{ site.images is not empty ? 'slider-wrapper' : '' }} theme-default">
                             <div id="nivoslider" class="nivoSlider">
                                 {% for item in site.images %}
                                 <a href="#">
-                                    {# TODO: Method to generate image url #}
                                     <img
-                                            src="<?=toImage($websiteImage->id,'w_838,h_550,c_pad,q_90','jpg')?>"
-                                            title="<h3 class='title'>{{ site.title }}</h3>
-                                            <div class='subtitle'>${website.subtitle}</div>"
-                                            alt="{{ site.subtitle }}"
+                                            src="{{ site.generateImageUrl(item, 'w_838,h_550,c_pad,q_90', 'jpg') }}"
+                                            title="<h3 class='title'>{{ site.title }}</h3><div class='subtitle'>{{ site.subtitle }}</div>"
+                                            alt="{{ site.title }}"
                                             data-transition="slideInLeft">
                                 </a>
                                 {% endfor %}
