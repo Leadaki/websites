@@ -5,6 +5,7 @@ namespace Leadaki\Frontend\Factory;
 use Leadaki\Frontend\Model\Image;
 use Leadaki\Frontend\Model\Location;
 use Leadaki\Frontend\Model\Template;
+use Leadaki\Frontend\Model\Video;
 
 /**
  * Class ObjectFactory
@@ -16,7 +17,7 @@ class ObjectFactory
     /**
      * @param $name
      *
-     * @return Image|Location|Template
+     * @return Image|Location|Template|Video
      * @throws \InvalidArgumentException
      */
     public static function create($name)
@@ -28,6 +29,8 @@ class ObjectFactory
                 return new Image();
             case 'Template':
                 return new Template();
+            case 'Video':
+                return new Video();
             default:
                 throw new \InvalidArgumentException('Class not exists');
         }
