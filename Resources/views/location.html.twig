@@ -5,4 +5,21 @@
     {% set breadcrumb = { 'title': 'Ubicación' } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
 
+    <div class="content">
+        <div class="container" style="padding-bottom: 60px;">
+            <div
+                id="maps"
+                class="google-maps"
+                data-company="{{ site.title }}"
+                data-address="{{ site.mainLocation.google_maps_address is not empty ? site.mainLocation.google_maps_address : site.mainLocation.address }}"
+                data-address-description="{{ site.mainLocation.address }}">
+            </div>
+        </div>
+        <!-- Our Clients End -->
+    </div>
+
+    {% set hideLocationMap = true %}
+
+    {% include('partials/contact_us_box.html.twig') %}
+
 {% endblock main %}
