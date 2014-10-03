@@ -2,23 +2,23 @@
 
 {% block stylesheets %}
     <!-- Library CSS -->
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{  asset('/css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/font-awesome/css/font-awesome.min.css') }}">
 
-    <link rel="stylesheet" href="css/nivo-slider.css" media="screen">
+    <link rel="stylesheet" href="{{ asset('/css/nivo-slider.css') }}" media="screen">
 
     {% if site.template.id in ['pixma', 'motors'] %}
-    <link rel="stylesheet" href="css/revolution-slider.css" media="screen">
+    <link rel="stylesheet" href="{{ asset('/css/revolution-slider.css') }}" media="screen">
     {% endif %}
 
     {% if 'pixma' == site.template.id %}
-    <link rel="stylesheet" href="css/colors/{{ site.template.color  }}.css" id="colors">
+    <link rel="stylesheet" href="{{ asset("/css/colors/#{ site.template.color }.css") }}" id="colors">
     {% endif %}
 
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/theme-responsive.css">
-    <link rel="stylesheet" href="css/skin/{{ site.template.id }}.css" id="themecss">
-    <link rel="stylesheet" href="css/colors/{{ site.template.color }}.css" id="colors">
+    <link rel="stylesheet" href="{{ asset('/css/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/theme-responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset("/css/skin/#{ site.template.id }.css") }}" id="themecss">
+    <link rel="stylesheet" href="{{ asset("/css/colors/#{ site.template.color }.css") }}" id="colors">
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ site.generateImageUrl(site.logo, 'w_16,h_16,c_pad', 'ico') }}">
@@ -26,10 +26,10 @@
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="{{ asset('/js/respond.min.js') }}"></script>
     <![endif]-->
     <!--[if IE]>
-    <link rel="stylesheet" href="css/ie.css">
+    <link rel="stylesheet" href="{{ asset('/css/ie.css') }}">
     <![endif]-->
 
     {{ site.custom_css }}
@@ -38,17 +38,17 @@
 {% endblock stylesheets %}
 
 {% block javascripts_head %}
-    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="{{ asset('/js/modernizr-2.6.2.min.js') }}"></script>
 {% endblock javascripts_head %}
 
 {% block javascripts %}
     <!-- The Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.parallax.js"></script>
-    <script src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/jquery.nivo.slider.pack.js"></script>
-    <script src="js/jquery.unveil.js"></script>
+    <script src="{{ asset('/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/js/jquery.parallax.js') }}"></script>
+    <script src="{{ asset('/js/revolution-slider/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script src="{{ asset('/js/jquery.nivo.slider.pack.js') }}"></script>
+    <script src="{{ asset('/js/jquery.unveil.js') }}"></script>
 
     <script>
         $(document).ready(function() {
@@ -56,13 +56,13 @@
         });
     </script>
 
-    <link rel="stylesheet" href="css/prettyPhoto/prettyPhoto.css">
-    <script async src="js/jquery.prettyPhoto.js"></script>
-    <script async src="js/superfish.js"></script>
+    <link rel="stylesheet" href="{{ asset('/css/prettyPhoto/prettyPhoto.css') }}">
+    <script async src="{{ asset('/js/jquery.prettyPhoto.js') }}"></script>
+    <script async src="{{ asset('/js/superfish.js') }}"></script>
 
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script async src="js/jquery.gmap.min.js"></script>
-    <script async src="js/custom.js"></script>
+    <script async src="{{ asset('/js/jquery.gmap.min.js') }}"></script>
+    <script async src="{{ asset('/js/custom.js') }}"></script>
 
 
     {#<script type="text/javascript">#}
@@ -98,7 +98,7 @@
             <!-- Logo Start -->
             <div class="logo pull-left">
                 <h1>
-                    <a href="{{ url_generate('index') }}" title="{{ site.title }}">
+                    <a href="{{ path('index') }}" title="{{ site.title }}">
                     {% if site.logo is defined and site.logo is not empty %}
                         <img src="{{ site.generateImageUrl(site.logo, 'q_95,h_90', 'png') }}" alt="{{ site.title }}">
                     {% else %}
@@ -119,19 +119,19 @@
             <nav class="collapse navbar-collapse menu">
                 <ul class="nav navbar-nav sf-menu">
                     {% if site.promotions is not empty %}
-                    <li><a id="current" href="{{ url_generate('promociones') }}">Promociones</a></li>
+                    <li><a id="current" href="{{ path('promotions') }}">Promociones</a></li>
                     {% endif %}
                     {% if site.products is not empty %}
-                    <li><a href="{{ url_generate('productos') }}">Productos</a></li>
+                    <li><a href="{{ path('products') }}">Productos</a></li>
                     {% endif %}
                     {% if site.services is not empty %}
-                    <li><a href="{{ url_generate('servicios') }}">Servicios</a></li>
+                    <li><a href="{{ path('services') }}">Servicios</a></li>
                     {% endif %}
-                    <li><a href="{{ url_generate('quienes_somos') }}">Qui&eacute;nes somos</a></li>
+                    <li><a href="{{ path('about_us') }}">Qui&eacute;nes somos</a></li>
                     {% if site.mainLocation.address is not empty %}
-                    <li><a href="{{ url_generate('ubicacion') }}">Ubicaci&oacute;n</a></li>
+                    <li><a href="{{ path('location') }}">Ubicaci&oacute;n</a></li>
                     {% endif %}
-                    <li><a href="{{ url_generate('contactanos') }}">Contactanos</a></li>
+                    <li><a href="{{ path('contact') }}">Contactanos</a></li>
                 </ul>
             </nav>
             <!-- Menu End -->

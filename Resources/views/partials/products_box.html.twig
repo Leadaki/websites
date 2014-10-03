@@ -13,13 +13,13 @@
                         {% for item in site.products %}
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
                             <div class="portfolio-item">
-                                <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}" class="portfolio-item-link">
+                                <a href="{{ path('product_detail', { 'slug': item.friendlyUri }) }}" class="portfolio-item-link">
                                     <span class="portfolio-item-hover"></span>
                                     <span class="fullscreen"><i class="icon-search"></i></span>
                                     <img data-src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ item.title }}" />
                                 </a>
                                 <div class="portfolio-item-title">
-                                    <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}">{{ item.title }}</a>
+                                    <a href="{{ path('product_detail', { 'slug': item.friendlyUri }) }}">{{ item.title }}</a>
                                     <p>{{ item.price }}</p>
                                 </div>
                                 <div class="clearfix"></div>

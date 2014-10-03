@@ -15,14 +15,14 @@
                         {% if 'PROMOTION' == item.type %}
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
                             <div class="portfolio-item">
-                                <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}" class="portfolio-item-link">
+                                <a href="{{ path('product_detail', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}" class="portfolio-item-link">
                                     <span class="portfolio-item-hover"></span>
                                     <span class="fullscreen"><i class="icon-search"></i></span>
                                     {# TODO: Method generate image #}
                                     <img src="${IMG_BASE_PATH +'w_253,h_191,c_pad,q_90/'+product.cloudinary_id+'.jpg'}" alt="{{ item.title }}" />
                                 </a>
                                 <div class="portfolio-item-title">
-                                    <a href="{{ url_generate('productos_detalle', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}">{{ item.title[:30] }}</a>
+                                    <a href="{{ path('product_detail', { 'friendly_name': item.friendly_uri, 'product_id': item.website_id }) }}">{{ item.title[:30] }}</a>
                                     <p>{{ item.price }}&nbsp;</p>
                                 </div>
                                 <div class="clearfix"></div>
