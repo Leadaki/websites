@@ -631,4 +631,23 @@ class Site
             $this->getImagesPath()
         );
     }
+
+    /**
+     * @param $slug
+     *
+     * @return Product
+     */
+    public function getProductBySlug($slug)
+    {
+        $product = null;
+
+        foreach ($this->products as $item) {
+            if ($item->getFriendlyUri() == $slug) {
+                $product = $item;
+                break;
+            }
+        }
+
+        return $product;
+    }
 } 
