@@ -1,72 +1,111 @@
-/* Brown #c69c6d */
-.btn:focus, .subscribe-btn, .progress .progress-bar, .accordionMod .panel-heading .current, #current:after, .tp-leftarrow.default:hover,.tp-rightarrow.default:hover, .nivo-prevNav:hover, .nivo-nextNav:hover, .contact-box:hover, #options li a.selected, .ch-info .ch-info-back {
-    background: #c69c6d;
+/*--
+    THEME BASIC
+--------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: #c69c6d;
+}
+.theme-basic .address {
+  background-color: #9a7041;
+}
+/* Borders */
+.theme-basic .portfolio-item,
+.theme-basic .nav > li > a:hover,
+.theme-basic .nav > li > a:focus,
+.theme-basic .nav > li > #current {
+  border-color: #9a7041;
 }
 
 
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, .pager li > a:hover, .pager li > a:focus, .navbar-toggle i, .cn-wrapper li a, .cn-wrapper:after {
-    background-color: #c69c6d;
-    color: #fff;
+/*--
+    THEME MODERN
+--------------------------------------*/
+/* Buttons */
+.theme-modern .btn-color,
+.theme-modern .subscribe-btn {
+  background-color: #c69c6d;
+}
+.theme-modern .btn-color:hover,
+.theme-modern .subscribe-btn:hover {
+  background-color: #9a7041;
 }
 
-#options li a.selected {
-	border: 1px solid #c69c6d;
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: #9a7041;
 }
 
-.ie8 .btn-color, .ie9 .btn-color {
-	background: #c69c6d !important;
+/* Borders */
+.theme-modern .portfolio-item,
+.theme-modern .nav > li > a:hover,
+.theme-modern .nav > li > a:focus,
+.theme-modern .nav > li > #current {
+  border-color: #9a7041;
 }
 
-.ie8 .btn-color:hover, .ie9 .btn-color:hover {
-	background: #9a7041 !important;
-}
-
-.btn-color:hover, .subscribe-btn:hover {
-	background: -webkit-linear-gradient(#c69c6d,#9a7041);
-	background: -moz-linear-gradient(#c69c6d,#9a7041);
-	background: -o-linear-gradient(#c69c6d,#9a7041);
-	background: -ms-linear-gradient(#c69c6d,#9a7041);
-	background: linear-gradient(#c69c6d,#9a7041);
-}
-
-.btn-color, .subscribe-btn {
-	background: -webkit-linear-gradient(#9a7041,#c69c6d);
-	background: -moz-linear-gradient(#9a7041,#c69c6d);
-	background: -o-linear-gradient(#9a7041,#c69c6d);
-	background: -ms-linear-gradient(#9a7041,#c69c6d);
-	background: linear-gradient(#9a7041,#c69c6d);
-	border: 1px solid #867058;
-
-	-webkit-box-shadow: inset 0 1px 1px 0 #beab95, 0 2px 0 -1px rgba(0,0,0,0.2);
-	box-shadow: inset 0 1px 1px 0 #beab95, 0 2px 0 -1px rgba(0,0,0,0.2);
-	cursor: pointer;
-}
-
-#current,.menu ul li a:hover,.menu ul>li:hover>a {
-    border-bottom: 3px solid #c69c6d;
-}
-
-ul.why li:before {
-    background: #c69c6d;
-}
-
-.menu ul ul {
-    border-top: 3px solid #c69c6d !important;
-}
-
-#horizontal-tabs ul.tabs li.current {
-    border-top: 2px solid #c69c6d;
-}
-
-#vertical-tabs ul.tabs li.current {
-    border-left: 2px solid #c69c6d;
-}
-
-.author-content, div.content-box.big, #cn-tabs .service, .comment-des, .contact-box {
-	border-bottom-color:#c69c6d;
+/* Modal */
+.theme-modern .modal-content {
+  background-color: #9a7041;
 }
 
 
-a, .post-item h4 a:hover, .cn-wrapper li a:hover, .cn-wrapper li a.active {
-    color: #c69c6d;
+/*--
+    THEME MOTORS
+--------------------------------------*/
+.theme-motors #header .main-header {
+  background-color: #0d2e3a;
+  border-color: #f29100;
 }
+.theme-motors .tp-caption.modern_big_bluebg {
+  background-color: rgba(19,64,81,.5);
+  border-bottom-color: #f29100;
+}
+.theme-motors .sliderContainer .contact-form {
+  background-color: rgba(19,64,81,.5);
+}
+.theme-motors .contact-form {
+  background-color: #beab95;
+}
+
+/* Buttons */
+.theme-motors .btn-color,
+.theme-motors .subscribe-btn {
+  color: #134051;
+  background-color: #f29100;
+}
+.theme-motors .btn-color:hover,
+.theme-motors .subscribe-btn:hover {
+  background-color: #ef9c2e;
+}
+
+/* Address box */
+.theme-motors .address {
+  background-color: #beab95;
+}
+.theme-motors .address .phone {
+  background-color: #228487;
+}
+.theme-motors .address i {
+  color: #f29100;
+}
+
+/* Gallery */
+.theme-motors .portfolio-item {
+  border-bottom-color: #f29100;
+}
+.theme-motors .portfolio-item-title {
+  background-color: #beab95;
+}
+
+
+
+
+
+
+
+
+
+

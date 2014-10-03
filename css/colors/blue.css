@@ -1,72 +1,111 @@
-/*Blue #0488cd */
-.btn:focus, .subscribe-btn, .progress .progress-bar, .accordionMod .panel-heading .current, #current:after, .tp-leftarrow.default:hover,.tp-rightarrow.default:hover, .nivo-prevNav:hover, .nivo-nextNav:hover, .contact-box:hover, #options li a.selected, .ch-info .ch-info-back {
-    background: #0488cd;
+/*--
+    THEME BASIC
+--------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: #2980b9;
+}
+.theme-basic .address {
+  background-color: #3498db;
+}
+/* Borders */
+.theme-basic .portfolio-item,
+.theme-basic .nav > li > a:hover,
+.theme-basic .nav > li > a:focus,
+.theme-basic .nav > li > #current {
+  border-color: #3498db;
 }
 
 
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, .pager li > a:hover, .pager li > a:focus, .navbar-toggle i, .cn-wrapper li a, .cn-wrapper:after {
-    background-color: #0488cd;
-    color: #fff;
+/*--
+    THEME MODERN
+--------------------------------------*/
+/* Buttons */
+.theme-modern .btn-color,
+.theme-modern .subscribe-btn {
+  background-color: #2980b9;
+}
+.theme-modern .btn-color:hover,
+.theme-modern .subscribe-btn:hover {
+  background-color: #3498db;
 }
 
-#options li a.selected {
-	border: 1px solid #0488cd;
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: #3498db;
 }
 
-.ie8 .btn-color, .ie9 .btn-color {
-	background: #0488cd !important;
+/* Borders */
+.theme-modern .portfolio-item,
+.theme-modern .nav > li > a:hover,
+.theme-modern .nav > li > a:focus,
+.theme-modern .nav > li > #current {
+  border-color: #3498db;
 }
 
-.ie8 .btn-color:hover, .ie9 .btn-color:hover {
-	background: #2eaef0 !important;
-}
-
-.btn-color:hover, .subscribe-btn:hover {
-	background: -webkit-linear-gradient(#0488cd,#2eaef0);
-	background: -moz-linear-gradient(#0488cd,#2eaef0);
-	background: -o-linear-gradient(#0488cd,#2eaef0);
-	background: -ms-linear-gradient(#0488cd,#2eaef0);
-	background: linear-gradient(#0488cd,#2eaef0);
-}
-
-.btn-color, .subscribe-btn {
-	background: -webkit-linear-gradient(#2eaef0,#0488cd);
-	background: -moz-linear-gradient(#2eaef0,#0488cd);
-	background: -o-linear-gradient(#2eaef0,#0488cd);
-	background: -ms-linear-gradient(#2eaef0,#0488cd);
-	background: linear-gradient(#2eaef0,#0488cd);
-	border: 1px solid #2f7295;
-
-	-webkit-box-shadow: inset 0 1px 1px 0 #9fcee7, 0 2px 0 -1px rgba(0,0,0,0.2);
-	box-shadow: inset 0 1px 1px 0 #9fcee7, 0 2px 0 -1px rgba(0,0,0,0.2);
-	cursor: pointer;
+/* Modal */
+.theme-modern .modal-content {
+  background-color: #3498db;
 }
 
 
-#current,.menu ul li a:hover,.menu ul>li:hover>a {
-    border-bottom: 3px solid #0488cd;
+/*--
+    THEME MOTORS
+--------------------------------------*/
+.theme-motors #header .main-header {
+  background-color: #0d2e3a;
+  border-color: #f29100;
+}
+.theme-motors .tp-caption.modern_big_bluebg {
+  background-color: rgba(19,64,81,.5);
+  border-bottom-color: #f29100;
+}
+.theme-motors .sliderContainer .contact-form {
+  background-color: rgba(19,64,81,.5);
+}
+.theme-motors .contact-form {
+  background-color: #134151;
 }
 
-ul.why li:before {
-    background: #0488cd;
+/* Buttons */
+.theme-motors .btn-color,
+.theme-motors .subscribe-btn {
+  color: #134051;
+  background-color: #f29100;
+}
+.theme-motors .btn-color:hover,
+.theme-motors .subscribe-btn:hover {
+  background-color: #ef9c2e;
 }
 
-.menu ul ul {
-    border-top: 3px solid #0488cd !important;
+/* Address box */
+.theme-motors .address {
+  background-color: #134151;
+}
+.theme-motors .address .phone {
+  background-color: #228487;
+}
+.theme-motors .address i {
+  color: #f29100;
 }
 
-#horizontal-tabs ul.tabs li.current {
-    border-top: 2px solid #0488cd;
+/* Gallery */
+.theme-motors .portfolio-item {
+  border-bottom-color: #f29100;
+}
+.theme-motors .portfolio-item-title {
+  background-color: #134151;
 }
 
-#vertical-tabs ul.tabs li.current {
-    border-left: 2px solid #0488cd;
-}
 
-.author-content, div.content-box.big, #cn-tabs .service, .comment-des, .contact-box {
-	border-bottom-color:#0488cd;
-}
 
-a, .post-item h4 a:hover, .cn-wrapper li a:hover, .cn-wrapper li a.active {
-    color: #0488cd;
-}
+
+
+
+
+
+
+

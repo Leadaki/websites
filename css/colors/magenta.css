@@ -1,74 +1,118 @@
-/*Magenta #ec008c */
-
-.btn:focus, .subscribe-btn, .progress .progress-bar, .accordionMod .panel-heading .current, #current:after, .tp-leftarrow.default:hover,.tp-rightarrow.default:hover, .nivo-prevNav:hover, .nivo-nextNav:hover, .contact-box:hover, #options li a.selected, .ch-info .ch-info-back {
-    background: #ec008c;
+/*--
+    THEME BASIC
+--------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: #8e44ad;
+}
+.theme-basic .address {
+  background-color: #9b59b6;
+}
+/* Borders */
+.theme-basic .portfolio-item,
+.theme-basic .nav > li > a:hover,
+.theme-basic .nav > li > a:focus,
+.theme-basic .nav > li > #current {
+  border-color: #9b59b6;
 }
 
 
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, .pager li > a:hover, .pager li > a:focus, .navbar-toggle i, .cn-wrapper li a, .cn-wrapper:after {
-    background-color: #ec008c;
-    color: #fff;
+/*--
+    THEME MODERN
+--------------------------------------*/
+/* Buttons */
+.theme-modern .btn-color:hover,
+.theme-modern .subscribe-btn:hover {
+  background-color: #9b59b6;
+}
+.theme-modern .btn-color,
+.theme-modern .subscribe-btn {
+  background-color: #8e44ad;
 }
 
-#options li a.selected {
-	border: 1px solid #ec008c;
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: #9b59b6;
 }
 
-.ie8 .btn-color, .ie9 .btn-color {
-	background: #ec008c !important;
+/* Borders */
+.theme-modern .portfolio-item,
+.theme-modern .nav > li > a:hover,
+.theme-modern .nav > li > a:focus,
+.theme-modern .nav > li > #current {
+  border-color: #9b59b6;
 }
 
-.ie8 .btn-color:hover, .ie9 .btn-color:hover {
-	background: #fb61bd !important;
-}
-
-.btn-color:hover, .subscribe-btn:hover {
-	background: -webkit-linear-gradient(#fb61bd,#ec008c);
-	background: -moz-linear-gradient(#fb61bd,#ec008c);
-	background: -o-linear-gradient(#fb61bd,#ec008c);
-	background: -ms-linear-gradient(#fb61bd,#ec008c);
-	background: linear-gradient(#fb61bd,#ec008c);
-}
-
-.btn-color, .subscribe-btn {
-	background: -webkit-linear-gradient(#ec008c,#fb61bd);
-	background: -moz-linear-gradient(#ec008c,#fb61bd);
-	background: -o-linear-gradient(#ec008c,#fb61bd);
-	background: -ms-linear-gradient(#ec008c,#fb61bd);
-	background: linear-gradient(#ec008c,#fb61bd);
-	border: 1px solid #a05280;
-
-	-webkit-box-shadow: inset 0 1px 1px 0 #e4a6cb, 0 2px 0 -1px rgba(0,0,0,0.2);
-	box-shadow: inset 0 1px 1px 0 #e4a6cb, 0 2px 0 -1px rgba(0,0,0,0.2);
-	cursor: pointer;
+/* Modal */
+.theme-modern .modal-content {
+  background-color: #9b59b6;
 }
 
 
-#current,.menu ul li a:hover,.menu ul>li:hover>a {
-    border-bottom: 3px solid #ec008c;
+/*--
+    THEME APPAREL
+--------------------------------------*/
+.theme-apparel {
+  background-color: #2b202a;
+  color: #eef1cc;
+}
+.theme-apparel a,
+.theme-apparel .btn-color,
+.theme-apparel .subscribe-btn,
+.theme-apparel .nav > li > a,
+.theme-apparel .address .phone a {
+  color: #eef1cc;
 }
 
-ul.why li:before {
-    background: #ec008c;
+/* Borders */
+.theme-apparel h3.title,
+.theme-apparel #header .main-header,
+.theme-apparel .portfolio-item,
+.theme-apparel .contact-form,
+.theme-apparel .portfolio-item-title,
+.theme-apparel .address {
+  border-color: #eef1cc;
+}
+.theme-apparel .nav > li > a:hover,
+.theme-apparel .nav > li > a:focus,
+.theme-apparel .nav > li > #current {
+  border-color: #8a1d75;
 }
 
-.menu ul ul {
-    border-top: 3px solid #ec008c !important;
+/* Buttons */
+.theme-apparel .btn-color:hover,
+.theme-apparel .subscribe-btn:hover {
+  background-color: #9e288d;
+}
+.theme-apparel .btn-color,
+.theme-apparel .subscribe-btn {
+  background-color: #8a1d75;
 }
 
-#horizontal-tabs ul.tabs li.current {
-    border-top: 2px solid #ec008c;
+.theme-apparel .nivo-caption .title,
+.theme-apparel .nivo-caption .subtitle {
+  background-color: rgba(43,32,42,.8);
+}
+.theme-apparel .reply input,
+.theme-apparel .reply textarea {
+    background-color: #4b1a42;
+    border-color: #211521;
+    color: #e4e3c9;
 }
 
-#vertical-tabs ul.tabs li.current {
-    border-left: 2px solid #ec008c;
+/* Footer */
+.theme-apparel .footer-top {
+  background-color: #242128;
 }
-
-
-.author-content, div.content-box.big, #cn-tabs .service, .comment-des, .contact-box {
-	border-bottom-color:#ec008c;
+.theme-apparel .footer-bottom,
+.theme-apparel .member-social.dark a {
+  background-color: #19181c;
 }
-
-a, .post-item h4 a:hover, .cn-wrapper li a:hover, .cn-wrapper li a.active {
-    color: #ec008c;
+.theme-apparel .footer-top,
+.theme-apparel .footer-bottom,
+.theme-apparel footer .contact-us a {
+  color: #eef1cc!important;
 }
