@@ -139,7 +139,10 @@ class LoadSiteDataService
     }
 
     /**
+     * @param $name
+     * @param $items
      *
+     * @return array
      */
     private function processItems($name, $items)
     {
@@ -198,6 +201,12 @@ class LoadSiteDataService
         return $this->processItems('Service', $items);
     }
 
+    /**
+     * @param string $name
+     * @param array $input
+     *
+     * @return Image|Location|Template|Video
+     */
     private function processObjects($name, $input)
     {
         if (empty($input) || !is_array($input)) {
@@ -214,6 +223,38 @@ class LoadSiteDataService
         }
 
         return $object;
+    }
+
+    /**
+     * Process a collection of objects
+     *
+     * @param string $name
+     * @param array $input
+     *
+     * @return array
+     */
+    private function processCollectionObjects($name, $input)
+    {
+        if (empty($input) || !is_array($input)) {
+            return;
+        }
+
+        $collection = array();
+        foreach ($input as $item) {
+            $collection[] = $this->processObjects($name, $item);
+        }
+
+        return $collection;
+    }
+
+    /**
+     * @param $input
+     *
+     * @return array
+     */
+    private function processVideos($input)
+    {
+        return $this->processCollectionObjects('Video', $input);
     }
 
     /**
