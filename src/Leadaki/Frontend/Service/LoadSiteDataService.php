@@ -288,6 +288,16 @@ class LoadSiteDataService
     }
 
     /**
+     * @param $input
+     *
+     * @return Social
+     */
+    private function processSocial($input)
+    {
+        return $this->processObjects('Social', $input);
+    }
+
+    /**
      * @param array $input
      *
      * @return array
