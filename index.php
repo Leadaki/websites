@@ -43,7 +43,8 @@ $templateService->addGlobal('site', $site);
 $templateService->addFunction(
     'path',
     function($name, $parameters = array()) use ($routerService) {
-        return $routerService->generate($name, $parameters);
+        $queryString = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+        return $routerService->generate($name, $parameters) . (empty($queryString) ? '' : '?' . $queryString);
     }
 );
 
