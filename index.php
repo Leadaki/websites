@@ -49,6 +49,19 @@ $templateService->addFunction(
 );
 
 $templateService->addFunction(
+    'is_path',
+    function($name) use ($routerService) {
+        $route = $routerService->match();
+
+        if (empty($route)) {
+            return false;
+        }
+
+        return $route->getName() === $name;
+    }
+);
+
+$templateService->addFunction(
     'asset',
     function($path) use ($config) {
         return $config['app']['base_url'] . $path;
