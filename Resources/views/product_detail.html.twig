@@ -20,7 +20,6 @@
                             <!-- Slider Start-->
                             <div class="{{ 0 < (product.images | length) ? 'slider-wrapper' : '' }} theme-default">
                                 <div id="nivoslider" class="nivoSlider">
-                                    {#<a href="#"><img src="${IMG_BASE_PATH +'w_838,h_550,c_pad,q_90/' + product.cloudinary_id + '.jpg'}" title="<strong>{{ product.title }} #{if product.price}- Precio: {{ product.price }}#{/if}</strong><br><small>{{ product.subtitle }}</small>" alt="{{ product.title }}" ></a>#}
                                     <a href="#">
                                         <img
                                                 src="{{ site.generateImageUrl(product.images[0], 'w_838,h_550,c_pad,q_90', 'jpg') }}"
@@ -31,7 +30,6 @@
                                     {% for item in product.images %}
                                     <a href="#">
                                         <img
-                                                {#src="${IMG_BASE_PATH +'w_838,h_550,c_pad,q_90/' + productImage + '.jpg'}"#}
                                                 src="{{ site.generateImageUrl(item, 'w_838,h_550,c_pad,q_90', 'jpg') }}"
                                                 title="<strong>{{ product.title }} {% if product.price %}- Precio: {{ product.price }}{% endif %}</strong><br><small>{{ product.subtitle }}</small>"
                                                 alt="{{ product.title }}"
@@ -107,11 +105,9 @@
                     {% if item.friendlyUri != product.friendlyUri %}
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                         <div class="portfolio-item">
-                            {#<a href="/producto/${product.friendlyUri}" class="portfolio-item-link" *{ data-rel="prettyPhoto" }* >#}
                             <a href="{{ path('product_detail', { slug: item.friendlyUri }) }}" class="portfolio-item-link">
                             <span class="portfolio-item-hover"></span>
                             <span class="fullscreen"><i class="icon-search"></i></span>
-                            {#<img src="${IMG_BASE_PATH +'w_253,h_191,c_pad,q_90/'+product.cloudinary_id+'.jpg'}" alt="{{ product.title }}" />#}
                             <img src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ product.title }}" />
                             </a>
                             <div class="portfolio-item-title">
