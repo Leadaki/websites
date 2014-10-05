@@ -2,7 +2,7 @@
 
 {% block main %}
 
-    {% set breadcrumb = { 'title': 'Nuestros productos' } %}
+    {% set breadcrumb = { 'title': 'Nuestros productos', breadcrumb: 'Productos' } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
 
     {% include('partials/products_box.html.twig') %}

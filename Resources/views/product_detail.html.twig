@@ -4,7 +4,7 @@
 
     {% set product = site.getProductBySlug(slug) %}
 
-    {% set breadcrumb = { 'title': product.title } %}
+    {% set breadcrumb = { 'title': (product is empty ? 'Producto no encontrado' : product.title), breadcrumb: { 'Productos': path('products'), (product.title): null } } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
 
     <!-- Main Content start-->
