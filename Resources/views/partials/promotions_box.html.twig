@@ -1,5 +1,4 @@
 {% if site.promotions is not empty %}
-{# TODO: Verify if has promotions #}
 <div class="content">
     <div class="container">
         <div class="row">
@@ -17,7 +16,6 @@
                                 <a href="{{ path('promotion_detail', { 'slug': item.friendlyUri }) }}" class="portfolio-item-link">
                                     <span class="portfolio-item-hover"></span>
                                     <span class="fullscreen"><i class="icon-search"></i></span>
-                                    {#<img src="${IMG_BASE_PATH +'w_253,h_191,c_pad,q_90/'+product.cloudinary_id+'.jpg'}" alt="{{ item.title }}" />#}
                                     <img src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ item.title }}" />
                                 </a>
                                 <div class="portfolio-item-title">
