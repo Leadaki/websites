@@ -10,7 +10,21 @@
                     <ul>
                         <li><a href="{{ path('index') }}">Inicio</a></li>
                         <li></li>
+                        {% if breadcrumb is not defined %}
                         <li>{{ title }}</li>
+                        {% else %}
+                            {% if breadcrumb is iterable %}
+                                {% for title, url in breadcrumb %}
+                                    {% if url is null %}
+                                        <li>{{ title }}</li>
+                                    {% else %}
+                                        <li><a href="{{ url }}">{{ title }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                <li>{{ breadcrumb }}</li>
+                            {% endif %}
+                        {% endif %}
                     </ul>
                 </div>
             </div>
