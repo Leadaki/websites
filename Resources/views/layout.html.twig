@@ -143,13 +143,13 @@
             <nav class="collapse navbar-collapse menu">
                 <ul class="nav navbar-nav sf-menu">
                     {% if site.promotions is not empty %}
-                    <li><a href="{{ path('promotions') }}" {{ is_path('promotions') ? 'id="current"' : '' }}>Promociones</a></li>
+                    <li><a href="{{ path('promotions') }}" {{ is_path('promotions') or is_path('promotion_detail') ? 'id="current"' : '' }}>Promociones</a></li>
                     {% endif %}
                     {% if site.products is not empty %}
-                    <li><a href="{{ path('products') }}" {{ is_path('products') ? 'id="current"' : '' }}>Productos</a></li>
+                    <li><a href="{{ path('products') }}" {{ is_path('products') or is_path('product_detail') ? 'id="current"' : '' }}>Productos</a></li>
                     {% endif %}
                     {% if site.services is not empty %}
-                    <li><a href="{{ path('services') }}" {{ is_path('services') ? 'id="current"' : '' }}>Servicios</a></li>
+                    <li><a href="{{ path('services') }}" {{ is_path('services') or is_path('service_detail') ? 'id="current"' : '' }}>Servicios</a></li>
                     {% endif %}
                     <li><a href="{{ path('about_us') }}" {{ is_path('about_us') ? 'id="current"' : '' }}>Qui&eacute;nes somos</a></li>
                     {% if site.mainLocation.address is not empty %}
