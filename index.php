@@ -5,6 +5,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 // -- Load used class
 use Leadaki\Frontend\Service\LoadSiteDataService;
+use Leadaki\Frontend\Service\LoadUrlConfigService;
 use Leadaki\Frontend\Application\Application;
 use Leadaki\Frontend\Service\AltoRouterService;
 use Leadaki\Frontend\Service\TwigTemplateService;
@@ -16,6 +17,10 @@ if (file_exists(__DIR__ . '/config/config.php')) {
     header('Location: install/');
 }
 
+// -- Load config from url
+$loadUrlConfigService = new LoadUrlConfigService($config, $_SERVER['REQUEST_URI']);
+$config['app']['website_id'] = $loadUrlConfigService->getWebsiteId();
+
 // -- Load remote data
 $loadSiteDataService = new LoadSiteDataService(
     $config['api']['base_url'] . '/' . $config['app']['website_id'],
@@ -26,6 +31,9 @@ $loadSiteDataService = new LoadSiteDataService(
 );
 
 $site = $loadSiteDataService->getSite();
+
+$site->getTemplate()->setId($loadUrlConfigService->getTemplate());
+$site->getTemplate()->setColor($loadUrlConfigService->getColor());
 
 $routerService = new AltoRouterService(array(
     'base_path' => parse_url($config['app']['base_url'], PHP_URL_PATH)
