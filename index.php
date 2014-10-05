@@ -9,6 +9,7 @@ use Leadaki\Frontend\Service\LoadUrlConfigService;
 use Leadaki\Frontend\Application\Application;
 use Leadaki\Frontend\Service\AltoRouterService;
 use Leadaki\Frontend\Service\TwigTemplateService;
+use Leadaki\Frontend\Twig\ApplicationTwigExtension;
 
 // -- Load config file or redirect to install script
 if (file_exists(__DIR__ . '/config/config.php')) {
@@ -48,36 +49,9 @@ $templateService = new TwigTemplateService(array(
 $templateService->addGlobal('config', $config);
 $templateService->addGlobal('site', $site);
 
-$templateService->addFunction(
-    'path',
-    function($name, $parameters = array()) use ($routerService) {
-        $queryString = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
-        return $routerService->generate($name, $parameters) . (empty($queryString) ? '' : '?' . $queryString);
-    }
-);
-
-$templateService->addFunction(
-    'is_path',
-    function($name) use ($routerService) {
-        $route = $routerService->match();
-
-        if (empty($route)) {
-            return false;
-        }
-
-        return $route->getName() === $name;
-    }
-);
-
-$templateService->addFunction(
-    'asset',
-    function($path) use ($config) {
-        return $config['app']['base_url'] . $path;
-    }
-);
-
 $templateService->addExtension(new Twig_Extensions_Extension_Text());
 $templateService->addExtension(new Twig_Extensions_Extension_Array());
+$templateService->addExtension(new ApplicationTwigExtension($config, $routerService));
 
 if ($config['app']['debug']) {
     $templateService->addExtension(new Twig_Extension_Debug());
