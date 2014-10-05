@@ -21,6 +21,10 @@ class Social
      */
     public function setFacebook($facebook)
     {
+        if (1 < substr_count($facebook, 'facebook.com')) {
+            $facebook = preg_replace('#^https?://(?:www\.)?facebook.com/#', '', $facebook);
+        }
+
         $this->facebook = $facebook;
 
         return $this;
@@ -39,6 +43,10 @@ class Social
      */
     public function setGooglePlus($googlePlus)
     {
+        if (1 < substr_count($googlePlus, 'plus.google.com')) {
+            $googlePlus = preg_replace('#^https?://plus.google.com/\+#', '', $googlePlus, 1);
+        }
+
         $this->googlePlus = $googlePlus;
 
         return $this;
@@ -75,6 +83,10 @@ class Social
      */
     public function setTwitter($twitter)
     {
+        if (1 < substr_count($twitter, 'twitter.com')) {
+            $twitter = preg_replace('#^https?://(?:www\.)?twitter.com/#', '', $twitter, 1);
+        }
+
         $this->twitter = $twitter;
 
         return $this;
