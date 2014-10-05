@@ -93,6 +93,7 @@
                 <div class="divider"></div>
             {% endif %}
 
+            {% if 1 < (site.promotions | length) %}
             <div class="row">
                 <!-- Recent works start-->
                 <div class="portfolio">
@@ -101,8 +102,8 @@
                             <h3 class="title">Otras promociones</h3>
                         </div>
                     {% endif %}
-                    {% for item in site.promotions %}
-                        {% if item.friendlyUri != promotion.friendlyUri %}
+                    {% for item in site.promotions | shuffle if (item.friendlyUri != promotion.friendlyUri) %}
+                        {% if 4 >= loop.index %}
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                 <div class="portfolio-item">
                                     <a href="{{ path('promotion_detail', { slug: item.friendlyUri }) }}" class="portfolio-item-link">
@@ -122,6 +123,7 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
+            {% endif %}
         </div>
         <!-- Recent work end-->
     </div>

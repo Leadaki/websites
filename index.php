@@ -77,6 +77,7 @@ $templateService->addFunction(
 );
 
 $templateService->addExtension(new Twig_Extensions_Extension_Text());
+$templateService->addExtension(new Twig_Extensions_Extension_Array());
 
 if ($config['app']['debug']) {
     $templateService->addExtension(new Twig_Extension_Debug());

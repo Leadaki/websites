@@ -93,6 +93,7 @@
             <div class="divider"></div>
             {% endif %}
 
+            {% if 1 < (site.products | length) %}
             <div class="row">
                 <!-- Recent works start-->
                 <div class="portfolio">
@@ -101,27 +102,28 @@
                         <h3 class="title">Otros productos</h3>
                     </div>
                     {% endif %}
-                    {% for item in site.products %}
-                    {% if item.friendlyUri != product.friendlyUri %}
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                        <div class="portfolio-item">
-                            <a href="{{ path('product_detail', { slug: item.friendlyUri }) }}" class="portfolio-item-link">
-                            <span class="portfolio-item-hover"></span>
-                            <span class="fullscreen"><i class="icon-search"></i></span>
-                            <img src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ item.title }}" />
-                            </a>
-                            <div class="portfolio-item-title">
-                                <a href="{{ path('product_detail', { slug: item.friendlyUri }) }}">{{ item.title | truncate(25) }}</a>
-                                <p>{{ item.price }}&nbsp;</p>
+                    {% for item in site.products | shuffle if (item.friendlyUri != product.friendlyUri) %}
+                        {% if 4 >= loop.index %}
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
+                                <div class="portfolio-item">
+                                    <a href="{{ path('product_detail', { slug: item.friendlyUri }) }}" class="portfolio-item-link">
+                                    <span class="portfolio-item-hover"></span>
+                                    <span class="fullscreen"><i class="icon-search"></i></span>
+                                    <img src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ item.title }}" />
+                                    </a>
+                                    <div class="portfolio-item-title">
+                                        <a href="{{ path('product_detail', { slug: item.friendlyUri }) }}">{{ item.title | truncate(25) }}</a>
+                                        <p>{{ item.price }}&nbsp;</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
                             </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    {% endif %}
+                        {% endif %}
                     {% endfor %}
                     <div class="clearfix"></div>
                 </div>
             </div>
+            {% endif %}
         </div>
         <!-- Recent work end-->
     </div>
