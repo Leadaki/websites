@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+
+    {% set vars = { item_data: item_data } %}
+
+    {% set breadcrumb = { 'title': "#{ vars.item_data.title }", breadcrumb: vars.item_data.title } %}
+    {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
+
+    {% include('partials/items_box.html.twig') with vars %}
+
+    {% set hideLocationMap = true %}
+    {% include('partials/contact_us_box.html.twig') %}
+
+{% endblock main %}

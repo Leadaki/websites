@@ -11,13 +11,25 @@ class ProductController extends AbstractController
 {
     public function indexAction()
     {
-        return $this->render('products.html.twig');
+        return $this->render('items.html.twig', array(
+            'item_data' => array(
+                'title' => 'Productos',
+                'name' => 'product',
+                'collection' => 'products',
+            ),
+        ));
     }
 
     public function detailAction($slug)
     {
-        return $this->render('product_detail.html.twig', array(
+        return $this->render('item_detail.html.twig', array(
             'slug' => $slug,
+            'item_data' => array(
+                'title' => 'Producto',
+                'title_collection' => 'Productos',
+                'name' => 'product',
+                'collection' => 'products',
+            ),
         ));
     }
 } 

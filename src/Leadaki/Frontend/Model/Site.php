@@ -688,4 +688,24 @@ class Site
 
         return $service;
     }
+
+    /**
+     * @param $itemName
+     * @param $slug
+     *
+     * @return Service|Product|Promotion
+     */
+    public function getItemBySlug($itemName, $slug)
+    {
+        $item = null;
+
+        foreach ($this->$itemName as $el) {
+            if ($el->getFriendlyUri() == $slug) {
+                $item = $el;
+                break;
+            }
+        }
+
+        return $item;
+    }
 } 

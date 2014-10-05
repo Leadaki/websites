@@ -1,0 +1,132 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+
+    {% set item = attribute(site,"getItemBySlug", [item_data.collection, slug]) %}
+
+    {% set breadcrumb = { 'title': (item is empty ? "#{ item.title } no encontrado" : item.title), breadcrumb: { (item_data.title_collection): path(item_data.collection), (item.title): null } } %}
+    {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
+
+    <!-- Main Content start-->
+    <div class="content">
+        <div class="container">
+            {% if item is not empty %}
+                <div class="row">
+                    <div class="posts-block col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                        <!-- Recent work start-->
+                        <div class="recentwork_wrapper">
+                            <!-- Slider Start-->
+                            <div class="post-image">
+                                <!-- Slider Start-->
+                                <div class="{{ 0 < (item.images | length) ? 'slider-wrapper' : '' }} theme-default">
+                                    <div id="nivoslider" class="nivoSlider">
+                                        <a href="#">
+                                            <img
+                                                    src="{{ site.generateImageUrl(item.images[0], 'w_838,h_550,c_pad,q_90', 'jpg') }}"
+                                                    title="<strong>{{ item.title }} {% if item.price %}- Precio: {{ item.price }}{% endif %}</strong><br><small>{{ item.subtitle }}</small>"
+                                                    alt="{{ item.title }}">
+                                        </a>
+                                        {% if 1 < (item.images | length) %}
+                                            {% for sub_item in item.images %}
+                                                <a href="#">
+                                                    <img
+                                                            src="{{ site.generateImageUrl(sub_item, 'w_838,h_550,c_pad,q_90', 'jpg') }}"
+                                                            title="<strong>{{ item.title }} {% if item.price %}- Precio: {{ item.price }}{% endif %}</strong><br><small>{{ item.subtitle }}</small>"
+                                                            alt="{{ item.title }}"
+                                                            data-transition="slideInLeft">
+                                                </a>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <!-- Slider End-->
+                            </div>
+                            <h3>Descripción</h3>
+                            <div class="post-content top-pad">
+                                <p>{{ item.description | raw('html') }}</p>
+                                {%  if item.price is not empty %}
+                                    <p><strong>Precio: {{ item.price }}</strong></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- Recent work end-->
+                    </div>
+
+                    <!-- Left Section End -->
+                    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12" id="contact-form">
+                        <h3 class="title">Solicitar presupuesto</h3>
+                        <p>Dejanos tu consulta y te responderemos a la brevedad.</p>
+                        <form method="post" class="reply" id="contact">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Nombre: <span>*</span></label>
+                                        <input class="form-control" id="name" name="name" type="text" value="" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Teléfono: <span>*</span></label>
+                                        <input class="form-control" type="tel" id="phone" name="phone" value="" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Email: <span>*</span></label>
+                                        <input class="form-control" id="email" name="email" type="email" value="" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Quiero solicitar presupuesto para: <span>*</span></label>
+                                        <textarea class="form-control" id="text" name="message" style="min-height: 95px;" rows="3" cols="40" required></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button class="btn-normal btn-color submit  bottom-pad" type="submit">Solicitar Presupuesto Gratis</button>
+                            <div class="success alert-success alert" style="display:none">Tu mensaje se envió correctamente</div>
+                            <div class="error alert-error alert" style="display:none">E-mail must be valid and message must be longer than 100 characters.</div>
+                            <div class="clearfix">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            {% endif %}
+
+            {% if 1 < (attribute(site, item_data.collection) | length) %}
+                <div class="row">
+                    <!-- Recent works start-->
+                    <div class="portfolio">
+                        {% if item is not empty %}
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h3 class="title">Otros {{ item_data.title_collection | lower }}</h3>
+                            </div>
+                        {% endif %}
+                        {% for sub_item in attribute(site, item_data.collection) | shuffle if (sub_item.friendlyUri != item.friendlyUri) %}
+                            {% if 4 >= loop.index %}
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
+                                    <div class="portfolio-item">
+                                        <a href="{{ path("#{ item_data.name }_detail", { slug: sub_item.friendlyUri }) }}" class="portfolio-item-link">
+                                            <span class="portfolio-item-hover"></span>
+                                            <span class="fullscreen"><i class="icon-search"></i></span>
+                                            <img src="{{ site.generateImageUrl(sub_item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ sub_item.title }}" />
+                                        </a>
+                                        <div class="portfolio-item-title">
+                                            <a href="{{ path("#{ item_data.name }_detail", { slug: sub_item.friendlyUri }) }}">{{ sub_item.title | truncate(25) }}</a>
+                                            <p>{{ sub_item.price }}&nbsp;</p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <!-- Recent work end-->
+    </div>
+    <!-- Main Content end-->
+
+{% endblock main %}

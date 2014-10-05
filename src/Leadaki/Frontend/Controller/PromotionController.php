@@ -6,13 +6,25 @@ class PromotionController extends AbstractController
 {
     public function indexAction()
     {
-        return $this->render('promotions.html.twig');
+        return $this->render('items.html.twig', array(
+            'item_data' => array(
+                'title' => 'Promociones',
+                'name' => 'promotion',
+                'collection' => 'promotions',
+            ),
+        ));
     }
 
     public function detailAction($slug)
     {
-        return $this->render('promotion_detail.html.twig', array(
+        return $this->render('item_detail.html.twig', array(
             'slug' => $slug,
+            'item_data' => array(
+                'title' => 'Promocion',
+                'title_collection' => 'Promociones',
+                'name' => 'promotion',
+                'collection' => 'promotions',
+            ),
         ));
     }
 } 
