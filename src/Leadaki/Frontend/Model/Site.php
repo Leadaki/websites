@@ -650,4 +650,23 @@ class Site
 
         return $product;
     }
+
+    /**
+     * @param $slug
+     *
+     * @return Promotion
+     */
+    public function getPromotionBySlug($slug)
+    {
+        $promotion = null;
+
+        foreach ($this->promotions as $item) {
+            if ($item->getFriendlyUri() == $slug) {
+                $promotion = $item;
+                break;
+            }
+        }
+
+        return $promotion;
+    }
 } 

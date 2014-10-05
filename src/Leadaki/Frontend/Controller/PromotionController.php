@@ -8,4 +8,11 @@ class PromotionController extends AbstractController
     {
         return $this->render('promotions.html.twig');
     }
+
+    public function detailAction($slug)
+    {
+        return $this->render('promotion_detail.html.twig', array(
+            'slug' => $slug,
+        ));
+    }
 } 

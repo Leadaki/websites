@@ -1,0 +1,130 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+
+    {% set promotion = site.getPromotionBySlug(slug) %}
+
+    {% set breadcrumb = { 'title': (promotion is empty ? 'Promoción no encontrada' : promotion.title), breadcrumb: { 'Promociones': path('promotions'), (promotion.title): null } } %}
+    {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
+
+    <!-- Main Content start-->
+    <div class="content">
+        <div class="container">
+            {% if promotion is not empty %}
+                <div class="row">
+                    <div class="posts-block col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                        <!-- Recent work start-->
+                        <div class="recentwork_wrapper">
+                            <!-- Slider Start-->
+                            <div class="post-image">
+                                <!-- Slider Start-->
+                                <div class="{{ 0 < (promotion.images | length) ? 'slider-wrapper' : '' }} theme-default">
+                                    <div id="nivoslider" class="nivoSlider">
+                                        <a href="#">
+                                            <img
+                                                    src="{{ site.generateImageUrl(promotion.images[0], 'w_838,h_550,c_pad,q_90', 'jpg') }}"
+                                                    title="<strong>{{ promotion.title }} {% if promotion.price %}- Precio: {{ promotion.price }}{% endif %}</strong><br><small>{{ promotion.subtitle }}</small>"
+                                                    alt="{{ promotion.title }}">
+                                        </a>
+                                        {% if 1 < (promotion.images | length) %}
+                                            {% for item in promotion.images %}
+                                                <a href="#">
+                                                    <img
+                                                            src="{{ site.generateImageUrl(item, 'w_838,h_550,c_pad,q_90', 'jpg') }}"
+                                                            title="<strong>{{ promotion.title }} {% if promotion.price %}- Precio: {{ promotion.price }}{% endif %}</strong><br><small>{{ promotion.subtitle }}</small>"
+                                                            alt="{{ promotion.title }}"
+                                                            data-transition="slideInLeft">
+                                                </a>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <!-- Slider End-->
+                            </div>
+                            <h3>Descripción</h3>
+                            <div class="post-content top-pad">
+                                <p>{{ promotion.description | raw('html') }}</p>
+                                {%  if promotion.price is not empty %}
+                                    <p><strong>Precio: {{ promotion.price }}</strong></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- Recent work end-->
+                    </div>
+
+                    <!-- Left Section End -->
+                    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12" id="contact-form">
+                        <h3 class="title">Solicitar presupuesto</h3>
+                        <p>Dejanos tu consulta y te responderemos a la brevedad.</p>
+                        <form method="post" class="reply" id="contact">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Nombre: <span>*</span></label>
+                                        <input class="form-control" id="name" name="name" type="text" value="" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Teléfono: <span>*</span></label>
+                                        <input class="form-control" type="tel" id="phone" name="phone" value="" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Email: <span>*</span></label>
+                                        <input class="form-control" id="email" name="email" type="email" value="" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Quiero solicitar presupuesto para: <span>*</span></label>
+                                        <textarea class="form-control" id="text" name="message" style="min-height: 95px;" rows="3" cols="40" required></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button class="btn-normal btn-color submit  bottom-pad" type="submit">Solicitar Presupuesto Gratis</button>
+                            <div class="success alert-success alert" style="display:none">Tu mensaje se envió correctamente</div>
+                            <div class="error alert-error alert" style="display:none">E-mail must be valid and message must be longer than 100 characters.</div>
+                            <div class="clearfix">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            {% endif %}
+
+            <div class="row">
+                <!-- Recent works start-->
+                <div class="portfolio">
+                    {% if promotion is not empty %}
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h3 class="title">Otras promociones</h3>
+                        </div>
+                    {% endif %}
+                    {% for item in site.promotions %}
+                        {% if item.friendlyUri != promotion.friendlyUri %}
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
+                                <div class="portfolio-item">
+                                    <a href="{{ path('promotion_detail', { slug: item.friendlyUri }) }}" class="portfolio-item-link">
+                                        <span class="portfolio-item-hover"></span>
+                                        <span class="fullscreen"><i class="icon-search"></i></span>
+                                        <img src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}" alt="{{ item.title }}" />
+                                    </a>
+                                    <div class="portfolio-item-title">
+                                        <a href="{{ path('promotion_detail', { slug: item.friendlyUri }) }}">{{ item.title | truncate(25) }}</a>
+                                        <p>{{ promotion.price }}&nbsp;</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Recent work end-->
+    </div>
+    <!-- Main Content end-->
+
+{% endblock main %}

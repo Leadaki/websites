@@ -45,6 +45,13 @@ class AltoRouterService implements RouterServiceInterface
 
         $this->router->map(
             'GET',
+            '/promociones/[:slug]',
+            array('_controller' => 'Promotion', '_action' => 'detail'),
+            'promotion_detail'
+        );
+
+        $this->router->map(
+            'GET',
             '/productos',
             array('_controller' => 'Product', '_action' => 'index'),
             'products'
