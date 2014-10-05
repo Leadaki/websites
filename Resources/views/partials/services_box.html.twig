@@ -1,0 +1,38 @@
+{% if site.services is not empty %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 com-sm-12 col-xs-12">
+                    <h3 class="title" data-name="products.title">Servicios</h3>
+                    <p  data-name="products.subtitle">{{ "Estos son los servicios que ofrecemos en #{site.title}." }}</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 portfolio-wrap">
+                    <div class="row">
+                        <div class="portfolio">
+                            {% for item in site.services %}
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 web jquery item">
+                                    <div class="portfolio-item">
+                                        <a href="{{ path('service_detail', { 'slug': item.friendlyUri }) }}" class="portfolio-item-link">
+                                            <span class="portfolio-item-hover"></span>
+                                            <span class="fullscreen"><i class="icon-search"></i></span>
+                                            <img
+                                                    data-src="{{ site.generateImageUrl(item.images[0], 'w_253,h_191,c_pad,q_90', 'jpg') }}"
+                                                    alt="{{ item.title }}"/>
+                                        </a>
+                                        <div class="portfolio-item-title">
+                                            <a href="{{ path('service_detail', { 'slug': item.friendlyUri }) }}">{{ item.title | truncate(25) }}</a>
+                                            <p>{{ item.price }}&nbsp;</p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+        </div>
+    </div>
+{% endif %}

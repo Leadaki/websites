@@ -13,4 +13,11 @@ class ServiceController extends AbstractController
     {
         return $this->render('services.html.twig');
     }
+
+    public function detailAction($slug)
+    {
+        return $this->render('service_detail.html.twig', array(
+            'slug' => $slug
+        ));
+    }
 } 

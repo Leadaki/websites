@@ -669,4 +669,23 @@ class Site
 
         return $promotion;
     }
+
+    /**
+     * @param $slug
+     *
+     * @return Service
+     */
+    public function getServiceBySlug($slug)
+    {
+        $service = null;
+
+        foreach ($this->services as $item) {
+            if ($item->getFriendlyUri() == $slug) {
+                $service = $item;
+                break;
+            }
+        }
+
+        return $service;
+    }
 } 

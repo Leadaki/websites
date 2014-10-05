@@ -5,4 +5,9 @@
     {% set breadcrumb = { 'title': 'Servicios' } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
 
+    {% include('partials/services_box.html.twig') %}
+
+    {% set hideLocationMap = true %}
+    {% include('partials/contact_us_box.html.twig') %}
+
 {% endblock main %}
