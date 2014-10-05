@@ -188,7 +188,7 @@ class LoadSiteDataService
      */
     private function processPromotions($items)
     {
-        return $this->processItems('Promotions', $items);
+        return $this->processItems('Promotion', $items);
     }
 
     /**
