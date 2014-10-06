@@ -103,28 +103,16 @@
         {# TODO: Remove var, createad by weboptimizer #}
         var ldkHasConvertedLead = false;
         {# #{if play.mode.isDev()} #}
-        {% if config.app.debug %}
-            var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'), {
-                aggressive: true,
-                timer: 0,
-                delay: 600,
-                callback: function() {
-                    if (!ldkHasConvertedLead){  // Esta variable la crea el weboptimizer
-                        $("#contactModal").modal('show');
-                    }}
+        var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'), {
+            aggressive: true,
+            timer: {{ config.app.debug ? 0 : 4000 }},
+            delay: {{ config.app.debug ? 600 : 300 }},
+            callback: function() {
+                if (!ldkHasConvertedLead){  // Esta variable la crea el weboptimizer
+                    $("#contactModal").modal('show');
+                }}
 
-            });
-        {% else %}
-            var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'), {
-                aggressive: false,
-                timer: 4000,
-                delay: 300,
-                callback: function() {
-                    if (!ldkHasConvertedLead){  //Esta variable la crea el weboptimizer
-                        $("#contactModal").modal('show');
-                    }}
-            });
-        {% endif %}
+        });
         $('.modal-title').html('Tu consulta es sin compromiso');
         $('#messageBody').html('Dejanos tus datos sin compromiso y te enviaremos una propuesta.');
         $('#btnSubmit').addClass('btn-danger').removeClass('btn-color');
