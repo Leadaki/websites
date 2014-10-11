@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "404 Not found / #{ parent() }" %}
+
+{% block main %}
+
+    {% set breadcrumb = { 'title': '404 Not found' } %}
+    {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="jumbotron">
+                    <h1>404</h1>
+                    <p>Not found</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

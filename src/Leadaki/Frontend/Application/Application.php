@@ -46,7 +46,7 @@ class Application implements ApplicationInterface
         $match = $this->router->match();
 
         if (empty($match)) {
-            echo "\nNot Found\n";
+            echo $this->template->render('404.html.twig');
             exit;
         }
 
