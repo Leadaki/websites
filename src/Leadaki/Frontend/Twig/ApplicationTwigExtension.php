@@ -7,6 +7,8 @@ use Leadaki\Frontend\Router\RouterServiceInterface;
 /**
  * Class ApplicationTwigExtension
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Twig
  */
 class ApplicationTwigExtension extends \Twig_Extension

@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Router;
 /**
  * Class Response
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Router
  */
 class Response

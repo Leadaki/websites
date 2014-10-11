@@ -5,6 +5,13 @@ namespace Leadaki\Frontend\Service;
 use Leadaki\Frontend\Router\RouterMatch;
 use Leadaki\Frontend\Router\RouterServiceInterface;
 
+/**
+ * Class AltoRouterService
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Service
+ */
 class AltoRouterService implements RouterServiceInterface
 {
     /** @var \AltoRouter */

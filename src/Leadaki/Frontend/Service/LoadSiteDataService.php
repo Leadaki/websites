@@ -10,6 +10,13 @@ use Leadaki\Frontend\Model\Site;
 use Leadaki\Frontend\Model\Template;
 use Leadaki\Frontend\Util\Util;
 
+/**
+ * Class LoadSiteDataService
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Service
+ */
 class LoadSiteDataService
 {
     /** @var string */

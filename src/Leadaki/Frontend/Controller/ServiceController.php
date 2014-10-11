@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Controller;
 /**
  * Class ServiceController
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Controller
  */
 class ServiceController extends AbstractController

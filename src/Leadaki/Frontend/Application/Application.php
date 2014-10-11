@@ -7,6 +7,13 @@ use Leadaki\Frontend\Router\RouterServiceInterface;
 use Leadaki\Frontend\Template\TemplateServiceInterface;
 use Leadaki\Frontend\Model\Site;
 
+/**
+ * Class Application
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Application
+ */
 class Application implements ApplicationInterface
 {
     /** @var RouterServiceInterface */

@@ -2,7 +2,13 @@
 
 namespace Leadaki\Frontend\Model;
 
-
+/**
+ * Interface AbstractItemInterface
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Model
+ */
 interface AbstractItemInterface
 {
     /**

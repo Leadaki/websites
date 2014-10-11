@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Router;
 /**
  * Interface ResponseInterface
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Router
  */
 interface ResponseInterface

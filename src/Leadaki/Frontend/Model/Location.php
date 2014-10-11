@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Model;
 /**
  * Class Location
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Model
  */
 class Location

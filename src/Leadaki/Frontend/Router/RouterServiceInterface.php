@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Router;
 /**
  * Interface RouterServiceInterface
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Router
  */
 interface RouterServiceInterface

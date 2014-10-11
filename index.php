@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Leadaki Frontend Application
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ * @description Load data from remote API and display with Twig template system
+ */
+
 // -- Load composer autoload
 require __DIR__ . '/vendor/autoload.php';
 

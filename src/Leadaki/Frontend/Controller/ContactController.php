@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Controller;
 /**
  * Class ContactController
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Controller
  */
 class ContactController extends AbstractController

@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Controller;
 /**
  * Class ProductController
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Controller
  */
 class ProductController extends AbstractController

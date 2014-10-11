@@ -4,6 +4,13 @@ namespace Leadaki\Frontend\Model;
 
 use Leadaki\Frontend\Model\Image;
 
+/**
+ * Class Site
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Model
+ */
 class Site
 {
     /** @var string */

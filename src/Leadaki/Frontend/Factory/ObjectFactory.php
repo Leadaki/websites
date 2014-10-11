@@ -11,6 +11,8 @@ use Leadaki\Frontend\Model\Video;
 /**
  * Class ObjectFactory
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Factory
  */
 class ObjectFactory

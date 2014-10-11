@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Model;
 /**
  * Class Template
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Model
  */
 class Template

@@ -10,6 +10,8 @@ use Leadaki\Frontend\Model\Service;
 /**
  * Class ItemFactory
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Factory
  */
 class ItemFactory

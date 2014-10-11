@@ -2,6 +2,13 @@
 
 namespace Leadaki\Frontend\Controller;
 
+/**
+ * Class PromotionController
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Controller
+ */
 class PromotionController extends AbstractController
 {
     public function indexAction()

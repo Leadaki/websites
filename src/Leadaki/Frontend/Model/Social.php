@@ -2,6 +2,13 @@
 
 namespace Leadaki\Frontend\Model;
 
+/**
+ * Class Social
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Model
+ */
 class Social
 {
     /** @var string */

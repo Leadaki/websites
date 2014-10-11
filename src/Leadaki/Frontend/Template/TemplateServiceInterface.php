@@ -5,6 +5,8 @@ namespace Leadaki\Frontend\Template;
 /**
  * Interface TemplateServiceInterface
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Template
  */
 interface TemplateServiceInterface

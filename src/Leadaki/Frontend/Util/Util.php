@@ -2,6 +2,13 @@
 
 namespace Leadaki\Frontend\Util;
 
+/**
+ * Class Util
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Util
+ */
 class Util
 {
     /**

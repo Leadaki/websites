@@ -9,6 +9,8 @@ use Leadaki\Frontend\Template\TemplateServiceInterface;
 /**
  * Class AbstractController
  *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
  * @package Leadaki\Frontend\Controller
  */
 abstract class AbstractController

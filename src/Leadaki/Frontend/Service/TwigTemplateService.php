@@ -4,6 +4,13 @@ namespace Leadaki\Frontend\Service;
 
 use Leadaki\Frontend\Template\TemplateServiceInterface;
 
+/**
+ * Class TwigTemplateService
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Service
+ */
 class TwigTemplateService implements TemplateServiceInterface
 {
     /** @var \Twig_Environment */

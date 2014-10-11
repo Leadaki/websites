@@ -2,6 +2,13 @@
 
 namespace Leadaki\Frontend\Service;
 
+/**
+ * Class LoadUrlConfigService
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Service
+ */
 class LoadUrlConfigService
 {
     /** @var array */

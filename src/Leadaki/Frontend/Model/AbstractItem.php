@@ -2,6 +2,13 @@
 
 namespace Leadaki\Frontend\Model;
 
+/**
+ * Class AbstractItem
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Model
+ */
 class AbstractItem implements AbstractItemInterface
 {
     /** @var string */

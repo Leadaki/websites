@@ -2,6 +2,13 @@
 
 namespace Leadaki\Frontend\Model;
 
+/**
+ * Class Image
+ *
+ * @author Jesús Urrutia <me@jesusurrutia.com>
+ *
+ * @package Leadaki\Frontend\Model
+ */
 class Image
 {
     /** @var string */
