@@ -94,9 +94,23 @@ class LoadSiteDataService
                 'Accept' => 'application/json',
             ));
             $response = curl_exec($ch);
+            // -- Check if response is OK
+            if (empty($response)) {
+                if (file_exists($this->cachePath)) {
+                    $response = file_get_contents($this->cachePath);
+                } else {
+                    throw new \Exception('Impossible obtain site data');
+                }
+            }
+
             // -- Save Cache
             file_put_contents($this->cachePath, $response);
             curl_close($ch);
+        }
+
+        // -- Check if response is valid
+        if (!is_array(json_decode($response, true))) {
+            throw new \Exception('Invalid data of site');
         }
 
         return $response;
