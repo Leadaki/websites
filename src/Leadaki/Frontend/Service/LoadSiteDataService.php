@@ -108,10 +108,10 @@ class LoadSiteDataService
                 } else {
                     throw new \Exception('Impossible obtain site data');
                 }
+            } else {
+                // -- Save Cache
+                file_put_contents($this->cachePath, $response);
             }
-
-            // -- Save Cache
-            file_put_contents($this->cachePath, $response);
             curl_close($ch);
         }
 
