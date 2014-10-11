@@ -1,8 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% set promotion = site.getPromotionBySlug(slug) %}
+
+{% block title "#{ promotion.title } / #{ parent() }" %}
+
 {% block main %}
 
-    {% set promotion = site.getPromotionBySlug(slug) %}
 
     {% set breadcrumb = { 'title': (promotion is empty ? 'Promoción no encontrada' : promotion.title), breadcrumb: { 'Promociones': path('promotions'), (promotion.title): null } } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}

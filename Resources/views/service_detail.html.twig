@@ -1,8 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% set service = site.getServiceBySlug(slug) %}
+
+{% block title "#{ service.title } / #{ parent() }" %}
+
 {% block main %}
 
-    {% set service = site.getServiceBySlug(slug) %}
 
     {% set breadcrumb = { 'title': (service is empty ? 'Servicio no encontrado' : service.title), breadcrumb: { 'Servicios': path('services'), (service.title): null } } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}

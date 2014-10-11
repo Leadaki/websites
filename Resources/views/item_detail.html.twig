@@ -1,8 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% set item = attribute(site,"getItemBySlug", [item_data.collection, slug]) %}
+
+{% block title "#{item.title} / #{ parent() }" %}
+
 {% block main %}
 
-    {% set item = attribute(site,"getItemBySlug", [item_data.collection, slug]) %}
 
     {% set breadcrumb = { 'title': (item is empty ? "#{ item.title } no encontrado" : item.title), breadcrumb: { (item_data.title_collection): path(item_data.collection), (item.title): null } } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}

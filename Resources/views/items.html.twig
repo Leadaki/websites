@@ -1,8 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% set vars = { item_data: item_data } %}
+
+{% block title "#{vars.item_data.title} / #{ parent() }" %}
+
 {% block main %}
 
-    {% set vars = { item_data: item_data } %}
 
     {% set breadcrumb = { 'title': "#{ vars.item_data.title }", breadcrumb: vars.item_data.title } %}
     {% include 'partials/breadcrumb.html.twig' with breadcrumb only %}
