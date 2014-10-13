@@ -11,18 +11,6 @@ $config['app']['website_id'] = '';
 $config['app']['base_url'] = '';
 
 /**
- * Template id to apply
- * Available: apparel|basic|modern|motors|pixma
- */
-$config['template']['id'] = 'modern';
-
-/**
- * Template color
- * Available: blue|brown|golden|gray|green|magenta|orange|purple|red|teal
- */
-$config['template']['color'] = 'red';
-
-/**
  * Folder to save cache
  */
 $config['folders']['cache'] = __DIR__ . '/../cache';
@@ -56,3 +44,8 @@ $config['app']['charset'] = 'UTF-8';
  * Api Base URL
  */
 $config['api']['base_url'] = 'http://api.leadaki.com/api/v2/websites';
+
+/**
+ * Web optimizer URL
+ */
+$config['web_optimizer']['base_url'] = 'http://weboptimizer.leadaki.com';
