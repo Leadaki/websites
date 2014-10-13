@@ -6,6 +6,7 @@ use Leadaki\Frontend\Router\Response;
 use Leadaki\Frontend\Router\RouterServiceInterface;
 use Leadaki\Frontend\Template\TemplateServiceInterface;
 use Leadaki\Frontend\Model\Site;
+use Leadaki\Frontend\Util\Util;
 
 /**
  * Class Application
@@ -46,6 +47,7 @@ class Application implements ApplicationInterface
         $match = $this->router->match();
 
         if (empty($match)) {
+            Util::httpResponseCode(404);
             echo $this->template->render('404.html.twig');
             exit;
         }
