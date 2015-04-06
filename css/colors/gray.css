@@ -1,3 +1,29 @@
+.theme-apparel .contact-us p{
+  color:black;
+}
+.theme-apparel .callyou .pedir{
+  background-color: transparent;
+}
+
+.theme-apparel .btn-color, .theme-apparel .subscribe-btn {
+  color:white;
+}
+
+.theme-apparel .address .phone a{
+color:white;
+}
+
+.theme-apparel .address .phone a {
+  color:white;
+}
+
+.theme-apparel .portfolio-item-title {
+  color:black;
+  }
+
+.theme-apparel .portfolio-item-title {
+  background-color: #DDD;
+}
 /*--
     THEME BASIC
 --------------------------------------*/
@@ -46,4 +72,75 @@
 /* Modal */
 .theme-modern .modal-content {
   background-color: #95a5a6;
+}
+
+.address .phone {
+    background-color: #555;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 -30px 20px;
+    padding: 20px 30px;
+}
+
+
+#header .main-header {
+  background-color: #444;
+  }
+
+.footer-top {
+  background: #555;
+}
+.footer-bottom {
+  background: #333;
+}
+.btn-color, .subscribe-btn {
+  color: #000;
+  cursor: pointer;
+    background-color: grey;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color: #666;
+}
+
+.portfolio-item-title {
+  color: #FFF;
+  background-color: #555;
+  }
+
+  /*PIXMA*/
+
+  .theme-pixma .callyou .pedir {
+  background-color: transparent;
+}
+
+.theme-pixma .phone a{
+  color:white;
+}
+
+.theme-pixma .portfolio-item-title a{
+  color: #FFF;
+  }
+
+  .theme-motors .address-widget, .theme-motors .contact-us{
+  background-color: #555; /* footer-top */
+  padding:20px;
+}
+
+.theme-motors .callyou{
+  background-color:#555;
+}
+
+.contact-us p, .address-widget li, .address-widget p{
+  color:white;
+}
+
+.theme-pixma .contact-us p{
+color:black;
+}
+
+.theme-pixma .footer-top .contact-us p{
+color:white;
 }

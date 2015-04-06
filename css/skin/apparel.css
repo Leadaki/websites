@@ -40,15 +40,16 @@ h3.title {
   box-sizing: border-box;
 }
 .nav > li > a {
-  color: #333;
+  color: #FFF;
   border-top: 4px solid transparent;
   border-bottom: 2px solid transparent;
+  font-size: ;
 }
 .nav > li > a:hover,
 .nav > li > a:focus,
 .nav > li > #current {
   background-color: transparent;
-  border-color: #000;
+  border-color: #FFF;
 }
 
 @media (min-width: 980px) {
@@ -107,6 +108,7 @@ h3.title {
   top: 0; left: 0; right: 0;
   font-size: 35px;
   padding: 20px 25px 25px;
+  color:white;
 }
 .nivo-caption .subtitle {
     background-color: rgba(0,0,0,.4);
@@ -165,6 +167,14 @@ h3.title {
     border: 1px solid #ccc;
     padding: 15px;
 }
+
+.callyou h3.title{
+  font-size: 19px;
+}
+.callyou .pedir{
+  margin-left: 20px;
+}
+
 .address .title {
     padding: 0 0 10px;
 }
@@ -179,6 +189,7 @@ h3.title {
 }
 .address .action {
     margin: 30px 0 0;
+    text-align:center;
 }
 
 
@@ -204,4 +215,17 @@ h3.title {
 --------------------------------------*/
 .about-us {
   padding: 15px;
+}
+
+.about-us, .address-widget{
+  color:black;
+}
+
+.address-widget p, .address-widget a, .address-widget h3, .contact-us > ul > li > p{ 
+  color:black !important;
+}
+
+
+.footer-top .contact-us p{
+color:white;
 }

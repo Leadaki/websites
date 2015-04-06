@@ -1,3 +1,4 @@
+
 /*** ESSENTIAL STYLES FROM superfish.css***/
 .sf-menu,.sf-menu * {
 	margin:0;
@@ -2706,3 +2707,15 @@ float: left;
 }
 
 /*** compatibilidad con nuevo theme.css ***/
+.contact-form{
+        padding: 20px;
+}
+
+.address-widget{
+    padding:20px;
+}
+
+
+.footer-top .contact-us p{
+color:white;
+}

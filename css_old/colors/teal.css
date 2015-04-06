@@ -1,0 +1,111 @@
+/*--
+    THEME BASIC
+--------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: #008080;
+}
+.theme-basic .address {
+  background-color: #1cb8b8;
+}
+/* Borders */
+.theme-basic .portfolio-item,
+.theme-basic .nav > li > a:hover,
+.theme-basic .nav > li > a:focus,
+.theme-basic .nav > li > #current {
+  border-color: #1cb8b8;
+}
+
+
+/*--
+    THEME MODERN
+--------------------------------------*/
+/* Buttons */
+.theme-modern .btn-color,
+.theme-modern .subscribe-btn {
+  background-color: #008080;
+}
+.theme-modern .btn-color:hover,
+.theme-modern .subscribe-btn:hover {
+  background-color: #1cb8b8;
+}
+
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: #1cb8b8;
+}
+
+/* Borders */
+.theme-modern .portfolio-item,
+.theme-modern .nav > li > a:hover,
+.theme-modern .nav > li > a:focus,
+.theme-modern .nav > li > #current {
+  border-color: #1cb8b8;
+}
+
+/* Modal */
+.theme-modern .modal-content {
+  background-color: #1cb8b8;
+}
+
+
+/*--
+    THEME MOTORS
+--------------------------------------*/
+.theme-motors #header .main-header {
+  background-color: #0d2e3a;
+  border-color: #f29100;
+}
+.theme-motors .tp-caption.modern_big_bluebg {
+  background-color: rgba(19,64,81,.5);
+  border-bottom-color: #f29100;
+}
+.theme-motors .sliderContainer .contact-form {
+  background-color: rgba(19,64,81,.5);
+}
+.theme-motors .contact-form {
+  background-color: #134151;
+}
+
+/* Buttons */
+.theme-motors .btn-color,
+.theme-motors .subscribe-btn {
+  color: #134051;
+  background-color: #f29100;
+}
+.theme-motors .btn-color:hover,
+.theme-motors .subscribe-btn:hover {
+  background-color: #ef9c2e;
+}
+
+/* Address box */
+.theme-motors .address {
+  background-color: #134151;
+}
+.theme-motors .address .phone {
+  background-color: #228487;
+}
+.theme-motors .address i {
+  color: #f29100;
+}
+
+/* Gallery */
+.theme-motors .portfolio-item {
+  border-bottom-color: #f29100;
+}
+.theme-motors .portfolio-item-title {
+  background-color: #134151;
+}
+
+
+
+
+
+
+
+
+
+

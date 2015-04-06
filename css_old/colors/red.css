@@ -1,0 +1,118 @@
+/*--
+    THEME BASIC
+--------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: #c0392b;
+}
+.theme-basic .address {
+  background-color: #e74c3c;
+}
+/* Borders */
+.theme-basic .portfolio-item,
+.theme-basic .nav > li > a:hover,
+.theme-basic .nav > li > a:focus,
+.theme-basic .nav > li > #current {
+  border-color: #e74c3c;
+}
+
+
+/*--
+    THEME MODERN
+--------------------------------------*/
+/* Buttons */
+.theme-modern .btn-color:hover,
+.theme-modern .subscribe-btn:hover {
+  background-color: #e74c3c;
+}
+.theme-modern .btn-color,
+.theme-modern .subscribe-btn {
+  background-color: #c0392b;
+}
+
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: #e74c3c;
+}
+
+/* Borders */
+.theme-modern .portfolio-item,
+.theme-modern .nav > li > a:hover,
+.theme-modern .nav > li > a:focus,
+.theme-modern .nav > li > #current {
+  border-color: #e74c3c;
+}
+
+/* Modal */
+.theme-modern .modal-content {
+  background-color: #e74c3c;
+}
+
+
+/*--
+    THEME APPAREL
+--------------------------------------*/
+.theme-apparel {
+  background-color: #2f2935;
+  color: #eef1cc;
+}
+.theme-apparel a,
+.theme-apparel .btn-color,
+.theme-apparel .subscribe-btn,
+.theme-apparel .nav > li > a,
+.theme-apparel .address .phone a {
+  color: #eef1cc;
+}
+
+/* Borders */
+.theme-apparel h3.title,
+.theme-apparel #header .main-header,
+.theme-apparel .portfolio-item,
+.theme-apparel .contact-form,
+.theme-apparel .portfolio-item-title,
+.theme-apparel .address {
+  border-color: #eef1cc;
+}
+.theme-apparel .nav > li > a:hover,
+.theme-apparel .nav > li > a:focus,
+.theme-apparel .nav > li > #current {
+  border-color: #831c3d;
+}
+
+/* Buttons */
+.theme-apparel .btn-color:hover,
+.theme-apparel .subscribe-btn:hover {
+  background-color: #962a51;
+}
+.theme-apparel .btn-color,
+.theme-apparel .subscribe-btn {
+  background-color: #831c3d;
+}
+
+.theme-apparel .nivo-caption .title,
+.theme-apparel .nivo-caption .subtitle {
+  background-color: rgba(33,21,33,.8);
+}
+.theme-apparel .reply input,
+.theme-apparel .reply textarea {
+    background-color: #dee8bf;
+    border-color: #555253;
+    color: #2f2935;
+}
+
+/* Footer */
+.theme-apparel .footer-top {
+  background-color: #242128;
+}
+.theme-apparel .footer-bottom,
+.theme-apparel .member-social.dark a {
+  background-color: #19181c;
+}
+.theme-apparel .footer-top,
+.theme-apparel .footer-bottom,
+.theme-apparel footer .contact-us a {
+  color: #eef1cc!important;
+}

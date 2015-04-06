@@ -1,0 +1,222 @@
+/*--
+    GLOBAL
+--------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+body {
+    background-color: #3d3d3d;
+    color: #FFF;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    padding-top: 120px;
+}
+.divider {
+    border: none;
+}
+
+footer a,
+.contact-box:hover,
+#options li a.selected,
+header .top-bar,
+header .top-bar a,
+header .social li:hover i,
+footer .social li:hover i,
+.content-box:hover>.content-box-icon i,
+div.content-box div.content-box-icon:hover,
+div.content-box div.content-box-icon:hover i,
+#footer h3,.contact-box:hover h3,
+.contact-us li i {
+    color: #fff;
+}
+
+/* Titles */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 100;
+    color: #FFF;
+}
+
+
+/*--
+    HEADER
+--------------------------------------*/
+#header .main-header {
+  background-color: #656665;
+  min-height: 86px;
+  position: fixed;
+  left: 0; right: 0; top: 0;
+  z-index: 9999;
+}
+.nav > li {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.nav > li > a {
+  color: #FFF;
+  border-bottom: 2px solid #656665;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color: #353533;
+}
+
+
+/*--
+    FORM
+--------------------------------------*/
+.reply input,
+.reply textarea {
+    background-color: #7b7b7b;
+    color: #FFF;
+    border: none;
+}
+
+/*--
+    BTN
+--------------------------------------*/
+.btn-color, .subscribe-btn {
+  color: #FFF;
+  cursor: pointer;
+}
+
+
+/*--
+    SLIDER IMG
+--------------------------------------*/
+.post-image, .img-content {
+  /*background-color: blue;
+  padding: 15px;*/
+}
+.nivoSlider {
+    border-radius: 5px;
+}
+.nivo-caption {
+  background: none;
+  top: 0;
+  margin: 0;
+}
+.nivo-caption .title {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  font-size: 35px;
+  padding: 20px 25px 25px;
+}
+.nivo-caption .subtitle {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    bottom: 15px; left: 15px; right: 15px;
+    padding: 10px 20px;
+}
+.nivo-prevNav,
+.nivo-nextNav {
+  background-color: transparent;
+  border: 2px solid #FFF;
+  border-radius: 50px;
+  line-height: 50px;
+  padding: 0!important;
+  width: 50px; height: 50px;
+  top: 45%!important;
+}
+.nivo-prevNav {
+    left: 10px;
+}
+.nivo-nextNav {
+    right: 10px;
+}
+
+/*--
+    CONTACT FORM
+--------------------------------------*/
+.contact-form {
+    background-color: #656665;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+.contact-form .title {
+    color: #FFF;
+    margin: -20px -25px 20px;
+    padding: 20px 25px;
+    border-radius: 5px 5px 0 0;
+}
+.contact-form .actions {
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+/*--
+    ADDRESS
+--------------------------------------*/
+.address {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+.address .title {
+    color: #FFF;
+    margin: -20px -30px 20px;
+    padding: 20px 25px;
+    border-radius: 5px 5px 0 0;
+}
+.address .phone {
+
+    font-size: 26px;
+    font-weight: 500;
+    margin: 20px -30px;
+    padding: 15px 30px;
+}
+.address .phone a {
+    color: #FFF;
+}
+.address .action {
+    margin: 30px 0 0;
+}
+
+
+/*--
+    GALLERY
+--------------------------------------*/
+.portfolio-item {
+    border: none;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-radius: 5px;
+    padding: 0;
+}
+.portfolio-item-title {
+    background-color: #656665;
+    color: #FFF;
+}
+.portfolio-item-title a {
+    color: #FFF;
+}
+
+
+/*--
+    BREADCRUMB
+--------------------------------------*/
+.breadcrumb-wrapper {
+  border-bottom: 1px solid #666;
+}
+
+
+/*--
+  SLOGAN
+--------------------------------------*/
+.slogan {
+    background: #656665;
+    margin-bottom: 100px;
+}
+
+
+/*--
+  MODALS
+--------------------------------------*/
+.modal-body {
+  background: #656665!important;
+}
+.modal-header {
+  border: none;
+}

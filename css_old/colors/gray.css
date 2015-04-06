@@ -1,0 +1,49 @@
+/*--
+    THEME BASIC
+--------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: #7f8c8d;
+}
+.theme-basic .address {
+  background-color: #95a5a6;
+}
+/* Borders */
+.theme-basic .portfolio-item,
+.theme-basic .nav > li > a:hover,
+.theme-basic .nav > li > a:focus,
+.theme-basic .nav > li > #current {
+  border-color: #95a5a6;
+}
+
+
+/*--
+    THEME MODERN
+--------------------------------------*/
+/* Buttons */
+.theme-modern .btn-color:hover,
+.theme-modern .subscribe-btn:hover {
+  background-color: #95a5a6;
+}
+.theme-modern .btn-color,
+.theme-modern .subscribe-btn {
+  background-color: #7f8c8d;
+}
+
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: #95a5a6;
+}
+
+/* Borders */
+.theme-modern .portfolio-item {
+  border-color: #95a5a6;
+}
+
+/* Modal */
+.theme-modern .modal-content {
+  background-color: #95a5a6;
+}

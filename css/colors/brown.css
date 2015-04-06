@@ -1,3 +1,19 @@
+.theme-apparel .contact-us p{
+  color:black;
+}
+
+.theme-apparel .btn-color, .theme-apparel .subscribe-btn{
+  background-color: #735130;
+}
+
+.theme-apparel .callyou .pedir{
+  background-color: transparent;
+}
+
+.theme-apparel #header .main-header, .theme-apparel .footer-top {
+  background-color: #522900;
+  }
+
 /*--
     THEME BASIC
 --------------------------------------*/
@@ -17,6 +33,9 @@
   border-color: #9a7041;
 }
 
+.theme-basic .contact-form, .theme-basic #header .main-header {
+  background-color: #522900;
+}
 
 /*--
     THEME MODERN
@@ -56,15 +75,15 @@
     THEME MOTORS
 --------------------------------------*/
 .theme-motors #header .main-header {
-  background-color: #0d2e3a;
+  background-color: #322212;
   border-color: #f29100;
 }
 .theme-motors .tp-caption.modern_big_bluebg {
-  background-color: rgba(19,64,81,.5);
+  background-color: rgba(222,184,135,.5);
   border-bottom-color: #f29100;
 }
 .theme-motors .sliderContainer .contact-form {
-  background-color: rgba(19,64,81,.5);
+  background-color: rgba(222,184,135,.5);
 }
 .theme-motors .contact-form {
   background-color: #beab95;
@@ -86,7 +105,7 @@
   background-color: #beab95;
 }
 .theme-motors .address .phone {
-  background-color: #228487;
+  background-color: #996633;
 }
 .theme-motors .address i {
   color: #f29100;
@@ -96,16 +115,57 @@
 .theme-motors .portfolio-item {
   border-bottom-color: #f29100;
 }
-.theme-motors .portfolio-item-title {
+.portfolio-item-title, .portfolio-item-title a {
   background-color: #beab95;
 }
 
 
+/*-- COSAS QUE TUVE QUE AGREGAR
+    FOOTER
+--------------------------------------*/
+.footer-top {
+  background: #322212;
+}
+.footer-bottom {
+  background: #8B4513;
+  color: #FFF;
+}
+.footer-bottom a,
+#footer h3,
+.contact-us li i {
+  color: #FFF;
+}
 
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color: #8B4513;
+}
 
+#header .main-header{
+  background-color: #322212;
+}
 
+/*PIXMA*/
 
+.theme-pixma #header .main-header, .theme-apparel .footer-top {
+  background-color: #522900;
+  }
 
+.theme-pixma .callyou .pedir {
+  background-color: transparent;
+}
 
+.theme-pixma .nav > li > a:hover,
+.theme-pixma .nav > li > a:focus,
+.theme-pixma .nav > li > #current {
+  background-color: #8B4513;
+}
 
-
+.theme-motors .callyou{
+  background-color:#beab95;
+}
+.theme-motors .address-widget, .theme-motors .contact-us{
+  background-color: #322212; /* footer-top */
+  padding:20px;
+}

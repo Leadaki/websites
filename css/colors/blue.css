@@ -1,3 +1,16 @@
+.theme-apparel .contact-us p{
+  color:black;
+}
+.theme-apparel .btn-color, .theme-apparel .subscribe-btn{
+  background-color: #1A4C6E;
+}
+
+.theme-apparel .callyou .pedir{
+  background-color: transparent;
+}
+
+
+
 /*--
     THEME BASIC
 --------------------------------------*/
@@ -7,16 +20,25 @@
   background-color: #2980b9;
 }
 .theme-basic .address {
-  background-color: #3498db;
+  background-color: #1A4C6E;
 }
 /* Borders */
 .theme-basic .portfolio-item,
 .theme-basic .nav > li > a:hover,
 .theme-basic .nav > li > a:focus,
 .theme-basic .nav > li > #current {
-  border-color: #3498db;
+  background-color: #315E7C;
 }
 
+.theme-basic .callyou .pedir{
+  background-color: transparent;
+}
+
+.theme-basic .contact-form {
+    background-color: #1A4C6E;
+    padding: 20px 25px;
+    color: #FFF;
+}
 
 /*--
     THEME MODERN
@@ -28,14 +50,14 @@
 }
 .theme-modern .btn-color:hover,
 .theme-modern .subscribe-btn:hover {
-  background-color: #3498db;
+  background-color: #1A4C6E;
 }
 
 /* Titles */
 .theme-modern .nivo-caption .title,
 .theme-modern .contact-form .title,
 .theme-modern .address .title {
-  background-color: #3498db;
+  background-color: #1A4C6E;
 }
 
 /* Borders */
@@ -43,12 +65,12 @@
 .theme-modern .nav > li > a:hover,
 .theme-modern .nav > li > a:focus,
 .theme-modern .nav > li > #current {
-  border-color: #3498db;
+  border-color: #1A4C6E;
 }
 
 /* Modal */
 .theme-modern .modal-content {
-  background-color: #3498db;
+  background-color: #1A4C6E;
 }
 
 
@@ -56,7 +78,7 @@
     THEME MOTORS
 --------------------------------------*/
 .theme-motors #header .main-header {
-  background-color: #0d2e3a;
+  background-color: #233342;
   border-color: #f29100;
 }
 .theme-motors .tp-caption.modern_big_bluebg {
@@ -67,7 +89,11 @@
   background-color: rgba(19,64,81,.5);
 }
 .theme-motors .contact-form {
-  background-color: #134151;
+  background-color: #2C4254;
+}
+
+#header .main-header{
+  background-color: #1A4C6E;
 }
 
 /* Buttons */
@@ -83,10 +109,10 @@
 
 /* Address box */
 .theme-motors .address {
-  background-color: #134151;
+  background-color: #2C4254;
 }
 .theme-motors .address .phone {
-  background-color: #228487;
+  background-color: #1E2B39;
 }
 .theme-motors .address i {
   color: #f29100;
@@ -96,16 +122,48 @@
 .theme-motors .portfolio-item {
   border-bottom-color: #f29100;
 }
-.theme-motors .portfolio-item-title {
-  background-color: #134151;
+.portfolio-item-title, .portfolio-item-title a {
+  background-color: #2C4254;
+    color: #FFF;
+}
+
+.callyou .pedir{
+  background-color: #1E2B39;
+}
+
+.footer-top {
+  background: #134151;
+}
+.footer-bottom {
+  background: #0d2f3b;
+  color: #FFF;
+}
+.footer-bottom a,
+#footer h3,
+.contact-us li i {
+  color: #FFF;
+}
+
+/* PIXMA */
+
+.theme-pixma .callyou .pedir {
+  background-color: transparent;
 }
 
 
+.theme-motors .callyou{
+  background-color:#134151;
+}
 
+  .theme-motors .address-widget, .theme-motors .contact-us{
+  background-color: #134151; /* footer-top */
+  padding:20px;
+}
 
+.theme-motors .callyou{
+  background-color:#134151;
+}
 
-
-
-
-
-
+.contact-us p, .address-widget li, .address-widget p{
+  color:white;
+}

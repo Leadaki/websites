@@ -1,0 +1,290 @@
+/*--
+    GLOBAL
+--------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+body {
+    background-color: #ececec;
+    color: #666;
+    font-family: "Lato",Helvetica,Arial,sans-serif;
+    padding-top: 85px;
+}
+.divider {
+    border: none;
+}
+
+footer a,
+.contact-box:hover,
+#options li a.selected,
+header .top-bar,
+header .top-bar a,
+header .social li:hover i,
+footer .social li:hover i,
+.content-box:hover>.content-box-icon i,
+div.content-box div.content-box-icon:hover,
+div.content-box div.content-box-icon:hover i,
+#footer h3,.contact-box:hover h3,
+.contact-us li i {
+    color: #666;
+}
+
+/* Titles */
+h1,h2,h3,h4,h5,h6 {
+    /*font-weight: 100;*/
+    font-family: "Lato",Helvetica,Arial,sans-serif;
+}
+h3.title {
+  color: #104056;
+  border-bottom: 1px solid #104056;
+  padding-bottom: 10px;
+}
+
+
+/*--
+    HEADER
+--------------------------------------*/
+#header .main-header {
+  background-color: #0d2f3b;
+  border-bottom: 2px solid #333;
+  min-height: 86px;
+  position: fixed;
+  left: 0; right: 0; top: 0;
+  z-index: 9999;
+}
+.nav > li {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.nav > li > a {
+  color: #FFF;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color: #134151;
+}
+
+
+/*--
+    FOOTER
+--------------------------------------*/
+.footer-top {
+  background: #134151;
+}
+.footer-bottom {
+  background: #0d2f3b;
+  color: #FFF;
+}
+.footer-bottom a,
+#footer h3,
+.contact-us li i {
+  color: #FFF;
+}
+
+
+/*--
+    FORM
+--------------------------------------*/
+.reply input,
+.reply textarea {
+    background-color: #FFF;
+    color: #333;
+    border: none;
+}
+
+/*--
+    BTN
+--------------------------------------*/
+.btn-color, .subscribe-btn {
+  color: #FFF;
+  cursor: pointer;
+}
+.btn-special,
+.btn-normal,
+.btn-small,
+.btn-large,
+.btn {
+  border-radius: 0;
+}
+
+
+/*--
+    SLIDER IMG
+--------------------------------------*/
+.post-image, .img-content {
+  /*background-color: blue;
+  padding: 15px;*/
+}
+.nivoSlider {
+    border-radius: 5px;
+}
+.nivo-caption {
+  background: none;
+  top: 0;
+  margin: 0;
+}
+.nivo-caption .title {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  font-size: 35px;
+  padding: 20px 25px 25px;
+}
+.nivo-caption .subtitle {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    bottom: 15px; left: 15px; right: 15px;
+    padding: 10px 20px;
+}
+.nivo-prevNav,
+.nivo-nextNav {
+  background-color: transparent;
+  border: 2px solid #666;
+  border-radius: 50px;
+  line-height: 50px;
+  padding: 0!important;
+  width: 50px; height: 50px;
+  top: 45%!important;
+}
+.nivo-prevNav {
+    left: 10px;
+}
+.nivo-nextNav {
+    right: 10px;
+}
+
+/*--
+    CONTACT FORM
+--------------------------------------*/
+.contact-form {
+    background-color: rgba(0,0,0,.7);
+    color: #FFF;
+    padding: 20px 25px;
+}
+.contact-form .actions {
+    margin: 0;
+    text-align: center;
+}
+
+
+/*--
+    ADDRESS
+--------------------------------------*/
+.address {
+    background-color: #333;
+    color: #FFF;
+    padding: 20px 30px;
+}
+.address .title {
+    color: #FFF;
+    margin: -20px -30px 0;
+    padding: 20px 25px;
+}
+.address .phone {
+    background-color: #CCC;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 -30px 20px;
+    padding: 20px 30px;
+}
+.address .phone a {
+    color: #FFF;
+}
+.address .action {
+    margin: 30px 0 0;
+}
+
+
+/*--
+    ABOUT
+--------------------------------------*/
+.about-us {
+  background-color: #FFF;
+  padding: 20px 25px;
+}
+.about-us .title {
+  border: none;
+}
+
+
+/*--
+    GALLERY
+--------------------------------------*/
+.portfolio-item {
+    border: none;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-radius: 0;
+    padding: 0;
+}
+.portfolio-item-title {
+    color: #FFF;
+}
+.portfolio-item-title a {
+    color: #FFF;
+}
+
+
+/*--
+    BREADCRUMB
+--------------------------------------*/
+.breadcrumb-wrapper {
+  border-bottom: 1px solid #666;
+  margin-top: 0;
+}
+
+
+/*--
+  SLOGAN
+--------------------------------------*/
+.slogan {
+    margin-bottom: 100px;
+}
+
+
+/*--
+  SLIDER
+--------------------------------------*/
+.tp-caption h3 {
+  font-weight: 500;
+  padding: 15px 40px;
+  text-transform: capitalize;
+}
+.tp-caption.modern_big_bluebg {
+  background-color: rgba(0,0,0,.5);
+  border-bottom: 2px solid #000;
+}
+.sliderContainer .contact-form .title {
+  color: #FFF;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 300;
+  text-align: left;
+  padding: 0 0 10px;
+}
+
+
+/*--
+  RECENT WORKS
+--------------------------------------*/
+.recentworks .title,
+.recentworks .address .title {
+  border-bottom: 1px solid #FFF;
+  color: #FFF;
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+}
+.recentworks .about-us .title {
+  color: #0e4653;
+  border-bottom: 1px solid #0e4653;
+}
+
+
+
+
+
+

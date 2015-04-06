@@ -1,3 +1,17 @@
+.theme-apparel .contact-us p{
+  color:black;
+}
+.theme-apparel .callyou .pedir{
+  background-color: transparent;
+}
+
+.theme-apparel .title{
+  color:white;
+}
+
+.theme-apparel .contact-form p{
+  color:white;
+}
 /*--
     THEME BASIC
 --------------------------------------*/
@@ -7,7 +21,7 @@
   background-color: #14836a;
 }
 .theme-basic .address {
-  background-color: #29b297;
+  background-color: #005200;
 }
 /* Borders */
 .theme-basic .portfolio-item,
@@ -16,8 +30,24 @@
 .theme-basic .nav > li > #current {
   border-color: #29b297;
 }
+.theme-basic .callyou .pedir{
+  background-color: transparent;
+}
 
+.portfolio-item-title, .portfolio-item-title a{
+  color:white;
+}
+.theme-basic #header .main-header{
+  background-color: #234F21;
+}
 
+.theme-basic .address-widget p{
+  color:black;
+}
+
+.theme-basic .address-widget li{
+  color:black;
+}
 /*--
     THEME MODERN
 --------------------------------------*/
@@ -49,4 +79,104 @@
 /* Modal */
 .theme-modern .modal-content {
   background-color: #29b297;
+}
+
+#header .main-header{
+  background-color: #234F21;
+}
+
+.contact-form{
+    background-color: rgba(25,66,0,.7);
+}
+
+.tp-caption.modern_big_bluebg {
+  background-color: rgba(25,66,0,.5);
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color: #396137;
+}
+
+.theme-motors .address {
+  background-color: #005200;
+}
+.theme-motors .address .phone {
+  background-color: #006B24;
+}
+.theme-motors .address i {
+  color: #f29100;
+}
+
+.btn-color, .subscribe-btn {
+  color: #FFF;
+  cursor: pointer;
+  background-color: #669900;
+  }
+
+  .callyou .pedir {
+  background-color: #004C1A;
+}
+
+.footer-top{
+  background-color: #1C3F1A;
+}
+
+.footer-bottom{
+  background-color: #005200;
+}
+
+.portfolio-item-title{
+    background-color: #234F21;
+}
+
+/*PIXMA*/
+.theme-pixma .address-widget p{
+  color:black;
+}
+
+.theme-pixma .address-widget li{
+  color:black;
+}
+
+.theme-pixma .nav > li > a:hover,
+.theme-pixma .nav > li > a:focus,
+.theme-pixma .nav > li > #current {
+background-color: #196319;
+}
+  .theme-pixma .callyou .pedir {
+  background-color: transparent;
+}
+
+.theme-pixma .btn-color, .theme-pixma .subscribe-btn {
+  color:white;
+}
+
+.theme-pixma .address .phone a{
+color:white;
+}
+
+.theme-pixma .contact-form h3, .theme-pixma .contact-form p{
+  color:white;
+}
+
+.theme-pixma .actions{
+  padding:10px;
+}
+
+.theme-motors .callyou{
+  background-color:#1C3F1A;
+}
+  .theme-motors .address-widget, .theme-motors .contact-us{
+  background-color:#1C3F1A; /* footer-top */
+  padding:20px;
+}
+
+.theme-motors .callyou{
+  background-color:#1C3F1A;
+}
+
+.contact-us p, .address-widget li, .address-widget p{
+  color:white;
 }

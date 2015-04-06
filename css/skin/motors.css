@@ -179,6 +179,27 @@ h3.title {
     color: #FFF;
     padding: 20px 30px;
 }
+
+.callyou{
+    background-color: #000;
+    border-color: #000;
+    border-width: 10px;
+    color: #FFF;
+    padding: 20px 30px;
+}
+
+.callyou .pedir{
+  color: #000;
+  font-size: 26px;
+  font-weight: 500;
+  padding: 20px;
+}
+}
+
+.callyou .pedir .btn-color{
+  color:#000;
+}
+
 .address .title {
     color: #FFF;
     margin: -20px -30px 0;
@@ -196,8 +217,12 @@ h3.title {
 }
 .address .action {
     margin: 30px 0 0;
+    text-align:center;
 }
 
+.address-widget h3{
+  color:black;
+}
 
 /*--
     ABOUT
@@ -284,6 +309,9 @@ h3.title {
 }
 
 
+.footer-top .contact-us p{
+color:white;
+}
 
 
 
