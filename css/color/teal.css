@@ -1,0 +1,183 @@
+.theme-apparel .contact-us p{
+  color:black;
+}
+.theme-apparel .callyou .pedir {
+  background-color: transparent;
+}
+
+/*--
+    THEME BASIC
+--------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: #008080;
+}
+.theme-basic .address {
+  background-color: #3B5761;
+}
+/* Borders */
+.theme-basic .portfolio-item,
+.theme-basic .nav > li > a:hover,
+.theme-basic .nav > li > a:focus,
+.theme-basic .nav > li > #current {
+  border-color: #3B5761;
+}
+.portfolio-item-title, .portfolio-item-title a{
+  color:white;
+  }
+
+/*--
+    THEME MODERN
+--------------------------------------*/
+/* Buttons */
+.theme-modern .btn-color,
+.theme-modern .subscribe-btn {
+  background-color: #008080;
+}
+.theme-modern .btn-color:hover,
+.theme-modern .subscribe-btn:hover {
+  background-color: #3B5761;
+}
+
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: #3B5761;
+}
+
+/* Borders */
+.theme-modern .portfolio-item,
+.theme-modern .nav > li > a:hover,
+.theme-modern .nav > li > a:focus,
+.theme-modern .nav > li > #current {
+  border-color: #3B5761;
+}
+
+/* Modal */
+.theme-modern .modal-content {
+  background-color: #3B5761;
+}
+
+
+/*--
+    THEME MOTORS
+--------------------------------------*/
+.theme-motors #header .main-header {
+  background-color: #0d2e3a;
+  border-color: #f29100;
+}
+.theme-motors .tp-caption.modern_big_bluebg {
+  background-color: rgba(19,64,81,.5);
+  border-bottom-color: #f29100;
+}
+.theme-motors .sliderContainer .contact-form {
+  background-color: rgba(19,64,81,.5);
+}
+.theme-motors .contact-form {
+  background-color: #134151;
+}
+
+/* Buttons */
+.theme-motors .btn-color,
+.theme-motors .subscribe-btn {
+  color: #134051;
+  background-color: #f29100;
+}
+.theme-motors .btn-color:hover,
+.theme-motors .subscribe-btn:hover {
+  background-color: #ef9c2e;
+}
+
+/* Address box */
+.theme-motors .address {
+  background-color: #134151;
+}
+.theme-motors .address .phone {
+  background-color: #228487;
+}
+.theme-motors .address i {
+  color: #f29100;
+}
+
+/* Gallery */
+.theme-motors .portfolio-item {
+  border-bottom-color: #f29100;
+}
+.theme-motors .portfolio-item-title {
+  background-color: #134151;
+}
+
+
+.callyou .pedir{
+  background-color: #228487;
+}
+.navbar-collapse ul{
+  background-color: #0d2f3b;
+}
+.theme-motors .navbar-collapse ul{
+  background-color: #0d2e3a;
+}
+#header .main-header {
+  background-color: #0d2f3b;
+  border-bottom: 2px solid #333;
+  min-height: 86px;
+  left: 0; right: 0; top: 0;
+  z-index: 9999;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color: #25444F;
+}
+
+.portfolio-item-title{
+    background-color: #25444F;
+}
+
+.footer-top {
+  background: #134151;
+}
+.footer-bottom {
+  background: #0d2f3b;
+  color: #FFF;
+}
+.footer-bottom a,
+#footer h3,
+.contact-us li i {
+  color: #FFF;
+}
+
+.contact-form {
+  background-color:transparent;
+}
+
+.theme-motors .callyou{
+  background-color:#134151;
+}
+  .theme-motors .address-widget, .theme-motors .contact-us{
+  background-color:#134151; /* footer-top */
+  padding:20px;
+}
+
+.theme-motors .callyou{
+  background-color:#134151;
+}
+
+.contact-us p, .address-widget li, .address-widget p{
+  color:white;
+}
+
+.theme-apparel .content{
+margin-top:8em;
+}
+.theme-pixma .contact-us p, .theme-pixma .address-widget li, .theme-pixma .address-widget p{
+  color:black;
+}
+
+
+.theme-pixma .footer-top .contact-us p {
+  color:white;
+}

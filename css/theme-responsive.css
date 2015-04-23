@@ -132,13 +132,19 @@ body.boxed {
 .top-bar .pull-left, .top-bar .pull-right, .logo.pull-left, .get-started .pull-right {
     float: none !important;
 }
-
-.logo.pull-left {
-    display: block;
-    text-align: center;
-    margin: 25px 0 10px;
+.logo {
+    height:10%;
 }
 
+.logo.pull-left {
+display: block;
+  text-align: left;
+  max-width: 75%;
+}
+
+.main-header .container {
+  height: 0px !important;
+}
 .navbar-fixed-top {
     position: relative !important;
     top: auto;
@@ -150,22 +156,31 @@ header .top-bar {
 }
 
 .navbar-toggle {
-    float: none;
+    float: right;
     text-align: center;
     padding: 0;
     display: block;
 }
+.navbar-collapse ul{
+    max-width:50%;
+}
+.navbar-collapse li{
+border-bottom:1px solid white;
+}
 
 .mobile.navbar-header {
-    margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .topnav a.navbar-toggle {
     padding: 0;
 	line-height:18px;
 	margin-top:-1px;
+    display:none;
 }
-
+.logo img{
+    height:auto !important;
+}
 
 .navbar-toggle:hover, .navbar-toggle:focus {
     background-color: transparent;

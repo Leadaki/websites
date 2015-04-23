@@ -1,0 +1,159 @@
+.theme-apparel .address .phone {
+  background-color: white;
+}
+.theme-apparel .contact-form{
+color:white;
+}
+
+.address-widget a{
+color:#428bca;
+}
+.address-widget .contact-us a{
+  color:#428bca !important;
+}
+.theme-apparel .contact-us a{
+color:grey !important;
+}
+
+.theme-apparel .contact-us p{
+color:white;
+}
+/*--
+    THEME BASIC
+-------------------------------------*/
+/* Buttons */
+.theme-basic .btn-color,
+.theme-basic .subscribe-btn {
+  background-color: black;
+}
+.theme-basic .address {
+  background-color: white;
+}
+/* Borders */
+.portfolio-item,
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > #current {
+  background-color:white;
+  color:black;
+}
+
+.theme-basic .callyou .pedir {
+  background-color: transparent;
+}
+/*--
+    THEME MODERN
+--------------------------------------*/
+
+/* Titles */
+.theme-modern .nivo-caption .title,
+.theme-modern .contact-form .title,
+.theme-modern .address .title {
+  background-color: white;
+}
+.theme-modern .nivo-caption h3{
+color:black !important;
+}
+
+.theme-modern .contact-form h3{
+color:black;
+}
+
+.theme-modern .modal-title-o{
+color:black;
+}
+
+.theme-modern .address-widget h3{
+color:white;
+}
+.theme-modern .address-widget p{
+color:white;
+}
+
+.theme-modern .callyou{
+background-color:transparent;
+}
+
+.theme-modern .callyou .pedir{
+background-color:transparent;
+}
+
+.theme-modern .portfolio-item-title{
+background-color:white;
+border-top: 1px solid black;
+}
+
+.theme-modern .address-widget li{
+color:white;
+}
+
+/* Modal */
+.theme-modern .modal-content {
+  background-color: white;
+}
+
+#header .main-header {
+  background-color: black;
+  }
+.navbar-collapse ul{
+  background-color: black;
+}
+.contact-form {
+  background-color: rgba(0,0,0,.7);
+    padding: 20px;
+}
+.tp-caption.modern_big_bluebg {
+    background-color: rgba(0,0,0,.5);
+  }
+
+  .modal-title{
+color:black !important;
+}
+
+  .address {
+  background-color: white;
+}
+
+.address .phone {
+  background-color: white;
+  }
+
+  .callyou {
+  background-color: white;
+}
+
+.callyou .pedir {
+  background-color: white;
+  }
+  .callyou .pedir .btn-color {
+  color: white;
+}
+
+.footer-bottom {
+  background: black;
+  }
+
+.footer-top {
+  background: black;
+}
+
+.btn-color, .subscribe-btn {
+  color: #FFF;
+  cursor: pointer;
+   background-color: black;
+ }
+
+
+/* PIXMA */
+
+.contact-us p, .address-widget li, .address-widget p, .address-widget h3, .address-widget .title, .portfolio-item-title p, .portfolio-item-title a{
+  color:black;
+}
+.theme-pixma .contact-us p, .theme-pixma .address-widget li, .theme-pixma .address-widget p{
+  color:black;
+}
+
+
+.theme-pixma .footer-top .contact-us p {
+  color:white;
+}
